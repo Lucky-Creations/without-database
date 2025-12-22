@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Lucky Creations: Phone Pouches</title>
+    <title>Lucky Creations: Centerpieces</title>
     <link rel="icon" type="image/png" href="../media/centerpiece-main.png">
     <link rel="stylesheet" type="text/css" href="../css-files/everywhere.css"/>
     <link rel="stylesheet" type="text/css" href="../css-files/header.css"/>
@@ -49,7 +49,7 @@
     <div class="middle-section">
       <div class="page-title-container">
         <hr class="top-line"> <!-- Top line -->
-        <div class="page-title">Phone Pouches</div>
+        <div class="page-title">Centerpieces</div>
         <hr class="bottom-line"> <!-- Bottom line -->
       </div>
     </div>
@@ -78,7 +78,7 @@
   <main id="product-container"></main>
 
 <script>
-fetch('../json-files/phone.json')
+fetch('../json-files/centerpieces.json')
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById('product-container');
@@ -94,14 +94,14 @@ fetch('../json-files/phone.json')
 
     data.forEach(item => {
       const name  = item.name  || 'Item';
-      const size  = item.size  || '';
       const rate  = item.rate  || '';
-      const file  = (item.image || '').trim();          // e.g., "phone-pouches-main.png"
-      const base  = toBase(file);                       // "phone-pouches-main"
+      const size  = item.size  || '';
+      const file  = (item.image || '').trim();          // e.g., "centerpiece-main.png"
+      const base  = toBase(file);                       // "centerpiece-main"
 
       // Build URLs with per-segment encoding to handle spaces/special chars
-      const webpUrl = `../products/phone-pouches/${enc(base)}.webp`;
-      const pngUrl  = `../products/phone-pouches/${enc(file)}`;
+      const webpUrl = `../products/centerpieces/${enc(base)}.webp`;
+      const pngUrl  = `../products/centerpieces/${enc(file)}`;
 
       // Optional intrinsic size support if you add width/height in JSON
       const w = item.width  || '';
@@ -180,14 +180,7 @@ fetch('../json-files/phone.json')
       container.appendChild(card);
     });
   })
-  .catch(err => {
-  const container = document.getElementById('product-container');
-  if (container) {
-    container.innerHTML = '<p class="error">Loading products soon! Please try again later.</p>';
-  }
-  console.error('Error loading phone-pouches:', err);
-  });
-
+  .catch(err => console.error('Error loading centerpieces', err));
 </script>
 
 <script>
@@ -200,40 +193,6 @@ fetch('../json-files/phone.json')
     document.getElementById("dropdown-menu").classList.add("hidden");
     document.getElementById("backdrop").classList.add("hidden");
   }
-</script>
-
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-  import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
-  import { getDatabase, ref, runTransaction, set } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAvWlnAUx3hFEkksLzvTTnUWsn90OVPqFI",
-    authDomain: "lph-server-website.firebaseapp.com",
-    databaseURL: "https://lph-server-website-default-rtdb.firebaseio.com",
-    projectId: "lph-server-website",
-    storageBucket: "lph-server-website.firebasestorage.app",
-    messagingSenderId: "200401032111",
-    appId: "1:200401032111:web:d0ccd06a0415e97657955a",
-    measurementId: "G-9B9SR4TZVY"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  const db = getDatabase(app);
-
-  logEvent(analytics, "site_visit", { source: "phonePouches_page" });
-
-  window.addEventListener("DOMContentLoaded", () => {
-  runTransaction(ref(db, "crochet_stats/phone_visits"), n => (n || 0) + 1);
-});
-
 </script>
 
 <!-- Image Modal -->
