@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Cotton Candy Phone Pouch",
+    "size": "9.5*18 cms",
+    "rate": "₹180",
+    "bestseller": true,
+    "image": "cotton-candy.jpeg",
+    "category": "Phone Pouch",
+    "whatsapp": "Hi! I'm interested in the Cotton Candy Phone Pouch from Lucky Creations."
+  },
+  {
+    "name": "Red Shells Multicolour Phone Pouch",
+    "size": "9.5*18 cms",
+    "rate": "₹180",
+    "image": "red-shells-multicolour.jpeg",
+    "category": "Phone Pouch",
+    "whatsapp": "Hi! I'm interested in the Red Shells Multicolour Phone Pouch from Lucky Creations."
+  },
+  {
+    "name": "Blue & White Phone Pouch",
+    "size": "9.5*18 cms",
+    "rate": "₹180",
+    "image": "blue-white.png",
+    "category": "Phone Pouch",
+    "whatsapp": "Hi! I'm interested in the Blue & White Phone Pouch from Lucky Creations."
+  },
+  {
+    "name": "Orange & Green Phone Pouch",
+    "size": "9.5*18 cms",
+    "rate": "₹180",
+    "image": "orange-green.png",
+    "category": "Phone Pouch",
+    "whatsapp": "Hi! I'm interested in the Orange & Green Phone Pouch from Lucky Creations."
+  },
+  {
+    "name": "Purple & Green Phone Pouch",
+    "size": "9.5*18 cms",
+    "rate": "₹180",
+    "bestseller": true,
+    "image": "purple-green.jpeg",
+    "category": "Phone Pouch",
+    "whatsapp": "Hi! I'm interested in the Purple & Green Phone Pouch from Lucky Creations."
+  },
+  {
+    "name": "Grey & Pink Phone Pouch",
+    "size": "9.5*18 cms",
+    "rate": "₹180",
+    "image": "grey-pink.jpeg",
+    "category": "Phone Pouch",
+    "whatsapp": "Hi! I'm interested in the Grey & Pink Phone Pouch from Lucky Creations."
+  },
+  {
+    "name": "Orange & Blue Phone Pouch",
+    "size": "9.5*18 cms",
+    "rate": "₹180",
+    "image": "orange-blue.jpeg",
+    "category": "Phone Pouch",
+    "whatsapp": "Hi! I'm interested in the Orange & Blue Phone Pouch from Lucky Creations."
+  },
+  {
+    "name": "Blue & Golden Phone Pouch",
+    "size": "9.5*18 cms",
+    "rate": "₹180",
+    "image": "blue-golden.jpeg",
+    "category": "Phone Pouch",
+    "whatsapp": "Hi! I'm interested in the Blue & Golden Phone Pouch from Lucky Creations."
+  },
+  {
+    "name": "Green & Red Phone Pouch",
+    "size": "9.5*18 cms",
+    "rate": "₹180",
+    "image": "green-red.jpeg",
+    "category": "Phone Pouch",
+    "whatsapp": "Hi! I'm interested in the Green & Red Phone Pouch from Lucky Creations."
+  }
+]

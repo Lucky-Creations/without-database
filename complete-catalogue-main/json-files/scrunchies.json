@@ -1,0 +1,281 @@
+[
+  {
+    "name": "Design 1",
+    "rate": "₹50",
+    "bestseller": true,
+    "image": "1.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 1 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 2",
+    "rate": "₹50",
+    "image": "2.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 2 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 3",
+    "rate": "₹50",
+    "image": "3.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 3 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 4",
+    "rate": "₹40",
+    "image": "4.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 4 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 5",
+    "rate": "₹60",
+    "image": "5.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 5 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 6",
+    "rate": "₹40",
+    "image": "6.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 6 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 7",
+    "rate": "₹60",
+    "bestseller": true,
+    "image": "7.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 7 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 8",
+    "rate": "₹40",
+    "image": "8.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 8 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 9",
+    "rate": "₹60",
+    "image": "9.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 9 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 10",
+    "rate": "₹40",
+    "image": "10.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 10 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 11",
+    "rate": "₹60",
+    "image": "11.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 11 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 12",
+    "rate": "₹60",
+    "bestseller": true,
+    "image": "12.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 12 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 13",
+    "rate": "₹60",
+    "image": "13.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 13 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 14",
+    "rate": "₹50",
+    "image": "14.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 14 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 15",
+    "rate": "₹50",
+    "image": "15.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 15 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 16",
+    "rate": "₹50",
+    "image": "16.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 16 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 17",
+    "rate": "₹50",
+    "image": "17.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 17 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 18",
+    "rate": "₹50",
+    "image": "18.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 18 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 19",
+    "rate": "₹60",
+    "bestseller": true,
+    "image": "19.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 19 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 20",
+    "rate": "₹60",
+    "image": "20.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 20 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 21",
+    "rate": "₹50",
+    "image": "21.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 21 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 22",
+    "rate": "₹50",
+    "image": "22.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 22 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 23",
+    "rate": "₹40",
+    "image": "23.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 23 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 24",
+    "rate": "₹50",
+    "image": "24.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 24 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 25",
+    "rate": "₹50",
+    "bestseller": true,
+    "image": "25.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 25 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 26",
+    "rate": "₹50",
+    "image": "26.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 26 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 27",
+    "rate": "₹50",
+    "image": "27.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 27 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 28",
+    "rate": "₹60",
+    "image": "28.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 28 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 29",
+    "rate": "₹50",
+    "image": "29.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 29 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 30",
+    "rate": "₹50",
+    "image": "30.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 30 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 31",
+    "rate": "₹40",
+    "bestseller": true,
+    "image": "31.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 31 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 32",
+    "rate": "₹50",
+    "image": "32.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 32 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 33",
+    "rate": "₹50",
+    "image": "33.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 33 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 34",
+    "rate": "₹50",
+    "image": "34.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 34 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 35",
+    "rate": "₹40",
+    "image": "35.jpeg",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 35 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 36",
+    "rate": "₹65",
+    "image": "36.png",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 36 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 37",
+    "rate": "₹50",
+    "image": "37.png",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 37 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 38",
+    "rate": "₹65",
+    "image": "38.png",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 38 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 39",
+    "rate": "₹55",
+    "image": "39.png",
+    "category": "Scrunchies",
+    "whatsapp": "Hi! I'm interested in the Design 39 Scrunchie from Lucky Creations."
+  }
+]

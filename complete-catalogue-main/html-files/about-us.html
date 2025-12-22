@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Lucky Creations: About Us</title>
+    <link rel="icon" type="image/png" href="../media/centerpiece-main.png">
+    <link rel="stylesheet" type="text/css" href="../css-files/everywhere.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/delivery.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/about-us.css"/>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+<div class="header"> <!--Beginning of the header-->
+    <div class="left-section">
+      <div class="hamburger-icon-container">
+        <picture>
+          <source srcset="../media/hamburger-icon.webp" type="image/webp">
+          <img class="hamburger-icon"
+               alt="toggle-icon"
+               src="../media/hamburger-icon.png"
+               width="24" height="24"
+               decoding="async"
+               onclick="toggleMenu()">
+        </picture>
+      </div>
+
+      <div class="header-logo-container">
+        <!-- Use a relative link to avoid GitHub Pages subpath issues -->
+        <a rel="website" href="../index.html">
+          <picture>
+            <source srcset="../media/upscale.webp" type="image/webp">
+            <img class="header-logo"
+                 alt="the-logo"
+                 src="../media/upscale.png"
+                 width="756" height="251"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async">
+          </picture>
+        </a>
+      </div>
+    </div>
+
+    <div class="middle-section">
+      <div class="page-title-container">
+        <hr class="top-line"> <!-- Top line -->
+        <div class="page-title">About Us</div>
+        <hr class="bottom-line"> <!-- Bottom line -->
+      </div>
+    </div>
+
+    <div class="right-section">
+      Complete <br> Catalogue
+    </div>
+  </div> <!--Ending of the header-->
+
+<div id="dropdown-menu" class="dropdown hidden">
+  <a href="about-us.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<div id="backdrop" class="backdrop hidden" onclick="closeMenu()"></div>
+
+    <div class="delivery-bar"> <!--Beginning of the delivery bar-->
+        <marquee>
+            Pan-India Delivery Available. Contact &#9742; +91 8169341750 &#9679; &#9993;
+            <a href="mailto:luckycreations.crochet@gmail.com?subject=Inquiry%20About%20Catalogue">
+            luckycreations.crochet@gmail.com
+            </a>
+        </marquee>
+</div> <!--Ending of the delivery bar-->
+
+<div class="yarn-marquee">
+  <svg viewBox="0 0 1000 1500" preserveAspectRatio="none">
+    <path class="yarn-loop" d="M0,100 Q250,0 500,100 T1000,100" />
+    <path class="yarn-loop" d="M0,300 Q250,200 500,300 T1000,300" />
+    <path class="yarn-loop" d="M0,500 Q250,400 500,500 T1000,500" />
+    <path class="yarn-loop" d="M0,700 Q250,600 500,700 T1000,700" />
+    <path class="yarn-loop" d="M0,900 Q250,800 500,900 T1000,900" />
+    <path class="yarn-loop" d="M0,1100 Q250,1000 500,1100 T1000,1100" />
+    <path class="yarn-loop" d="M0,1300 Q250,1200 500,1300 T1000,1300" />
+    <path class="yarn-loop" d="M0,1500 Q250,1400 500,1500 T1000,1500" />
+    <path class="yarn-loop" d="M0,1700 Q250,1600 500,1700 T1000,1700" />
+    <path class="yarn-loop" d="M0,1900 Q250,1800 500,1900 T1000,1900" />
+    <path class="yarn-loop" d="M0,2100 Q250,2000 500,2100 T1000,2100" />
+    <path class="yarn-loop" d="M0,2300 Q250,2200 500,2300 T1000,2300" />
+    <path class="yarn-loop" d="M0,2500 Q250,2400 500,2500 T1000,2500" />
+    <path class="yarn-loop" d="M0,2700 Q250,2600 500,2700 T1000,2700" />
+    <path class="yarn-loop" d="M0,2900 Q250,2800 500,2900 T1000,2900" />
+    <path class="yarn-loop" d="M0,3100 Q250,3000 500,3100 T1000,3100" />
+    <path class="yarn-loop" d="M0,3300 Q250,3200 500,3300 T1000,3300" />
+    <path class="yarn-loop" d="M0,3500 Q250,3400 500,3500 T1000,3500" />
+  </svg>
+</div>
+
+<main class="paragraphs">
+    <h1>
+        "As we offer a range like no one, <br>
+        Those yarns and threads are meant to be woven." <br>
+        - LUCKY CREATIONS🧶
+    </h1>
+    <p>
+        I still remember the time of my childhood when I used to learn crochet from my mother. Sometimes, a sweet
+        smile of perfection, a brow for improvement on other days...and those were the days when my art was moulded.
+        Years have passed, cut to now, when I was making so many things, exploring so many designs that one day,
+        it struck me to present the range of the art before all of you. The site doesn't just exhibit products, it
+        stands as a testament to 4 decades of experience of beautification of the craft.
+        <br>
+        <br>
+        Please check out the handmade and hand-picked range of crochet products from the catalogue. Would feel delighted
+        to have you, not just as a customer but a companion in our journey!
+        <br>
+        <br>
+        Thank you for your time.
+        <br>
+        <br>
+        With regards,
+        <br>
+        Team, Lucky Creations.
+    </main>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("dropdown-menu").classList.toggle("hidden");
+    document.getElementById("backdrop").classList.toggle("hidden");
+  }
+
+  function closeMenu() {
+    document.getElementById("dropdown-menu").classList.add("hidden");
+    document.getElementById("backdrop").classList.add("hidden");
+  }
+</script>
+
+</body>
+
+</html>

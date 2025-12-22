@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.delivery-bar {
+    margin-top: -40px;
+    font-size: 26.56px;
+    background-color: #a46e9d;
+    color: #ede8d8;
+    position: fixed;
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+}
+
+.delivery-bar a {
+    color: #ede8d8
+}
+
+@media (max-width: 575px) {
+    .delivery-bar {
+        font-size: 20.02px;
+    }
+}
+
+@media (max-width: 528px) {
+    .delivery-bar {
+        font-size: 20.02px;
+    }
+}
+
+@media (max-width: 448px) {
+    .delivery-bar {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 364px) {
+    .delivery-bar {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 321px) {
+/* .delivery-bar {
+    margin-top: 45px;
+} */
+}

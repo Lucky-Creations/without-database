@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Lucky Creations: Tricolour</title>
+    <link rel="icon" type="image/png" href="../media/centerpiece-main.png">
+    <link rel="stylesheet" type="text/css" href="../css-files/everywhere.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/delivery.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/products.css"/>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+
+<body>
+<div class="header"> <!--Beginning of the header-->
+    <div class="left-section">
+      <div class="hamburger-icon-container">
+        <picture>
+          <source srcset="../media/hamburger-icon.webp" type="image/webp">
+          <img class="hamburger-icon"
+               alt="toggle-icon"
+               src="../media/hamburger-icon.png"
+               width="24" height="24"
+               decoding="async"
+               onclick="toggleMenu()">
+        </picture>
+      </div>
+
+      <div class="header-logo-container">
+        <!-- Use a relative link to avoid GitHub Pages subpath issues -->
+        <a rel="website" href="../index.html">
+          <picture>
+            <source srcset="../media/upscale.webp" type="image/webp">
+            <img class="header-logo"
+                 alt="the-logo"
+                 src="../media/upscale.png"
+                 width="756" height="251"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async">
+          </picture>
+        </a>
+      </div>
+    </div>
+
+    <div class="middle-section">
+      <div class="page-title-container">
+        <hr class="top-line"> <!-- Top line -->
+        <div class="page-title">Tricolour</div>
+        <hr class="bottom-line"> <!-- Bottom line -->
+      </div>
+    </div>
+
+    <div class="right-section">
+      Complete <br> Catalogue
+    </div>
+  </div> <!--Ending of the header-->
+
+<div id="dropdown-menu" class="dropdown hidden">
+  <a href="about-us.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<div id="backdrop" class="backdrop hidden" onclick="closeMenu()"></div>
+
+    <div class="delivery-bar"> <!--Beginning of the delivery bar-->
+        <marquee>
+            Pan-India Delivery Available. Contact &#9742; +91 8169341750 &#9679; &#9993;
+            <a href="mailto:luckycreations.crochet@gmail.com?subject=Inquiry%20About%20Catalogue">
+            luckycreations.crochet@gmail.com
+            </a>
+        </marquee>
+</div> <!--Ending of the delivery bar-->
+
+  <main id="product-container"></main>
+
+<script>
+fetch('../json-files/tricolour.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('product-container');
+    if (!container || !Array.isArray(data)) return;
+
+    if (!Array.isArray(data) || data.length === 0) {
+    container.innerHTML = '<p class="empty">No products available right now.</p>';
+    return;
+    }
+
+    const toBase = f => (f || '').trim().replace(/\.(webp|png|jpe?g|avif)$/i, '');
+    const enc = s => encodeURIComponent(s);
+
+    data.forEach(item => {
+      const name  = item.name  || 'Item';
+      const size  = item.size  || '';
+      const rate  = item.rate  || '';
+      const file  = (item.image || '').trim();          // e.g., "earrings-main.png"
+      const base  = toBase(file);                       // "earrings-main"
+
+      // Build URLs with per-segment encoding to handle spaces/special chars
+      const webpUrl = `../products/tricolour/${enc(base)}.webp`;
+      const pngUrl  = `../products/tricolour/${enc(file)}`;
+
+      // Optional intrinsic size support if you add width/height in JSON
+      const w = item.width  || '';
+      const h = item.height || '';
+
+      const card = document.createElement('div');
+      card.className = 'product-card';
+
+      let badge = null;
+      if (item.bestseller) {
+        badge = document.createElement('div');
+        badge.className = 'bestseller-badge';
+        badge.textContent = 'Bestseller';
+      }
+
+      // Picture element: WebP + fallback
+      const picture = document.createElement('picture');
+
+      const source = document.createElement('source');
+      source.type = 'image/webp';
+      source.srcset = webpUrl;               // single candidate, no descriptors
+      picture.appendChild(source);
+
+      const img = document.createElement('img');
+      img.src = pngUrl;                      // fallback to PNG/JPG
+      img.alt = name;
+      if (w && h) { img.width = w; img.height = h; } // keeps layout stable when provided
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      picture.appendChild(img);
+
+      card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return; // spare WhatsApp link
+
+      const modal = document.getElementById('image-modal');
+      const modalImg = document.getElementById('modal-img');
+      const caption = document.getElementById('caption-name');
+
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      caption.textContent = name;
+
+      document.querySelector('.close').onclick = () => {
+          modal.style.display = "none";
+        };
+      });
+
+      // Details
+      const pName = document.createElement('p');
+      pName.innerHTML = `<strong>Name:</strong> ${name}`;
+
+      const pSize = document.createElement('p');
+      pSize.innerHTML = `<strong>Size:</strong> ${size}`;
+
+      const pRate = document.createElement('p');
+      pRate.innerHTML = `<strong>Price:</strong> ${rate}`;
+
+      const a = document.createElement('a');
+      const msg = item.whatsapp || `Hi! I'm interested in the ${name} from Lucky Creations.`;
+      a.href = `https://wa.me/918169341750?text=${encodeURIComponent(msg)}`;
+      a.target = '_blank';
+      a.textContent = 'Purchase Design on WhatsApp';
+
+      a.rel = 'noopener'; 
+      a.setAttribute('aria-label', `Purchase ${name} on WhatsApp`);
+
+      // Assemble
+      card.appendChild(picture);
+      if (badge){
+        card.insertBefore(badge, picture);
+      }
+      card.appendChild(pName);
+      if (size){
+        card.appendChild(pSize);
+      }
+      card.appendChild(pRate);
+      card.appendChild(a);
+      container.appendChild(card);
+    });
+  })
+  .catch(err => {
+  const container = document.getElementById('product-container');
+  if (container) {
+    container.innerHTML = '<p class="error">Loading products soon! Please try again later.</p>';
+  }
+  console.error('Error loading tricolour:', err);
+  });
+
+</script>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("dropdown-menu").classList.toggle("hidden");
+    document.getElementById("backdrop").classList.toggle("hidden");
+  }
+
+  function closeMenu() {
+    document.getElementById("dropdown-menu").classList.add("hidden");
+    document.getElementById("backdrop").classList.add("hidden");
+  }
+</script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+  import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+  import { getDatabase, ref, runTransaction, set } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAvWlnAUx3hFEkksLzvTTnUWsn90OVPqFI",
+    authDomain: "lph-server-website.firebaseapp.com",
+    databaseURL: "https://lph-server-website-default-rtdb.firebaseio.com",
+    projectId: "lph-server-website",
+    storageBucket: "lph-server-website.firebasestorage.app",
+    messagingSenderId: "200401032111",
+    appId: "1:200401032111:web:d0ccd06a0415e97657955a",
+    measurementId: "G-9B9SR4TZVY"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase(app);
+
+  logEvent(analytics, "site_visit", { source: "tricolour_page" });
+
+  window.addEventListener("DOMContentLoaded", () => {
+  runTransaction(ref(db, "crochet_stats/tricolour_visits"), n => (n || 0) + 1);
+});
+
+</script>
+
+<!-- Image Modal -->
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption-name"></div>
+  </div>
+
+</body>
+
+</html>

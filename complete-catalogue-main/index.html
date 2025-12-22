@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Lucky Creations: Home Page</title>
+
+  <!-- Use a PNG/ICO favicon with matching type for broad support -->
+  <link rel="icon" type="image/png" href="./media/centerpiece-main.png">
+
+  <!-- Existing stylesheets -->
+  <link rel="stylesheet" href="./css-files/everywhere.css"/>
+  <link rel="stylesheet" href="./css-files/header.css"/>
+  <link rel="stylesheet" href="./css-files/delivery.css"/>
+  <link rel="stylesheet" href="./css-files/index.css"/>
+  <link rel="stylesheet" href="./css-files/products.css"/>
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <div class="header"> <!--Beginning of the header-->
+    <div class="left-section">
+      <div class="hamburger-icon-container">
+        <picture>
+          <source srcset="./media/hamburger-icon.webp" type="image/webp">
+          <img class="hamburger-icon"
+               alt="toggle-icon"
+               src="./media/hamburger-icon.png"
+               width="24" height="24"
+               decoding="async"
+               onclick="toggleMenu()">
+        </picture>
+      </div>
+
+      <div class="header-logo-container">
+        <!-- Use a relative link to avoid GitHub Pages subpath issues -->
+        <a rel="website" href="index.html">
+          <picture>
+            <source srcset="./media/upscale.webp" type="image/webp">
+            <img class="header-logo"
+                 alt="the-logo"
+                 src="./media/upscale.png"
+                 width="756" height="251"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async">
+          </picture>
+        </a>
+      </div>
+    </div>
+
+    <div class="middle-section">
+      <div class="page-title-container">
+        <hr class="top-line"> <!-- Top line -->
+        <div class="page-title">Home Page</div>
+        <hr class="bottom-line"> <!-- Bottom line -->
+      </div>
+    </div>
+
+    <div class="right-section">
+      Complete <br> Catalogue
+    </div>
+  </div> <!--Ending of the header-->
+
+  <div id="dropdown-menu" class="dropdown hidden">
+    <a href="./html-files/about-us.html">About Us</a>
+    <a href="./html-files/contact.html">Contact Us</a>
+  </div>
+
+  <div id="backdrop" class="backdrop hidden" onclick="closeMenu()"></div>
+
+  <div class="delivery-bar"> <!--Beginning of the delivery bar-->
+    <marquee>
+      Pan-India Delivery Available. Contact &#9742; +91 8169341750 &#9679; &#9993;
+      <a href="mailto:luckycreations.crochet@gmail.com?subject=Inquiry%20About%20Catalogue">
+        luckycreations.crochet@gmail.com
+      </a>
+    </marquee>
+  </div> <!--Ending of the delivery bar-->
+
+  <div class="hero-image-container"> <!--Beginning of the hero image-->
+    <div class="hero-image-1">
+      <picture>
+        <source srcset="./media/hero-1.webp" type="image/webp">
+        <img src="./media/hero-1.png"
+             alt="Hero Top"
+             width="1265" height="646"
+             loading="eager"
+             fetchpriority="high"
+             decoding="async">
+      </picture>
+    </div>
+
+    <div class="tagline">
+      <p>Wear It, Style It, Flaunt It!</p>
+    </div>
+
+    <div class="hero-image-2">
+      <picture>
+        <source srcset="./media/hero-2.webp" type="image/webp">
+        <img src="./media/hero-2.png"
+             alt="Hero Bottom"
+             width="1265" height="640"
+             loading="lazy"
+             decoding="async">
+      </picture>
+    </div>
+  </div> <!--Ending of the hero image-->
+
+  <div class="intro-line">Showcasing Our Products Gallery :</div>
+
+  <main class="products-category"></main>
+
+<script>
+fetch('./json-files/index.json')
+  .then(r => r.json())
+  .then(categories => {
+    const container = document.querySelector('.products-category');
+    if (!container) return;
+
+    // Empty or malformed data => friendly message
+    if (!Array.isArray(categories) || categories.length === 0) {
+      container.innerHTML = '<p class="empty">No categories available right now.</p>';
+      return;
+    }
+
+    categories.forEach(cat => {
+      const title = cat.title || 'Item';
+      const desc  = cat.description || '';
+      const link  = (cat.link || '').trim();
+      const image = (cat.image || '').trim();                 // e.g., "Keychain Main.png"
+      const base  = image.replace(/\.(avif|webp|png|jpe?g)$/i, ''); // "Keychain Main"
+
+      // Encode only filename segments
+      const encImage = encodeURIComponent(image);             // "Keychain%20Main.png"
+      const encBase  = encodeURIComponent(base);              // "Keychain%20Main"
+
+      const a = document.createElement('a');
+      a.href = `./html-files/${link}`;
+      a.setAttribute('aria-label', title);
+
+      const card = document.createElement('div');
+      card.className = 'product-card';
+
+      const titleDiv = document.createElement('div');
+      titleDiv.className = 'product-title';
+      titleDiv.textContent = title;
+
+      const imgWrap = document.createElement('div');
+      imgWrap.className = 'product-image';
+
+      const picture = document.createElement('picture');
+
+      const webp = document.createElement('source');
+      webp.type = 'image/webp';
+      webp.srcset = `./media/${encBase}.webp`;                // single URL, no descriptor
+      picture.appendChild(webp);
+
+      const img = document.createElement('img');
+      img.src = `./media/${encImage}`;                        // PNG/JPG fallback
+      img.alt = title;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      picture.appendChild(img);
+
+      imgWrap.appendChild(picture);
+
+      const descDiv = document.createElement('div');
+      descDiv.className = 'product-description';
+      descDiv.textContent = desc;
+
+      card.appendChild(titleDiv);
+      card.appendChild(imgWrap);
+      card.appendChild(descDiv);
+      a.appendChild(card);
+      container.appendChild(a);
+    });
+  })
+  .catch(err => {
+    const container = document.querySelector('.products-category');
+    if (container) {
+      container.innerHTML = '<p class="error">Loading products soon! Please try again later and kindly notify this issue on the above number or email to help us improve. Thank You!</p>';
+    }
+    console.error('Error loading categories:', err);
+  });
+  
+</script>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("dropdown-menu").classList.toggle("hidden");
+      document.getElementById("backdrop").classList.toggle("hidden");
+    }
+    function closeMenu() {
+      document.getElementById("dropdown-menu").classList.add("hidden");
+      document.getElementById("backdrop").classList.add("hidden");
+    }
+  </script>
+
+  <!-- Optional: wrap Firebase init for resilience; keep as-is if working -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+    import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+    import { getDatabase, ref, runTransaction } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAvWlnAUx3hFEkksLzvTTnUWsn90OVPqFI",
+      authDomain: "lph-server-website.firebaseapp.com",
+      databaseURL: "https://lph-server-website-default-rtdb.firebaseio.com",
+      projectId: "lph-server-website",
+      storageBucket: "lph-server-website.firebasestorage.app",
+      messagingSenderId: "200401032111",
+      appId: "1:200401032111:web:d0ccd06a0415e97657955a",
+      measurementId: "G-9B9SR4TZVY"
+    };
+
+    window.addEventListener("DOMContentLoaded", () => {
+      try {
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        logEvent(analytics, "site_visit", { source: "home_page" });
+        const db = getDatabase(app);
+        runTransaction(ref(db, "crochet_stats/crochet_visits"), n => (n || 0) + 1);
+      } catch (e) {
+        console.warn("Firebase init error:", e);
+      }
+    });
+  </script>
+</body>
+</html>

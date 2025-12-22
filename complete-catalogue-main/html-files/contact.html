@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Lucky Creations: Contact Us</title>
+    <link rel="icon" type="image/png" href="../media/centerpiece-main.png">
+    <link rel="stylesheet" type="text/css" href="../css-files/everywhere.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/delivery.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/contact.css"/>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+<div class="header"> <!--Beginning of the header-->
+    <div class="left-section">
+      <div class="hamburger-icon-container">
+        <picture>
+          <source srcset="../media/hamburger-icon.webp" type="image/webp">
+          <img class="hamburger-icon"
+               alt="toggle-icon"
+               src="../media/hamburger-icon.png"
+               width="24" height="24"
+               decoding="async"
+               onclick="toggleMenu()">
+        </picture>
+      </div>
+
+      <div class="header-logo-container">
+        <!-- Use a relative link to avoid GitHub Pages subpath issues -->
+        <a rel="website" href="../index.html">
+          <picture>
+            <source srcset="../media/upscale.webp" type="image/webp">
+            <img class="header-logo"
+                 alt="the-logo"
+                 src="../media/upscale.png"
+                 width="756" height="251"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async">
+          </picture>
+        </a>
+      </div>
+    </div>
+
+    <div class="middle-section">
+      <div class="page-title-container">
+        <hr class="top-line"> <!-- Top line -->
+        <div class="page-title">Contact Us</div>
+        <hr class="bottom-line"> <!-- Bottom line -->
+      </div>
+    </div>
+
+    <div class="right-section">
+      Complete <br> Catalogue
+    </div>
+  </div> <!--Ending of the header-->
+
+<div id="dropdown-menu" class="dropdown hidden">
+  <a href="about-us.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<div id="backdrop" class="backdrop hidden" onclick="closeMenu()"></div>
+
+    <div class="delivery-bar"> <!--Beginning of the delivery bar-->
+        <marquee>
+            Pan-India Delivery Available. Contact &#9742; +91 8169341750 &#9679; &#9993;
+            <a href="mailto:luckycreations.crochet@gmail.com?subject=Inquiry%20About%20Catalogue">
+            luckycreations.crochet@gmail.com
+            </a>
+        </marquee>
+</div> <!--Ending of the delivery bar-->
+
+
+<main class="contactContainer">
+<form action="https://api.web3forms.com/submit" method="POST" class="contactLeft">
+<div class="contactLeftTitle">
+<h2>Weave Your Words</h2>
+<hr>
+</div>
+<input type="hidden" name="access_key" value="9f130c4b-e29c-4b12-a06d-cf1be6bb3681">
+<input type="text" name="name" placeholder="Your Name" class="contactInputs" required>
+<input type="email" name="email" placeholder="Your Email" class="contactInputs" required>
+<textarea name="message" placeholder="Your Message" class="contactInputs" required></textarea>
+<button type="submit">Submit</button>
+</form>
+
+</main>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("dropdown-menu").classList.toggle("hidden");
+    document.getElementById("backdrop").classList.toggle("hidden");
+  }
+
+  function closeMenu() {
+    document.getElementById("dropdown-menu").classList.add("hidden");
+    document.getElementById("backdrop").classList.add("hidden");
+  }
+</script>
+
+</body>
+</html>
