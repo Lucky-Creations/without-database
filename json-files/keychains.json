@@ -25,23 +25,26 @@
   {
     "name": "3D Fuschia Keychain",
     "rate": "₹60",
+    "new": true,
     "image": "3d-fuschia.png",
     "category": "Keychains",
     "whatsapp": "Hi! I'm interested in the 3D Fuschia Keychain from Lucky Creations."
   },
   {
-    "name": "Baby Carrot Keychain",
-    "rate": "₹65",
-    "image": "baby-carrot.jpeg",
+    "name": "Flower & Lush Keychain",
+    "rate": "₹45",
+    "new": true,
+    "image": "flower-lush.png",
     "category": "Keychains",
-    "whatsapp": "Hi! I'm interested in the Baby Carrot Keychain from Lucky Creations."
+    "whatsapp": "Hi! I'm interested in the Flower & Lush Keychain from Lucky Creations."
   },
   {
-    "name": "Beaded Flower With Popcorns Keychain",
-    "rate": "₹70",
-    "image": "beaded-flower-with-popcorns.jpeg",
+    "name": "Pearls' Umbrella Keychain",
+    "rate": "₹60",
+    "new": true,
+    "image": "pearls-umbrella.png",
     "category": "Keychains",
-    "whatsapp": "Hi! I'm interested in the Beaded Flower With Popcorns Keychain from Lucky Creations."
+    "whatsapp": "Hi! I'm interested in the Pearls' Umbrella Keychain from Lucky Creations."
   },
   {
     "name": "Bunch Of Grapes Keychain",
@@ -81,8 +84,16 @@
     "whatsapp": "Hi! I'm interested in the Coin Pouch Keychain from Lucky Creations."
   },
   {
+    "name": "Beaded Flower With Popcorns Keychain",
+    "rate": "₹70",
+    "image": "beaded-flower-with-popcorns.jpeg",
+    "category": "Keychains",
+    "whatsapp": "Hi! I'm interested in the Beaded Flower With Popcorns Keychain from Lucky Creations."
+  },
+  {
     "name": "Multilayered Flower Keychain",
     "rate": "₹100",
+    "new": true,
     "image": "multilayered-flower.png",
     "category": "Keychains",
     "whatsapp": "Hi! I'm interested in the Multilayered Flower Keychain from Lucky Creations."
@@ -116,6 +127,13 @@
     "whatsapp": "Hi! I'm interested in the Eastern Sunrise Keychain from Lucky Creations."
   },
   {
+    "name": "Baby Carrot Keychain",
+    "rate": "₹65",
+    "image": "baby-carrot.jpeg",
+    "category": "Keychains",
+    "whatsapp": "Hi! I'm interested in the Baby Carrot Keychain from Lucky Creations."
+  },
+  {
     "name": "Elephant Keychain",
     "rate": "₹55",
     "image": "elephant.jpeg",
@@ -139,6 +157,7 @@
   {
     "name": "Heart Armour Keychain 2",
     "rate": "₹90",
+    "new": true,
     "image": "heart-armour-2.png",
     "category": "Keychains",
     "whatsapp": "Hi! I'm interested in the Heart Armour Keychain 2 from Lucky Creations."
