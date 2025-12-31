@@ -9,12 +9,31 @@
     "whatsapp": "Hi! I'm interested in the Doily: Flowers In All Directions from Lucky Creations."
   },
   {
-    "name": "Cotton Candy Doily",
-    "size": "23 cms",
-    "rate": "₹110",
-    "image": "cotton-candy.png",
+    "name": "Vibrant Illusion Doily",
+    "size": "29 cms",
+    "rate": "₹250",
+    "new": true,
+    "image": "vibrant-illusion.png",
     "category": "Doily",
-    "whatsapp": "Hi! I'm interested in the Cotton Candy Doily from Lucky Creations."
+    "whatsapp": "Hi! I'm interested in the Vibrant Illusion Doily from Lucky Creations."
+  },
+  {
+    "name": "Sweet Corn Doily",
+    "size": "20*20 cms",
+    "rate": "₹125",
+    "new": true,
+    "image": "sweet-corn.png",
+    "category": "Doily",
+    "whatsapp": "Hi! I'm interested in the Sweet Corn Doily from Lucky Creations."
+  },
+  {
+    "name": "Blackberry Cheesecake Doily",
+    "size": "24 cms",
+    "rate": "₹200",
+    "new": true,
+    "image": "blackberry-cheesecake.png",
+    "category": "Doily",
+    "whatsapp": "Hi! I'm interested in the Blackberry Cheesecake Doily from Lucky Creations."
   },
   {
     "name": "Blue Net Flower Doily",
@@ -40,6 +59,14 @@
     "image": "light-peach-heart.jpeg",
     "category": "Doily",
     "whatsapp": "Hi! I'm interested in the Light Peach Heart Doily from Lucky Creations."
+  },
+  {
+    "name": "Cotton Candy Doily",
+    "size": "23 cms",
+    "rate": "₹110",
+    "image": "cotton-candy.png",
+    "category": "Doily",
+    "whatsapp": "Hi! I'm interested in the Cotton Candy Doily from Lucky Creations."
   },
   {
     "name": "Green Disk Doily",
