@@ -21,6 +21,7 @@
     "name": "Pink Chime Earrings",
     "size": "8 cms",
     "rate": "₹120",
+    "new": true,
     "image": "pink-chime.png",
     "category": "Earrings",
     "whatsapp": "Hi! I'm interested in the Pink Chime Earrings from Lucky Creations."
@@ -37,6 +38,7 @@
     "name": "Golden Flower Earrings",
     "size": "8.5 cms",
     "rate": "₹130",
+    "new": true,
     "image": "golden-flower.png",
     "category": "Earrings",
     "whatsapp": "Hi! I'm interested in the Golden Flower Earrings from Lucky Creations."
@@ -53,6 +55,7 @@
     "name": "Primary Camouflage Earrings",
     "size": "8 cms",
     "rate": "₹100",
+    "new": true,
     "image": "primary-camouflage.png",
     "category": "Earrings",
     "whatsapp": "Hi! I'm interested in the Primary Camouflage Earrings from Lucky Creations."
@@ -85,6 +88,7 @@
     "name": "Peach Brush Earrings",
     "size": "5 cms",
     "rate": "₹70",
+    "new": true,
     "image": "peach-brush.png",
     "category": "Earrings",
     "whatsapp": "Hi! I'm interested in the Peach Brush Earrings from Lucky Creations."
@@ -110,6 +114,7 @@
     "name": "Skyline Earrings",
     "size": "8 cms",
     "rate": "₹100",
+    "new": true,
     "image": "skyline.png",
     "category": "Earrings",
     "whatsapp": "Hi! I'm interested in the Skyline Earrings from Lucky Creations."
