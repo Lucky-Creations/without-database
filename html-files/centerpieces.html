@@ -117,6 +117,13 @@ fetch('../json-files/centerpieces.json')
         badge.textContent = 'Bestseller';
       }
 
+      let mark = null;
+      if (item.new) {
+        mark = document.createElement('div');
+        mark.className = 'new-arrival';
+        mark.textContent = 'New Arrival';
+      }
+
       // Picture element: WebP + fallback
       const picture = document.createElement('picture');
 
@@ -173,6 +180,9 @@ fetch('../json-files/centerpieces.json')
       if (badge){
         card.insertBefore(badge, picture);
       }
+      if (mark){
+        card.insertBefore(mark, picture);
+      }
       card.appendChild(pName);
       card.appendChild(pSize);
       card.appendChild(pRate);
@@ -201,6 +211,14 @@ fetch('../json-files/centerpieces.json')
     <img class="modal-content" id="modal-img">
     <div id="caption-name"></div>
   </div>
+
+  <footer class="note-footer">
+  <hr>
+  <div class="footer-text">
+    The colours may or may not vary depending on their availability.<br>
+    Please confirm at the time of purchase.
+  </div>
+  </footer>
 
 </body>
 
