@@ -87,6 +87,7 @@
     "name": "Sand Dune Bag",
     "size": "18*9.5 cms",
     "rate": "₹230",
+    "new": true,
     "image": "rd-11.png",
     "category": "Mini Bags",
     "whatsapp": "Hi! I'm interested in the Sand Dune Bag from Lucky Creations."
@@ -95,6 +96,7 @@
     "name": "Rising Sun Bag",
     "size": "18*9.5 cms",
     "rate": "₹250",
+    "new": true,
     "image": "rd-12.png",
     "category": "Mini Bags",
     "whatsapp": "Hi! I'm interested in the Rising Sun Bag from Lucky Creations."
@@ -103,6 +105,7 @@
     "name": "Grassland Bag",
     "size": "18*9.5 cms",
     "rate": "₹250",
+    "new": true,
     "image": "rd-13.png",
     "category": "Mini Bags",
     "whatsapp": "Hi! I'm interested in the Grassland Bag from Lucky Creations."
@@ -111,6 +114,7 @@
     "name": "Multicolour Mini Bag",
     "size": "18*9 cms",
     "rate": "₹130",
+    "new": true,
     "image": "multicolour-mini.png",
     "category": "Mini Bags",
     "whatsapp": "Hi! I'm interested in the Multicolor Mini Bag from Lucky Creations."
