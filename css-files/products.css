@@ -142,6 +142,27 @@
   color: #442a6e;
 }
 
+.new-arrival {
+  position: absolute;
+  top: 15px;
+  left: -45px;
+  background: linear-gradient(45deg, #33bf00, #ffffff);
+  background-size: 300% 300%;
+  color: #000000;
+  padding: 5px 40px;
+  font-size: 12px;
+  font-weight: bold;
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  pointer-events: none;
+  animation: gradientShift 2s ease infinite;
+}
+
+.product-card:hover .new-arrival {
+  background: #f7f7f2;
+  color: #442a6e;
+}
+
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -183,6 +204,24 @@
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.note-footer {
+  position: relative;
+  bottom: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  z-index: 50;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+}
+
+.footer-text {
+  font-style: italic;
 }
 
 #product-container .error {
