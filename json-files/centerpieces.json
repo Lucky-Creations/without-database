@@ -8,14 +8,7 @@
     "category": "Centerpiece",
     "whatsapp": "Hi! I'm interested in the Purple Mud Pie Centerpiece from Lucky Creations."
   },
-  {
-    "name": "Santa's Boulevard Centerpiece",
-    "size": "45 cms",
-    "rate": "₹475",
-    "image": "christmas.png",
-    "category": "Centerpiece",
-    "whatsapp": "Hi! I'm interested in the Santa's Boulevard Centerpiece from Lucky Creations."
-  },
+  
   {
     "name": "Multichrome Marvel Centerpiece",
     "size": "47 cms",
@@ -29,6 +22,7 @@
     "name": "Figure-O-Fish Centerpiece",
     "size": "60*27 cms",
     "rate": "₹325",
+    "new": true,
     "image": "figure-o-fish.png",
     "category": "Centerpiece",
     "whatsapp": "Hi! I'm interested in the Figure-O-Fish Centerpiece from Lucky Creations."
@@ -54,9 +48,28 @@
     "name": "Purple Passion Centerpiece",
     "size": "43 cms",
     "rate": "₹375",
+    "new": true,
     "image": "purple-passion.png",
     "category": "Centerpiece",
     "whatsapp": "Hi! I'm interested in the Purple Passion Centerpiece from Lucky Creations."
+  },
+  {
+    "name": "Santa's Boulevard Centerpiece",
+    "size": "45 cms",
+    "rate": "₹475",
+    "new": true,
+    "image": "christmas.png",
+    "category": "Centerpiece",
+    "whatsapp": "Hi! I'm interested in the Santa's Boulevard Centerpiece from Lucky Creations."
+  },
+  {
+    "name": "Purple Crown Centerpiece",
+    "size": "37 cms",
+    "rate": "₹325",
+    "new": true,
+    "image": "purple-crown.png",
+    "category": "Centerpiece",
+    "whatsapp": "Hi! I'm interested in the Purple Crown Centerpiece from Lucky Creations."
   },
   {
     "name": "Green Web Octagon Centerpiece",
@@ -70,6 +83,7 @@
     "name": "Skyline Centerpiece",
     "size": "34 cms",
     "rate": "₹275",
+    "new": true,
     "image": "skyline.png",
     "category": "Centerpiece",
     "whatsapp": "Hi! I'm interested in the Skyline Centerpiece from Lucky Creations."
@@ -78,6 +92,7 @@
     "name": "Rangoli Centerpiece",
     "size": "40 cms",
     "rate": "₹350",
+    "new": true,
     "image": "rangoli.png",
     "category": "Centerpiece",
     "whatsapp": "Hi! I'm interested in the Rangoli Centerpiece from Lucky Creations."
@@ -94,6 +109,7 @@
     "name": "Eastern Sunrise Centerpiece",
     "size": "47 cms",
     "rate": "₹400",
+    "new": true,
     "image": "eastern-sunrise.png",
     "category": "Centerpiece",
     "whatsapp": "Hi! I'm interested in the Eastern Sunrise Centerpiece from Lucky Creations."
@@ -110,6 +126,7 @@
     "name": "Pink Flower Garden Centerpiece",
     "size": "36 cms",
     "rate": "₹330",
+    "new": true,
     "image": "pink-flower-garden.png",
     "category": "Centerpiece",
     "whatsapp": "Hi! I'm interested in the Pink Flower Garden Centerpiece from Lucky Creations."
@@ -126,6 +143,7 @@
     "name": "Blooming Flowers Centerpiece",
     "size": "50 cms",
     "rate": "₹440",
+    "new": true,
     "image": "blooming-flowers.png",
     "category": "Centerpiece",
     "whatsapp": "Hi! I'm interested in the Blooming Flowers Centerpiece from Lucky Creations."
@@ -232,6 +250,7 @@
     "name": "Multicolour Centerpiece 6",
     "size": "39 cms",
     "rate": "₹400",
+    "new": true,
     "image": "multicolour-6.png",
     "category": "Centerpiece",
     "whatsapp": "Hi! I'm interested in the Multicolour Centerpiece 6 from Lucky Creations."
@@ -266,6 +285,7 @@
     "name": "Watermelon 3 Centerpiece",
     "size": "35 cms",
     "rate": "₹280",
+    "new": true,
     "image": "watermelon-3.png",
     "category": "Centerpiece",
     "whatsapp": "Hi! I'm interested in the Watermelon 3 Centerpiece from Lucky Creations."
