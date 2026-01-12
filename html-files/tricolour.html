@@ -117,6 +117,13 @@ fetch('../json-files/tricolour.json')
         badge.textContent = 'Bestseller';
       }
 
+      let mark = null;
+      if (item.new) {
+        mark = document.createElement('div');
+        mark.className = 'new-arrival';
+        mark.textContent = 'New Arrival';
+      }
+
       // Picture element: WebP + fallback
       const picture = document.createElement('picture');
 
@@ -172,6 +179,9 @@ fetch('../json-files/tricolour.json')
       card.appendChild(picture);
       if (badge){
         card.insertBefore(badge, picture);
+      }
+      if (mark){
+        card.insertBefore(mark, picture);
       }
       card.appendChild(pName);
       if (size){
