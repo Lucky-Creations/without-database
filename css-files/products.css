@@ -169,6 +169,37 @@
   100% { background-position: 0% 50%; }
 }
 
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 6px;
+}
+
+.new-price {
+  font-weight: bold;
+  color: #222;
+  margin-right: 6px;
+}
+
+.discount-label {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  animation: floatUpDown 1s ease-in infinite;
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-2.5px); }
+  50% { transform: translateY(0px); }
+  75% { transform: translateY(2.5px); }
+  100% { transform: translateY(0); }
+}
+
 .modal {
   display: none; /* hidden by default */
   position: fixed;
