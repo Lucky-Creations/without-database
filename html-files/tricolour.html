@@ -166,6 +166,21 @@ fetch('../json-files/tricolour.json')
       const pRate = document.createElement('p');
       pRate.innerHTML = `<strong>Price:</strong> ${rate}`;
 
+      if (item.discount) {
+        const cleanRate = String(item.rate).replace(/[^\d.]/g, '');
+        const original = parseFloat(cleanRate);
+        const discounted = Math.round(original * (1 - item.discount / 100));
+
+        pRate.innerHTML = `
+          <strong>Price:</strong>
+          <span class="old-price">₹${original}</span>
+          <span class="new-price">₹${discounted}</span>
+          <span class="discount-label">${item.discount}% OFF</span>
+        `;
+      } else {
+        pRate.innerHTML = `<strong>Price:</strong> ${item.rate}`;
+      }
+
       const a = document.createElement('a');
       const msg = item.whatsapp || `Hi! I'm interested in the ${name} from Lucky Creations.`;
       a.href = `https://wa.me/918169341750?text=${encodeURIComponent(msg)}`;
