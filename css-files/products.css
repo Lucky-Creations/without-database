@@ -181,6 +181,10 @@
   margin-right: 6px;
 }
 
+.product-card:hover .old-price, .product-card:hover  .new-price {
+  color: #f7f7f2;
+}
+
 .discount-label {
   background-color: #28a745;
   color: #fff;
