@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+/* Preventing dragging images in CSS */
+img { 
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
 body {
     margin: 0;
     padding-top: 140px;
