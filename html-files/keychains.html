@@ -14,7 +14,7 @@
     
 </head>
 
-<body>
+<body oncontextmenu="return false">
 <div class="header"> <!--Beginning of the header-->
     <div class="left-section">
       <div class="hamburger-icon-container">
@@ -25,7 +25,9 @@
                src="../media/hamburger-icon.png"
                width="24" height="24"
                decoding="async"
-               onclick="toggleMenu()">
+               onclick="toggleMenu()"
+               draggable="false"
+               ondragstart="return false;">
         </picture>
       </div>
 
@@ -40,7 +42,9 @@
                  width="756" height="251"
                  loading="eager"
                  fetchpriority="high"
-                 decoding="async">
+                 decoding="async"
+                 draggable="false"
+                 ondragstart="return false;">
           </picture>
         </a>
       </div>
@@ -95,14 +99,14 @@ fetch('../json-files/keychains.json')
     data.forEach(item => {
       const name  = item.name  || 'Item';
       const rate  = item.rate  || '';
-      const file  = (item.image || '').trim();          // e.g., "keychains-main.png"
-      const base  = toBase(file);                       // "keychains-main"
+      const file  = (item.image || '').trim(); // e.g., "keychains-main.png"
+      const base  = toBase(file); // "keychains-main"
 
       // Build URLs with per-segment encoding to handle spaces/special chars
       const webpUrl = `../products/keychains/${enc(base)}.webp`;
       const pngUrl  = `../products/keychains/${enc(file)}`;
 
-      // Optional intrinsic size support if you add width/height in JSON
+      // Optional intrinsic size support if width/height is added in JSON
       const w = item.width  || '';
       const h = item.height || '';
 
@@ -128,16 +132,20 @@ fetch('../json-files/keychains.json')
 
       const source = document.createElement('source');
       source.type = 'image/webp';
-      source.srcset = webpUrl;               // single candidate, no descriptors
+      source.srcset = webpUrl; // single candidate, no descriptors
       picture.appendChild(source);
 
       const img = document.createElement('img');
-      img.src = pngUrl;                      // fallback to PNG/JPG
+      img.src = pngUrl; // fallback to PNG/JPG
       img.alt = name;
       if (w && h) { img.width = w; img.height = h; } // keeps layout stable when provided
       img.loading = 'lazy';
       img.decoding = 'async';
       picture.appendChild(img);
+
+      // Preventing dragging images in HTML
+      img.setAttribute('draggable', 'false');
+      img.ondragstart = (e) => e.preventDefault();
 
       card.addEventListener('click', (e) => {
       if (e.target.closest('a')) return; // spare WhatsApp link
@@ -145,6 +153,11 @@ fetch('../json-files/keychains.json')
       const modal = document.getElementById('image-modal');
       const modalImg = document.getElementById('modal-img');
       const caption = document.getElementById('caption-name');
+      const copyright = document.getElementById('copyright-label');
+
+      // Preventing dragging images in HTML
+      modalImg.setAttribute('draggable', 'false');
+      modalImg.ondragstart = (e) => e.preventDefault();
 
       modal.style.display = "block";
       modalImg.src = img.src;
@@ -207,11 +220,64 @@ fetch('../json-files/keychains.json')
   }
 </script>
 
+<!-- Preventing right-clicking in Javascript embedded in HTML -->
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
+
+<!-- Preventing dragging images in Javascript embedded in HTML -->
+  <script>
+document.querySelectorAll('.header-logo').forEach(el => {
+  el.setAttribute('draggable', 'false');
+  el.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+  <script>
+document.querySelectorAll('.hamburger-icon').forEach(el => {
+  el.setAttribute('draggable', 'false');
+  el.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+  <script>
+document.addEventListener('dragstart', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
+</script>
+
+<!-- Disabling keys -->
+<script>
+  document.addEventListener('keydown', e => {
+  if (e.ctrlKey && ['s','u','i','p'].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+    alert("This shortcut is disabled to protect copyrighted content.");
+  }
+});
+</script>
+
+<!-- Discouraging screenshots -->
+<script>
+  document.addEventListener('keyup', e => {
+  if (e.key === 'PrintScreen' || e.key === 44) {
+    navigator.clipboard.writeText('Screenshots are discouraged due to copyright.');
+    alert("Screenshots are discouraged due to copyright.");
+    e.preventDefault();
+    setInterval(() => {
+      navigator.clipboard.writeText('Screenshots are discouraged due to copyright.');
+}, 1000);
+  }
+});
+</script>
+
 <!-- Image Modal -->
   <div id="image-modal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modal-img">
     <div id="caption-name"></div>
+    <div id="copyright-label">© 2025 Lucky Creations. All rights reserved.</div>
   </div>
 
   <footer class="note-footer">
