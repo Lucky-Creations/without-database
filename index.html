@@ -4,10 +4,10 @@
   <meta charset="utf-8"/>
   <title>Lucky Creations: Home Page</title>
 
-  <!-- Use a PNG/ICO favicon with matching type for broad support -->
+  <!-- PNG Favicon (Not Webp) -->
   <link rel="icon" type="image/png" href="./media/centerpiece-main.png">
 
-  <!-- Existing stylesheets -->
+  <!-- Stylesheets from folder 'css-files' -->
   <link rel="stylesheet" href="./css-files/everywhere.css"/>
   <link rel="stylesheet" href="./css-files/header.css"/>
   <link rel="stylesheet" href="./css-files/delivery.css"/>
@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body oncontextmenu="return false">
   <div class="header"> <!--Beginning of the header-->
     <div class="left-section">
       <div class="hamburger-icon-container">
@@ -30,12 +30,13 @@
                src="./media/hamburger-icon.png"
                width="24" height="24"
                decoding="async"
-               onclick="toggleMenu()">
+               onclick="toggleMenu()"
+               draggable="false"
+               ondragstart="return false;">
         </picture>
       </div>
 
       <div class="header-logo-container">
-        <!-- Use a relative link to avoid GitHub Pages subpath issues -->
         <a rel="website" href="index.html">
           <picture>
             <source srcset="./media/upscale.webp" type="image/webp">
@@ -45,7 +46,9 @@
                  width="756" height="251"
                  loading="eager"
                  fetchpriority="high"
-                 decoding="async">
+                 decoding="async"
+                 draggable="false"
+                 ondragstart="return false;">
           </picture>
         </a>
       </div>
@@ -89,7 +92,9 @@
              width="1265" height="646"
              loading="eager"
              fetchpriority="high"
-             decoding="async">
+             decoding="async"
+             draggable="false"
+             ondragstart="return false;">
       </picture>
     </div>
 
@@ -104,12 +109,14 @@
              alt="Hero Bottom"
              width="1265" height="640"
              loading="lazy"
-             decoding="async">
+             decoding="async"
+             draggable="false"
+             ondragstart="return false;">
       </picture>
     </div>
   </div> <!--Ending of the hero image-->
 
-  <div class="intro-line">Showcasing Our Handicrafts' Gallery :</div>
+  <div class="intro-line">Showcasing Our <b>Handicrafts</b> Gallery :</div>
 
   <main class="products-category"></main>
 
@@ -120,7 +127,7 @@ fetch('./json-files/index.json')
     const container = document.querySelector('.products-category');
     if (!container) return;
 
-    // Empty or malformed data => friendly message
+    // A warning message to prevent site from going wrong
     if (!Array.isArray(categories) || categories.length === 0) {
       container.innerHTML = '<p class="empty">No categories available right now.</p>';
       return;
@@ -130,12 +137,12 @@ fetch('./json-files/index.json')
       const title = cat.title || 'Item';
       const desc  = cat.description || '';
       const link  = (cat.link || '').trim();
-      const image = (cat.image || '').trim();                 // e.g., "Keychain Main.png"
-      const base  = image.replace(/\.(avif|webp|png|jpe?g)$/i, ''); // "Keychain Main"
+      const image = (cat.image || '').trim(); // e.g., "keychain-main.png"
+      const base  = image.replace(/\.(avif|webp|png|jpe?g)$/i, ''); // "keychain-main"
 
       // Encode only filename segments
-      const encImage = encodeURIComponent(image);             // "Keychain%20Main.png"
-      const encBase  = encodeURIComponent(base);              // "Keychain%20Main"
+      const encImage = encodeURIComponent(image);
+      const encBase  = encodeURIComponent(base);
 
       const a = document.createElement('a');
       a.href = `./html-files/${link}`;
@@ -155,15 +162,19 @@ fetch('./json-files/index.json')
 
       const webp = document.createElement('source');
       webp.type = 'image/webp';
-      webp.srcset = `./media/${encBase}.webp`;                // single URL, no descriptor
+      webp.srcset = `./media/${encBase}.webp`; // single URL, no descriptor
       picture.appendChild(webp);
 
       const img = document.createElement('img');
-      img.src = `./media/${encImage}`;                        // PNG/JPG fallback
+      img.src = `./media/${encImage}`; // PNG/JPG fallback
       img.alt = title;
       img.loading = 'lazy';
       img.decoding = 'async';
       picture.appendChild(img);
+
+      // Preventing dragging images in HTML
+      img.setAttribute('draggable', 'false');
+      img.ondragstart = (e) => e.preventDefault();
 
       imgWrap.appendChild(picture);
 
@@ -198,6 +209,58 @@ fetch('./json-files/index.json')
       document.getElementById("backdrop").classList.add("hidden");
     }
   </script>
+
+<!-- Preventing right-clicking in Javascript embedded in HTML -->
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
+
+<!-- Preventing dragging images in Javascript embedded in HTML -->
+  <script>
+document.querySelectorAll('.header-logo').forEach(el => {
+  el.setAttribute('draggable', 'false');
+  el.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+  <script>
+document.querySelectorAll('.hamburger-icon').forEach(el => {
+  el.setAttribute('draggable', 'false');
+  el.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+  <script>
+document.addEventListener('dragstart', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
+</script>
+
+<!-- Disabling keys -->
+<script>
+  document.addEventListener('keydown', e => {
+  if (e.ctrlKey && ['s','u','i','p'].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+    alert("This shortcut is disabled to protect copyrighted content.");
+  }
+});
+</script>
+
+<!-- Discouraging screenshots -->
+<script>
+  document.addEventListener('keyup', e => {
+  if (e.key === 'PrintScreen' || e.key === 44) {
+    navigator.clipboard.writeText('Screenshots are discouraged due to copyright.');
+    alert("Screenshots are discouraged due to copyright.");
+    e.preventDefault();
+  }
+});
+setInterval(() => {
+  navigator.clipboard.writeText('Screenshots are discouraged due to copyright.');
+}, 1000);
+</script>
 
 </body>
 </html>
