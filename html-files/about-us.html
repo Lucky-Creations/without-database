@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body oncontextmenu="return false">
 <div class="header"> <!--Beginning of the header-->
     <div class="left-section">
       <div class="hamburger-icon-container">
@@ -25,7 +25,9 @@
                src="../media/hamburger-icon.png"
                width="24" height="24"
                decoding="async"
-               onclick="toggleMenu()">
+               onclick="toggleMenu()"
+               draggable="false"
+               ondragstart="return false;">
         </picture>
       </div>
 
@@ -40,7 +42,9 @@
                  width="756" height="251"
                  loading="eager"
                  fetchpriority="high"
-                 decoding="async">
+                 decoding="async"
+                 draggable="false"
+                 ondragstart="return false;">
           </picture>
         </a>
       </div>
@@ -134,6 +138,50 @@
     document.getElementById("dropdown-menu").classList.add("hidden");
     document.getElementById("backdrop").classList.add("hidden");
   }
+</script>
+
+<!-- Preventing right-clicking in Javascript embedded in HTML -->
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
+
+<!-- Preventing dragging images in Javascript embedded in HTML -->
+  <script>
+document.querySelectorAll('.header-logo').forEach(el => {
+  el.setAttribute('draggable', 'false');
+  el.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+  <script>
+document.querySelectorAll('.hamburger-icon').forEach(el => {
+  el.setAttribute('draggable', 'false');
+  el.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+<!-- Disabling keys -->
+<script>
+  document.addEventListener('keydown', e => {
+  if (e.ctrlKey && ['s','u','i','p'].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+    alert("This shortcut is disabled to protect copyrighted content.");
+  }
+});
+</script>
+
+<!-- Discouraging screenshots -->
+<script>
+  document.addEventListener('keyup', e => {
+  if (e.key === 'PrintScreen' || e.key === 44) {
+    navigator.clipboard.writeText('Screenshots are discouraged due to copyright.');
+    alert("Screenshots are discouraged due to copyright.");
+    e.preventDefault();
+  }
+});
+setInterval(() => {
+  navigator.clipboard.writeText('Screenshots are discouraged due to copyright.');
+}, 1000);
 </script>
 
 </body>
