@@ -226,9 +226,18 @@
 #caption-name {
   margin: 15px auto;
   text-align: center;
-  color: #fff;        /* white text */
+  color: #fff;
   font-size: 18px;
   font-weight: 500;
+  max-width: 90%;
+}
+
+#copyright-label {
+  margin: 15px auto;
+  text-align: center;
+  color: #aaaaaa;
+  font-size: 14px;
+  font-weight: 200;
   max-width: 90%;
 }
 
