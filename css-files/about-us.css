@@ -18,6 +18,10 @@
   line-height: 1.8;
   letter-spacing: 0.3px;
   animation: yarnFlash 0.8s ease-out 1;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .yarn-marquee {
