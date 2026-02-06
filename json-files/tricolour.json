@@ -5,8 +5,7 @@
     "new": true,
     "image": "flying-in-freedom-keychain.png",
     "category": "Keychains",
-    "whatsapp": "Hi! I'm interested in the Flying In Freedom Keychain from Lucky Creations.",
-    "discount": 10
+    "whatsapp": "Hi! I'm interested in the Flying In Freedom Keychain from Lucky Creations."
   },
   {
     "name": "Tricolour Earrings 1",
@@ -15,8 +14,7 @@
     "bestseller": true,
     "image": "earrings-1.png",
     "category": "Earrings",
-    "whatsapp": "Hi! I'm interested in the Tricolour Earrings 1 from Lucky Creations.",
-    "discount": 10
+    "whatsapp": "Hi! I'm interested in the Tricolour Earrings 1 from Lucky Creations."
   },
   {
     "name": "Tricolour Earrings 2",
@@ -24,23 +22,20 @@
     "rate": "₹100",
     "image": "earrings-2.png",
     "category": "Earrings",
-    "whatsapp": "Hi! I'm interested in the Tricolour Earrings 2 from Lucky Creations.",
-    "discount": 10
+    "whatsapp": "Hi! I'm interested in the Tricolour Earrings 2 from Lucky Creations."
   },
   {
     "name": "Tricolour Scrunchie 1",
     "rate": "₹60",
     "image": "scrunchie-1.png",
     "category": "Scrunchies",
-    "whatsapp": "Hi! I'm interested in the Tricolour Scrunchie 1 from Lucky Creations.",
-    "discount": 10
+    "whatsapp": "Hi! I'm interested in the Tricolour Scrunchie 1 from Lucky Creations."
   },
   {
     "name": "Tricolour Scrunchie 2",
     "rate": "₹50",
     "image": "scrunchie-2.png",
     "category": "Scrunchies",
-    "whatsapp": "Hi! I'm interested in the Tricolour Scrunchie 2 from Lucky Creations.",
-    "discount": 10
+    "whatsapp": "Hi! I'm interested in the Tricolour Scrunchie 2 from Lucky Creations."
   }
 ]
