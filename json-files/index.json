@@ -1,12 +1,5 @@
 [
   {
-    "title": "Everything Tricolour",
-    "image": "tricolour-main.png",
-    "description": "All things woven in the Indian colours!",
-    "link": "tricolour.html",
-    "class": "tricolour"
-  },
-  {
     "title": "Keychains",
     "image": "keychain-main.png",
     "description": "The 'Master Key' to flaunt your keys",
@@ -33,40 +26,47 @@
     "description": "Shelf or vase, style with class",
     "link": "centerpieces.html",
     "class": "thaalposh"
-  },  
+  },
   {
     "title": "Doilies",
     "image": "doily-main.png",
     "description": "Masterpieces for your showpieces",
     "link": "doilies.html",
     "class": "doilies"
-  },  
+  },
   {
     "title": "Mini Bags & Pouches",
     "image": "mini-bag.png",
     "description": "Travel light, travel far",
     "link": "mini-bags.html",
     "class": "mini-bags"
-  }, 
-  {
-    "title": "Coaster Sets",
-    "image": "coaster-main.png",
-    "description": "Drink to the nines, on packs of 2 & 4",
-    "link": "coaster-sets.html",
-    "class": "coaster-sets"
-  },  
-  {
-    "title": "Lacy Handkerchiefs",
-    "image": "chief-main.png",
-    "description": "Lacy, trendy, always handy",
-    "link": "handkerchiefs.html",
-    "class": "handkerchiefs"
-  },  
+  },
   {
     "title": "Phone Pouches",
     "image": "phone-pouch-main.png",
     "description": "For secrets, too big for pockets",
     "link": "phone-pouches.html",
     "class": "phone-pouches"
+  },
+  {
+    "title": "Coaster Sets",
+    "image": "coaster-main.png",
+    "description": "Drink to the nines, on packs of 2 & 4",
+    "link": "coaster-sets.html",
+    "class": "coaster-sets"
+  },
+  {
+    "title": "Lacy Handkerchiefs",
+    "image": "chief-main.png",
+    "description": "Lacy, trendy, always handy",
+    "link": "handkerchiefs.html",
+    "class": "handkerchiefs"
+  },
+  {
+    "title": "Everything Tricolour",
+    "image": "tricolour-main.png",
+    "description": "All things woven in the Indian colours!",
+    "link": "tricolour.html",
+    "class": "tricolour"
   }
 ]
