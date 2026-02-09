@@ -5,26 +5,25 @@
     "rate": "₹540",
     "bestseller": true,
     "image": "purple-mud-pie.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Purple Mud Pie Centerpiece from Lucky Creations."
   },
-  
   {
     "name": "Multichrome Marvel Centerpiece",
     "size": "47 cms",
     "rate": "₹400",
     "bestseller": true,
     "image": "multichrome-marvel.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Multichrome Marvel Centerpiece from Lucky Creations."
   },
   {
     "name": "Figure-O-Fish Centerpiece",
-    "size": "60*27 cms",
+    "size": "60 cms",
     "rate": "₹325",
     "new": true,
     "image": "figure-o-fish.png",
-    "category": "Centerpiece",
+    "category": ["dual", "thematic"],
     "whatsapp": "Hi! I'm interested in the Figure-O-Fish Centerpiece from Lucky Creations."
   },
   {
@@ -33,7 +32,7 @@
     "rate": "₹475",
     "bestseller": true,
     "image": "sprial-dual-burst.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Sprial Dual Burst Centerpiece from Lucky Creations."
   },
   {
@@ -41,7 +40,7 @@
     "size": "37 cms",
     "rate": "₹275",
     "image": "two-tone-diamond.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Two Tone Diamond Centerpiece from Lucky Creations."
   },
   {
@@ -50,7 +49,7 @@
     "rate": "₹375",
     "new": true,
     "image": "purple-passion.png",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Purple Passion Centerpiece from Lucky Creations."
   },
   {
@@ -59,7 +58,7 @@
     "rate": "₹475",
     "new": true,
     "image": "christmas.png",
-    "category": "Centerpiece",
+    "category": ["multi", "thematic"],
     "whatsapp": "Hi! I'm interested in the Santa's Boulevard Centerpiece from Lucky Creations."
   },
   {
@@ -68,7 +67,7 @@
     "rate": "₹325",
     "new": true,
     "image": "purple-crown.png",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Purple Crown Centerpiece from Lucky Creations."
   },
   {
@@ -76,7 +75,7 @@
     "size": "42 cms",
     "rate": "₹340",
     "image": "green-web-octagon.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Green Web Octagon Centerpiece from Lucky Creations."
   },
   {
@@ -85,7 +84,7 @@
     "rate": "₹275",
     "new": true,
     "image": "skyline.png",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Skyline Centerpiece from Lucky Creations."
   },
   {
@@ -94,7 +93,7 @@
     "rate": "₹350",
     "new": true,
     "image": "rangoli.png",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Rangoli Centerpiece from Lucky Creations."
   },
   {
@@ -102,7 +101,7 @@
     "size": "69 cms",
     "rate": "₹800",
     "image": "snow-cones-snow-white.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Snow Cones Snow White Centerpiece from Lucky Creations."
   },
   {
@@ -111,7 +110,7 @@
     "rate": "₹400",
     "new": true,
     "image": "eastern-sunrise.png",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Eastern Sunrise Centerpiece from Lucky Creations."
   },
   {
@@ -119,7 +118,7 @@
     "size": "36 cms",
     "rate": "₹260",
     "image": "rose-border.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Rose Border Centerpiece from Lucky Creations."
   },
   {
@@ -128,15 +127,15 @@
     "rate": "₹330",
     "new": true,
     "image": "pink-flower-garden.png",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Pink Flower Garden Centerpiece from Lucky Creations."
   },
   {
     "name": "Four Petals Centerpiece",
-    "size": "28*28 cms",
+    "size": "28 cms",
     "rate": "₹200",
     "image": "four-petals.jpeg",
-    "category": "Centerpiece",
+    "category": "mono",
     "whatsapp": "Hi! I'm interested in the Four Petals Centerpiece from Lucky Creations."
   },
   {
@@ -145,7 +144,7 @@
     "rate": "₹440",
     "new": true,
     "image": "blooming-flowers.png",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Blooming Flowers Centerpiece from Lucky Creations."
   },
   {
@@ -153,7 +152,7 @@
     "size": "38 cms",
     "rate": "₹300",
     "image": "red-white-puffed.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Red & White Puffed Centerpiece from Lucky Creations."
   },
   {
@@ -161,7 +160,7 @@
     "size": "45 cms",
     "rate": "₹340",
     "image": "pink-shell.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Pink Shell Centerpiece from Lucky Creations."
   },
   {
@@ -170,7 +169,7 @@
     "rate": "₹400",
     "bestseller": true,
     "image": "multi-flower.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Multi-Flower Centerpiece from Lucky Creations."
   },
   {
@@ -179,7 +178,7 @@
     "rate": "₹450",
     "bestseller": true,
     "image": "sunflower-netted.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Sunflower Netted Centerpiece from Lucky Creations."
   },
   {
@@ -187,7 +186,7 @@
     "size": "36 cms",
     "rate": "₹280",
     "image": "puff-border-flower.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Puff Border Flower Centerpiece from Lucky Creations."
   },
   {
@@ -195,7 +194,7 @@
     "size": "34 cms",
     "rate": "₹250",
     "image": "floral-monochrome.jpeg",
-    "category": "Centerpiece",
+    "category": "mono",
     "whatsapp": "Hi! I'm interested in the Floral Monochrome Centerpiece from Lucky Creations."
   },
   {
@@ -203,7 +202,7 @@
     "size": "33 cms",
     "rate": "₹220",
     "image": "enclosed-peacots.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Enclosed Peacots Centerpiece from Lucky Creations."
   },
   {
@@ -211,7 +210,7 @@
     "size": "31 cms",
     "rate": "₹230",
     "image": "multicolour-1.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Multicolour Centerpiece 1 from Lucky Creations."
   },
   {
@@ -219,7 +218,7 @@
     "size": "36 cms",
     "rate": "₹280",
     "image": "multicolour-2.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Multicolour Centerpiece 2 from Lucky Creations."
   },
   {
@@ -227,7 +226,7 @@
     "size": "35 cms",
     "rate": "₹230",
     "image": "multicolour-3.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Multicolour Centerpiece 3 from Lucky Creations."
   },
   {
@@ -235,7 +234,7 @@
     "size": "38 cms",
     "rate": "₹270",
     "image": "multicolour-4.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Multicolour Centerpiece 4 from Lucky Creations."
   },
   {
@@ -243,7 +242,7 @@
     "size": "35 cms",
     "rate": "₹350",
     "image": "multicolour-5.png",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Multicolour Centerpiece 5 from Lucky Creations."
   },
   {
@@ -252,7 +251,7 @@
     "rate": "₹400",
     "new": true,
     "image": "multicolour-6.png",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Multicolour Centerpiece 6 from Lucky Creations."
   },
   {
@@ -260,7 +259,7 @@
     "size": "38 cms",
     "rate": "₹350",
     "image": "cross-stitch.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Cross Stitch Centerpiece from Lucky Creations."
   },
   {
@@ -269,7 +268,7 @@
     "rate": "₹220",
     "bestseller": true,
     "image": "watermelon.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Watermelon Centerpiece from Lucky Creations."
   },
   {
@@ -278,7 +277,7 @@
     "rate": "₹260",
     "bestseller": true,
     "image": "watermelon-with-seeds.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Watermelon With Seeds Centerpiece from Lucky Creations."
   },
   {
@@ -287,7 +286,7 @@
     "rate": "₹280",
     "new": true,
     "image": "watermelon-3.png",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Watermelon 3 Centerpiece from Lucky Creations."
   },
   {
@@ -295,7 +294,7 @@
     "size": "37 cms",
     "rate": "₹350",
     "image": "popcorn-flower.jpeg",
-    "category": "Centerpiece",
+    "category": "multi",
     "whatsapp": "Hi! I'm interested in the Popcorn Flower Centerpiece from Lucky Creations."
   },
   {
@@ -303,7 +302,7 @@
     "size": "37 cms",
     "rate": "₹250",
     "image": "fire-diamonds.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Fire & Diamonds Centerpiece from Lucky Creations."
   },
   {
@@ -311,7 +310,7 @@
     "size": "44 cms",
     "rate": "₹300",
     "image": "sun-swirl.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Sun & Swirl Centerpiece from Lucky Creations."
   },
   {
@@ -319,7 +318,7 @@
     "size": "44 cms",
     "rate": "₹370",
     "image": "intricate-spiral.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Intricate Spiral Centerpiece from Lucky Creations."
   },
   {
@@ -327,7 +326,7 @@
     "size": "41 cms",
     "rate": "₹300",
     "image": "strawberry-vanilla.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the Strawberry & Vanilla Centerpiece from Lucky Creations."
   },
   {
@@ -335,7 +334,7 @@
     "size": "35 cms",
     "rate": "₹230",
     "image": "2d-lotus.jpeg",
-    "category": "Centerpiece",
+    "category": "dual",
     "whatsapp": "Hi! I'm interested in the 2D Lotus Centerpiece from Lucky Creations."
   }
 ]
