@@ -252,14 +252,9 @@ document.addEventListener('dragstart', function(e) {
 <script>
   document.addEventListener('keyup', e => {
   if (e.key === 'PrintScreen' || e.key === 44) {
-    navigator.clipboard.writeText('Screenshots are discouraged due to copyright.');
     alert("Screenshots are discouraged due to copyright.");
-    e.preventDefault();
   }
 });
-setInterval(() => {
-  navigator.clipboard.writeText('Screenshots are discouraged due to copyright.');
-}, 1000);
 </script>
 
 </body>
