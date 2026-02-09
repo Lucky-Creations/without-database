@@ -268,7 +268,7 @@
     "rate": "₹220",
     "bestseller": true,
     "image": "watermelon.jpeg",
-    "category": "multi",
+    "category": ["multi", "thematic"],
     "whatsapp": "Hi! I'm interested in the Watermelon Centerpiece from Lucky Creations."
   },
   {
@@ -277,7 +277,7 @@
     "rate": "₹260",
     "bestseller": true,
     "image": "watermelon-with-seeds.jpeg",
-    "category": "multi",
+    "category": ["multi", "thematic"],
     "whatsapp": "Hi! I'm interested in the Watermelon With Seeds Centerpiece from Lucky Creations."
   },
   {
@@ -286,7 +286,7 @@
     "rate": "₹280",
     "new": true,
     "image": "watermelon-3.png",
-    "category": "multi",
+    "category": ["multi", "thematic"],
     "whatsapp": "Hi! I'm interested in the Watermelon 3 Centerpiece from Lucky Creations."
   },
   {
