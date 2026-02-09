@@ -41,7 +41,6 @@
   animation: marqueeFlow 10s linear infinite;
 }
 
-
 .yarn-loop {
   fill: none;
   stroke: #442a6e;
@@ -88,13 +87,27 @@
   margin-top: 10px;
 }
 
-/* .paragraphs p::first-line {
-  font-weight: 500;
-  color: #6b4c9a;
-} */
-
 .paragraphs p br {
   margin-bottom: 10px;
+}
+
+.about-footer {
+  position: relative;
+  bottom: 2vh;
+  left: 50%;
+  margin-bottom: 0;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  z-index: 50;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+}
+
+.footer-text {
+  font-style: italic;
 }
 
 @media (max-width: 833px) {
