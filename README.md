@@ -10,10 +10,10 @@ Thank you for visiting Lucky Creations!
 Wear It! Style It! Flaunt It!
 
 ## How It Works:
-The site features 9 product categories + 'About Us' and 'Contact Us' pages. You can navigate to separate pages
+The site features 10 product categories + 'About Us' and 'Contact Us' pages. You can navigate to separate pages
 of each category to view the available, up-to-date products and come back to the home page by clicking
 on the logo on the top-left. You can purchase a design by sharing the desired design on WhatsApp, using the
-button below each design.
+button below each design. The sort and filter options are available too, for easy picking of designs.
 If any bug, glitch or error is displayed in loading designs or navigating the website, kindly write to us
 about it to help us improve.
 
