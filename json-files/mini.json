@@ -5,7 +5,7 @@
     "rate": "₹230",
     "bestseller": true,
     "image": "rd-1.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Autumn 'n' Spring Bag from Lucky Creations."
   },
   {
@@ -13,7 +13,7 @@
     "size": "18*12 cms",
     "rate": "₹230",
     "image": "rd-2.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Burnt Wood Sienna Bag from Lucky Creations."
   },
   {
@@ -22,7 +22,7 @@
     "rate": "₹230",
     "bestseller": true,
     "image": "rd-3.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Grey Ice Monochrome Bag from Lucky Creations."
   },
   {
@@ -30,7 +30,7 @@
     "size": "18*12 cms",
     "rate": "₹230",
     "image": "rd-4.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Rose Pink Grain Design Bag from Lucky Creations."
   },
   {
@@ -39,7 +39,7 @@
     "rate": "₹230",
     "bestseller": true,
     "image": "rd-5.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Neon Green Bag from Lucky Creations."
   },
   {
@@ -47,7 +47,7 @@
     "size": "18*12 cms",
     "rate": "₹230",
     "image": "rd-6.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Golden Mango Bag from Lucky Creations."
   },
   {
@@ -55,7 +55,7 @@
     "size": "18*12 cms",
     "rate": "₹230",
     "image": "rd-7.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Ravishing Red Coral Bag from Lucky Creations."
   },
   {
@@ -63,7 +63,7 @@
     "size": "18*12 cms",
     "rate": "₹230",
     "image": "rd-8.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Molten Lava Bag from Lucky Creations."
   },
   {
@@ -71,16 +71,16 @@
     "size": "18*12 cms",
     "rate": "₹230",
     "image": "rd-9.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Rose Pink Puff Design Bag from Lucky Creations."
   },
   {
-    "name": "Rainbow Multicolour Bag",
+    "name": "Rainbow Multicolour Pouch",
     "size": "18*9.5 cms",
     "rate": "₹130",
     "bestseller": true,
     "image": "rd-10.png",
-    "category": "Mini Bags",
+    "category": "pouch",
     "whatsapp": "Hi! I'm interested in the Rainbow Multicolour Bag from Lucky Creations."
   },
   {
@@ -89,7 +89,7 @@
     "rate": "₹230",
     "new": true,
     "image": "rd-11.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Sand Dune Bag from Lucky Creations."
   },
   {
@@ -98,7 +98,7 @@
     "rate": "₹250",
     "new": true,
     "image": "rd-12.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Rising Sun Bag from Lucky Creations."
   },
   {
@@ -107,16 +107,16 @@
     "rate": "₹250",
     "new": true,
     "image": "rd-13.png",
-    "category": "Mini Bags",
+    "category": "mini",
     "whatsapp": "Hi! I'm interested in the Grassland Bag from Lucky Creations."
   },
   {
-    "name": "Multicolour Mini Bag",
+    "name": "Multicolour Pouch",
     "size": "18*9 cms",
     "rate": "₹130",
     "new": true,
     "image": "multicolour-mini.png",
-    "category": "Mini Bags",
+    "category": "pouch",
     "whatsapp": "Hi! I'm interested in the Multicolor Mini Bag from Lucky Creations."
   },
   {
@@ -124,7 +124,7 @@
     "size": "19*21 cms",
     "rate": "₹400",
     "image": "flower.png",
-    "category": "Mini Bags",
+    "category": "pouch",
     "whatsapp": "Hi! I'm interested in the Flower Center Mini Bag from Lucky Creations."
   },
   {
@@ -132,7 +132,7 @@
     "size": "20*26 cms",
     "rate": "₹300",
     "image": "purple.png",
-    "category": "Mini Bags",
+    "category": "pouch",
     "whatsapp": "Hi! I'm interested in the Purple Shells Pouch from Lucky Creations."
   }
 ]
