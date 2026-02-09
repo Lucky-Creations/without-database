@@ -79,76 +79,107 @@
         </marquee>
 </div> <!--Ending of the delivery bar-->
 
+<div id="controls">
+<div id="filters">
+  <label class="filter-label">
+
+<svg class="funnel-icon" viewBox="0 0 24 24" width="18" height="18">
+  <!-- Funnel outline -->
+  <path d="M6 6 H18 L14 14 L13 22 L11 22 L10 14 Z" fill="#f7f7f2"/>
+  <!-- Fluid rectangle -->
+</svg>
+
+    <span>Filter:</span>
+    <select id="filter-select">
+      <option value="normal">All</option>
+      <option value="dual">Dual Tone</option>
+      <option value="multi">Multi-Coloured</option>
+      <option value="mono">Monochrome</option>
+    </select>
+  </label>
+</div>
+
+  <div id="sort">
+  <label class="sort-label">
+    <svg class="sort-icon" viewBox="0 0 24 24" width="18" height="18">
+      <path d="M7 10l5-5 5 5H7z"/> <!-- up arrow -->
+      <path d="M7 14l5 5 5-5H7z"/> <!-- down arrow -->
+    </svg>
+    <span>Sort:</span>
+    <select id="sort-select">
+      <option value="default">Default</option>
+      <option value="price-low">Price: Low to High</option>
+      <option value="price-high">Price: High to Low</option>
+      <option value="small-size">Size: Smaller to Bigger</option>
+      <option value="big-size">Size: Bigger to Smaller</option>
+      <option value="bestsellers">Bestsellers First</option>
+      <option value="new">New Arrivals First</option>
+    </select>
+  </label>
+</div>
+</div>
+
   <main id="product-container"></main>
 
 <script>
-fetch('../json-files/doilies.json')
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById('product-container');
-    if (!container || !Array.isArray(data)) return;
+function renderCatalogue(list) {
+  const container = document.getElementById('product-container');
+  container.innerHTML = '';
 
-    if (!Array.isArray(data) || data.length === 0) {
+  if (!Array.isArray(list) || list.length === 0) {
     container.innerHTML = '<p class="empty">No products available right now.</p>';
     return;
+  }
+
+  const toBase = f => (f || '').trim().replace(/\.(webp|png|jpe?g|avif)$/i, '');
+  const enc = s => encodeURIComponent(s);
+
+  list.forEach(item => {
+    const name  = item.name  || 'Item';
+    const size  = item.size  || '';
+    const rate  = item.rate  || '';
+    const file  = (item.image || '').trim();
+    const base  = toBase(file);
+
+    const webpUrl = `../products/doilies/${enc(base)}.webp`;
+    const pngUrl  = `../products/doilies/${enc(file)}`;
+
+    // Optional intrinsic size support if width/height is added in JSON
+    const w = item.width  || '';
+    const h = item.height || '';
+
+    const card = document.createElement('div');
+    card.className = 'product-card';
+
+    if (item.bestseller) {
+      const badge = document.createElement('div');
+      badge.className = 'bestseller-badge';
+      badge.textContent = 'Bestseller';
+      card.appendChild(badge);
+    }
+    if (item.new) {
+      const mark = document.createElement('div');
+      mark.className = 'new-arrival';
+      mark.textContent = 'New Arrival';
+      card.appendChild(mark);
     }
 
-    const toBase = f => (f || '').trim().replace(/\.(webp|png|jpe?g|avif)$/i, '');
-    const enc = s => encodeURIComponent(s);
+    const picture = document.createElement('picture');
+    const source = document.createElement('source');
+    source.type = 'image/webp';
+    source.srcset = webpUrl;
+    picture.appendChild(source);
 
-    data.forEach(item => {
-      const name  = item.name  || 'Item';
-      const size  = item.size  || '';
-      const rate  = item.rate  || '';
-      const file  = (item.image || '').trim(); // e.g., "doily-main.png"
-      const base  = toBase(file); // "doily-main"
+    const img = document.createElement('img');
+    img.src = pngUrl;
+    img.alt = name;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    if (w && h) { img.width = w; img.height = h; } // keeps layout stable when provided
+    img.setAttribute('draggable', 'false');
+    picture.appendChild(img);
 
-      // Build URLs with per-segment encoding to handle spaces/special chars
-      const webpUrl = `../products/doilies/${enc(base)}.webp`;
-      const pngUrl  = `../products/doilies/${enc(file)}`;
-
-      // Optional intrinsic size support if width/height is added in JSON
-      const w = item.width  || '';
-      const h = item.height || '';
-
-      const card = document.createElement('div');
-      card.className = 'product-card';
-
-      let badge = null;
-      if (item.bestseller) {
-        badge = document.createElement('div');
-        badge.className = 'bestseller-badge';
-        badge.textContent = 'Bestseller';
-      }
-
-      let mark = null;
-      if (item.new) {
-        mark = document.createElement('div');
-        mark.className = 'new-arrival';
-        mark.textContent = 'New Arrival';
-      }
-
-      // Picture element: WebP + fallback
-      const picture = document.createElement('picture');
-
-      const source = document.createElement('source');
-      source.type = 'image/webp';
-      source.srcset = webpUrl; // single candidate, no descriptors
-      picture.appendChild(source);
-
-      const img = document.createElement('img');
-      img.src = pngUrl; // fallback to PNG/JPG
-      img.alt = name;
-      if (w && h) { img.width = w; img.height = h; } // keeps layout stable when provided
-      img.loading = 'lazy';
-      img.decoding = 'async';
-      picture.appendChild(img);
-
-      // Preventing dragging images in HTML
-      img.setAttribute('draggable', 'false');
-      img.ondragstart = (e) => e.preventDefault();
-
-      card.addEventListener('click', (e) => {
+    card.addEventListener('click', (e) => {
       if (e.target.closest('a')) return; // spare WhatsApp link
 
       const modal = document.getElementById('image-modal');
@@ -169,48 +200,141 @@ fetch('../json-files/doilies.json')
         };
       });
 
-      // Details
-      const pName = document.createElement('p');
-      pName.innerHTML = `<strong>Name:</strong> ${name}`;
+    card.appendChild(picture);
 
-      const pSize = document.createElement('p');
-      pSize.innerHTML = `<strong>Size:</strong> ${size}`;
+    const pName = document.createElement('p');
+    pName.innerHTML = `<strong>Name:</strong> ${name}`;
+    card.appendChild(pName);
 
-      const pRate = document.createElement('p');
-      pRate.innerHTML = `<strong>Price:</strong> ${rate}`;
+    const pSize = document.createElement('p');
+    pSize.innerHTML = `<strong>Size:</strong> ${size}`;
+    card.appendChild(pSize);
 
-      const a = document.createElement('a');
-      const msg = item.whatsapp || `Hi! I'm interested in the ${name} from Lucky Creations.`;
-      a.href = `https://wa.me/918169341750?text=${encodeURIComponent(msg)}`;
-      a.target = '_blank';
-      a.textContent = 'Purchase Design on WhatsApp';
+    const pRate = document.createElement('p');
+    pRate.innerHTML = `<strong>Price:</strong> ${rate}`;
+    card.appendChild(pRate);
 
-      a.rel = 'noopener'; 
-      a.setAttribute('aria-label', `Purchase ${name} on WhatsApp`);
+    const a = document.createElement('a');
+    const msg = item.whatsapp || `Hi! I'm interested in the ${name} from Lucky Creations.`;
+    a.href = `https://wa.me/918169341750?text=${encodeURIComponent(msg)}`;
+    a.target = '_blank';
+    a.textContent = 'Purchase Design on WhatsApp';
+    a.rel = 'noopener';
+    card.appendChild(a);
 
-      // Assemble
-      card.appendChild(picture);
-      if (badge){
-        card.insertBefore(badge, picture);
+    container.appendChild(card);
+  });
+}
+
+fetch('../json-files/doilies.json')
+  .then(res => res.json())
+  .then(products => {
+    renderCatalogue(products);
+
+    const parsePrice = p => Number(p.rate.replace(/[^\d]/g, ''));
+    const parseSize = p => Number(p.size.replace(/[^\d]/g, ''));
+
+    //
+    function updateSortOptions(list) {
+      const sortSelect = document.querySelector('#sort select');
+      const hasNew = list.some(p => p.new);
+      sortSelect.querySelector('option[value="new"]').disabled = !hasNew;
+      const hasBestseller = list.some(p => p.bestseller);
+      sortSelect.querySelector('option[value="bestsellers"]').disabled = !hasBestseller;
+    }
+
+    document.querySelector('#filters select').addEventListener('change', e => {
+      const filter = e.target.value;
+      let filtered = [...products];
+      if (filter === "dual") {
+        filtered = products.filter(p => p.category === "dual");
+      } else if (filter === "multi") {
+        filtered = products.filter(p => p.category === "multi");
+      } else if (filter === "mono") {
+        filtered = products.filter(p => p.category === "mono");
       }
-      if (mark){
-        card.insertBefore(mark, picture);
-      }
-      card.appendChild(pName);
-      card.appendChild(pSize);
-      card.appendChild(pRate);
-      card.appendChild(a);
-      container.appendChild(card);
+      renderCatalogue(filtered);
     });
+
+    document.querySelector('#sort select').addEventListener('change', e => {
+  const sort = e.target.value;
+  let sorted = [...products];
+
+  if (sort === "price-low") {
+    sorted.sort((a, b) => parsePrice(a) - parsePrice(b));
+  } else if (sort === "price-high") {
+    sorted.sort((a, b) => parsePrice(b) - parsePrice(a));
+  } else if (sort === "small-size") {
+    sorted.sort((a, b) => parseSize(a) - parseSize(b));
+  } else if (sort === "big-size") {
+    sorted.sort((a, b) => parseSize(b) - parseSize(a));
+  } else if (sort === "bestsellers") {
+    // put bestsellers first, then others
+    sorted.sort((a, b) => (b.bestseller === true) - (a.bestseller === true));
+  } else if (sort === "new") {
+    // put new arrivals first, then others
+    sorted.sort((a, b) => (b.new === true) - (a.new === true));
+  }
+
+  renderCatalogue(sorted);
+});
+
+// Keep track of current filter + sort
+let currentFilter = "all";
+let currentSort = "default";
+
+function applyFilterAndSort() {
+  let list = [...products];
+
+  // Filter first
+  if (currentFilter === "dual") {
+    list = list.filter(p => Array.isArray(p.category) ? p.category.includes("dual") : p.category === "dual" );
+  } else if (currentFilter === "multi") {
+    list = list.filter(p => Array.isArray(p.category) ? p.category.includes("multi") : p.category === "multi" );
+  } else if (currentFilter === "mono") {
+    list = list.filter(p => Array.isArray(p.category) ? p.category.includes("mono") : p.category === "mono" );
+  }
+
+  updateSortOptions(list);
+
+  // Then sort
+  if (currentSort === "price-low") {
+    list.sort((a, b) => parsePrice(a) - parsePrice(b));
+  } else if (currentSort === "price-high") {
+    list.sort((a, b) => parsePrice(b) - parsePrice(a));
+  } else if (currentSort === "small-size") {
+    list.sort((a, b) => parseSize(a) - parseSize(b));
+  } else if (currentSort === "big-size") {
+    list.sort((a, b) => parseSize(b) - parseSize(a));
+  } else if (currentSort === "bestsellers") {
+    // reorder so bestsellers come first
+    list.sort((a, b) => (b.bestseller === true) - (a.bestseller === true));
+  } else if (currentSort === "new") {
+    // reorder so new arrivals come first
+    list.sort((a, b) => (b.new === true) - (a.new === true));
+  }
+
+  renderCatalogue(list);
+}
+
+// Filter dropdown
+document.querySelector('#filters select').addEventListener('change', e => {
+  currentFilter = e.target.value;
+  applyFilterAndSort();
+});
+
+// Sort dropdown
+document.querySelector('#sort select').addEventListener('change', e => {
+  currentSort = e.target.value;
+  applyFilterAndSort();
+});
+
   })
   .catch(err => {
-  const container = document.getElementById('product-container');
-  if (container) {
-    container.innerHTML = '<p class="error">Loading products soon! Please try again later.</p>';
-  }
-  console.error('Error loading doilies:', err);
+    document.getElementById('product-container').innerHTML =
+      '<p class="error">Loading products soon! Please try again later.</p>';
+    console.error('Error loading doilies:', err);
   });
-
 </script>
 
 <script>
@@ -267,14 +391,9 @@ document.addEventListener('dragstart', function(e) {
 <script>
   document.addEventListener('keyup', e => {
   if (e.key === 'PrintScreen' || e.key === 44) {
-    navigator.clipboard.writeText('Screenshots are discouraged due to copyright.');
     alert("Screenshots are discouraged due to copyright.");
-    e.preventDefault();
   }
 });
-setInterval(() => {
-  navigator.clipboard.writeText('Screenshots are discouraged due to copyright.');
-}, 1000);
 </script>
 
 <!-- Image Modal -->
