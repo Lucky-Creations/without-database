@@ -117,6 +117,14 @@
 </div>
 </div>
 
+<!-- The message that fades -->
+<div id="tapOverlay" class="tap-overlay">
+  <div class="tap-message">
+    <img id="tapImage" src="../media/tap-1.png" alt="Tap hint">
+    <p>Tap on the card to enlarge the design.</p>
+  </div>
+</div>
+
 <main id="product-container"></main>
 
 <script>
@@ -319,6 +327,37 @@ document.querySelector('#sort select').addEventListener('change', e => {
       '<p class="error">Loading products soon! Please try again later.</p>';
     console.error('Error loading keychains:', err);
   });
+</script>
+
+<script>
+window.addEventListener("load", () => {
+  // Check if hint has already been removed in this browser
+  if (sessionStorage.getItem("hintRemoved")) {
+    return; // skip creating it again
+  }
+
+  const tapImage = document.getElementById("tapImage");
+  const images = ["../media/tap-1.png", "../media/tap-2.png", "../media/tap-3.png"];
+  let index = 0;
+
+  // Cycle through images
+  const interval = setInterval(() => {
+    index = (index + 1) % images.length;
+    tapImage.src = images[index];
+  }, 950);
+
+  // Hide + delete hint after 3 seconds
+  setTimeout(() => {
+    const hint = document.querySelector('.tap-message');
+    if (hint) {
+      hint.remove(); // completely delete from DOM
+    }
+    clearInterval(interval);
+
+    // Mark as removed so it won't be recreated
+    sessionStorage.setItem("hintRemoved", "true");
+  }, 3000);
+});
 </script>
 
 <script>
