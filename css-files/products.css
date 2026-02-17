@@ -14,6 +14,67 @@
   /* background-color: #fdfaf6; */
 }
 
+.tap-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); /* dark screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.tap-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tap-message {
+  background: transparent; /* no white box */
+  padding: 0; /* remove box padding */
+  text-align: center;
+  color: #fff; /* white text for contrast */
+  animation: fadeHint 3s ease forwards;
+}
+
+.tap-message img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.tap-message p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Fade in/out animation */
+@keyframes fadeHint {
+  0% { opacity: 0; transform: scale(0.9); }
+  20% { opacity: 1; transform: scale(1); }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Responsive tweak for very small screens */
+@media (max-width: 350px) {
+  .tap-message {
+    max-width: 240px;
+    padding: 15px;
+  }
+  .tap-message img {
+    width: 60px;
+  }
+  .tap-message p {
+    font-size: 14px;
+  }
+}
+
 #controls {
   bottom: 0;
   left: 0;
