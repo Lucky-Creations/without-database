@@ -331,14 +331,18 @@ document.querySelector('#sort select').addEventListener('change', e => {
 
 <script>
 window.addEventListener("load", () => {
-  // Check if hint has already been removed in this browser
+  // Skip if already removed in this session
   if (sessionStorage.getItem("hintRemoved")) {
-    return; // skip creating it again
+    return;
   }
 
+  const overlay = document.getElementById("tapOverlay");
   const tapImage = document.getElementById("tapImage");
   const images = ["../media/tap-1.png", "../media/tap-2.png", "../media/tap-3.png"];
   let index = 0;
+
+  // Show overlay
+  overlay.classList.add("show");
 
   // Cycle through images
   const interval = setInterval(() => {
@@ -346,12 +350,9 @@ window.addEventListener("load", () => {
     tapImage.src = images[index];
   }, 950);
 
-  // Hide + delete hint after 3 seconds
+  // Hide overlay after 3 seconds
   setTimeout(() => {
-    const hint = document.querySelector('.tap-message');
-    if (hint) {
-      hint.remove(); // completely delete from DOM
-    }
+    overlay.classList.remove("show"); // hide dark background
     clearInterval(interval);
 
     // Mark as removed so it won't be recreated
