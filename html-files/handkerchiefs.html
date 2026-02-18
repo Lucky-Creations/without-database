@@ -116,7 +116,15 @@
 </div>
 </div>
 
-  <main id="product-container"></main>
+<!-- The tap message -->
+<div id="tapOverlay" class="tap-overlay">
+  <div class="tap-message">
+    <img id="tapImage" src="../media/tap-1.png" alt="Tap hint">
+    <p>Tap on the card to enlarge the design.</p>
+  </div>
+</div>
+
+<main id="product-container"></main>
 
 <script>
 function renderCatalogue(list) {
@@ -304,6 +312,38 @@ document.querySelector('#sort select').addEventListener('change', e => {
       '<p class="error">Loading products soon! Please try again later.</p>';
     console.error('Error loading handkerchiefs:', err);
   });
+</script>
+
+<script>
+window.addEventListener("load", () => {
+  if (sessionStorage.getItem("hintRemoved")) {
+    return;
+  }
+
+  const tapImage = document.getElementById("tapImage");
+  const images = ["../media/tap-1.png", "../media/tap-2.png", "../media/tap-3.png"];
+  let index = 0;
+
+  // Preload all images
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  const overlay = document.getElementById("tapOverlay");
+  overlay.classList.add("show");
+
+  const interval = setInterval(() => {
+    index = (index + 1) % images.length;
+    tapImage.src = images[index];
+  }, 950);
+
+  setTimeout(() => {
+    overlay.classList.remove("show");
+    clearInterval(interval);
+    sessionStorage.setItem("hintRemoved", "true");
+  }, 3000);
+});
 </script>
 
 <script>
