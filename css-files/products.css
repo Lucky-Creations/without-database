@@ -11,7 +11,6 @@
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
-  /* background-color: #fdfaf6; */
 }
 
 /* Responsiveness and compatibility for smaller screens for tap overlay begins at line 538 */
@@ -65,13 +64,13 @@
 #controls {
   bottom: 0;
   left: 0;
-  position: fixed;   /* fixed at bottom of viewport */
+  position: fixed; /* fixed at bottom of viewport */
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
   background: linear-gradient(90deg, #442a6e, #a46e9d, #442a6e);
-  z-index: 1000;        /* ensures it overlays the catalogue */
+  z-index: 1000; /* ensures it overlays the catalogue */
 }
 
 #filters, #sort {
@@ -102,7 +101,7 @@
 }
 
 .filter-label svg {
-  fill: #f7f7f2; /* match your bar’s text color */
+  fill: #f7f7f2; /* match the bar’s text color */
 }
 
 #filters:hover .filter-label svg path {
@@ -110,11 +109,11 @@
 }
 
 @keyframes funnelGoldDrain {
-  0%   { fill: #f7f7f2; }   /* white */
-  25%  { fill: #ffd700; }      /* turns gold */
+  0%   { fill: #f7f7f2; }
+  25%  { fill: #ffd700; }
   50%  { fill: #f7f7f2; }
   75%  { fill: #ffd700; }
-  100% { fill: #f7f7f2; }   /* drains back to white */
+  100% { fill: #f7f7f2; } /* drains back to white */
 }
 
 .sort-label {
@@ -157,19 +156,17 @@
 .product-card {
     width: 100%;
     max-width: 300px;
-    /* height: 400px; */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers title and description vertically */
-    align-items: center; /* Centers elements horizontally */
+    justify-content: center;
+    align-items: center;
     background-color: #f7f7f2;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px; /* Space inside the container */
-    /* gap: 10px; Space between elements */
     margin: 0 auto 20px auto; /* Centers card horizontally */
     position: relative;
-    transition: all 0.3s ease; /* Smooth transition effect */
+    transition: all 0.3s ease;
     overflow: hidden;
 }
 
@@ -182,17 +179,11 @@
 
 /* Product image */
 .product-card img {
-  /* height: 275px;
-  width: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px; */
-
   display: block;
   width: 100%;
   max-width: 100%;
-  height: auto;        /* let height follow width */
-  max-height: 275px;   /* visual cap for large screens */
+  height: auto;
+  max-height: 275px;
   object-fit: contain; /* show whole product without cropping */
   object-position: center;
   border-radius: 8px;
@@ -208,10 +199,6 @@
 
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   border-radius: 8px;
-
-  /* border-bottom: 2px solid #a46e9d;
-  padding-bottom: 4px;
-  margin-bottom: 8px; */
 }
 
 .product-card:hover {
@@ -253,8 +240,8 @@
 #product-container .empty {
   margin: 1rem auto;
   padding: 0.75rem 1rem;
-  background: #F5EFE1;   /* light tint */
-  color: #A46E9D;        /* secondary ink */
+  background: #F5EFE1; /* light tint */
+  color: #A46E9D; /* secondary ink */
   border: 1px solid rgba(68,42,110,0.18);
   border-radius: 8px;
   text-align: center;
@@ -392,8 +379,8 @@
 #product-container .error {
   margin: 1rem auto;
   padding: 0.75rem 1rem;
-  background: #fdecec;   /* gentle error bg */
-  color: #8b1a1a;        /* readable error ink */
+  background: #fdecec; /* gentle error bg */
+  color: #8b1a1a; /* readable error ink */
   border: 1px solid #f5b5b5;
   border-radius: 8px;
   text-align: center;
@@ -424,14 +411,14 @@
 
   #controls {
     flex-wrap: wrap; /* allow children to wrap */
-    justify-content: center; /* center them when wrapping */
+    justify-content: center;
     gap: 8px; /* spacing between boxes */
     padding: 6px 10px; 
   }
   
   #filters, #sort {
     flex: 1 1 45%; /* each takes ~half width */
-    font-size: 14px; /* slightly smaller text */
+    font-size: 14px;
   }
   
   #filters select, #sort select {
