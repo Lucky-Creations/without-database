@@ -117,7 +117,7 @@
 </div>
 </div>
 
-<!-- The message that fades -->
+<!-- The tap message -->
 <div id="tapOverlay" class="tap-overlay">
   <div class="tap-message">
     <img id="tapImage" src="../media/tap-1.png" alt="Tap hint">
@@ -331,31 +331,31 @@ document.querySelector('#sort select').addEventListener('change', e => {
 
 <script>
 window.addEventListener("load", () => {
-  // Skip if already removed in this session
   if (sessionStorage.getItem("hintRemoved")) {
     return;
   }
 
-  const overlay = document.getElementById("tapOverlay");
   const tapImage = document.getElementById("tapImage");
   const images = ["../media/tap-1.png", "../media/tap-2.png", "../media/tap-3.png"];
   let index = 0;
 
-  // Show overlay
+  // Preload all images
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  const overlay = document.getElementById("tapOverlay");
   overlay.classList.add("show");
 
-  // Cycle through images
   const interval = setInterval(() => {
     index = (index + 1) % images.length;
     tapImage.src = images[index];
   }, 950);
 
-  // Hide overlay after 3 seconds
   setTimeout(() => {
-    overlay.classList.remove("show"); // hide dark background
+    overlay.classList.remove("show");
     clearInterval(interval);
-
-    // Mark as removed so it won't be recreated
     sessionStorage.setItem("hintRemoved", "true");
   }, 3000);
 });
