@@ -14,6 +14,7 @@
   /* background-color: #fdfaf6; */
 }
 
+/* Responsiveness and compatibility for smaller screens for tap overlay begins at line 538 */
 .tap-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -59,20 +60,6 @@
   20% { opacity: 1; transform: scale(1); }
   80% { opacity: 1; }
   100% { opacity: 0; }
-}
-
-/* Responsive tweak for very small screens */
-@media (max-width: 350px) {
-  .tap-message {
-    max-width: 240px;
-    padding: 15px;
-  }
-  .tap-message img {
-    width: 60px;
-  }
-  .tap-message p {
-    font-size: 14px;
-  }
 }
 
 #controls {
@@ -546,6 +533,19 @@
     .product-card a {
         font-size: 7px;
     }
+}
+
+@media (max-width: 350px) {
+  .tap-message {
+    max-width: 240px;
+    padding: 15px;
+  }
+  .tap-message img {
+    width: 60px;
+  }
+  .tap-message p {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 321px) {
