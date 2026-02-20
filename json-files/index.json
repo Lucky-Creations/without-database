@@ -1,5 +1,13 @@
 [
   {
+    "title": "Curtain Tie Backs",
+    "new": true,
+    "image": "tie-1.png",
+    "description": "Bind your blinds in style",
+    "link": "tie-backs.html",
+    "class": "tie-backs"
+  },
+  {
     "title": "Keychains",
     "image": "keychain-main.png",
     "description": "The 'Master Key' to flaunt your keys",
