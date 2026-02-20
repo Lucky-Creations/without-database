@@ -349,6 +349,14 @@
   border-radius: 8px;
 }
 
+.modal-tie-content img {
+  display: block;
+  margin: auto auto 15px auto;
+  width: 30%; /* force scaling relative to modal width */
+  height: auto; /* keep aspect ratio */
+  border-radius: 8px;
+}
+
 #caption-name {
   margin: 15px auto;
   text-align: center;
@@ -368,7 +376,7 @@
 }
 
 .close {
-  position: absolute;
+  position: fixed;
   top: 20px; right: 35px;
   color: #fff;
   font-size: 40px;
@@ -384,6 +392,34 @@
   border: 1px solid #f5b5b5;
   border-radius: 8px;
   text-align: center;
+}
+
+@media (max-width: 1101px) {
+.modal-tie-content img {
+  width: 35%;
+  height: auto;
+}
+}
+
+@media (max-width: 951px) {
+.modal-tie-content img {
+  width: 42%;
+  height: auto;
+}
+}
+
+@media (max-width: 801px) {
+.modal-tie-content img {
+  width: 50%;
+  height: auto;
+}
+}
+
+@media (max-width: 651px) {
+.modal-tie-content img {
+  width: 60%;
+  height: auto;
+}
 }
 
 @media (max-width: 721px) {
@@ -476,6 +512,13 @@
     .product-card a {
         font-size: 9px;
     }
+}
+
+@media (max-width: 451px) {
+.modal-tie-content img {
+  width: 70%;
+  height: auto;
+}
 }
 
 @media (max-width: 401px) {
