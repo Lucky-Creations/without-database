@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Lucky Creations: Curtain Tie Backs</title>
+    <link rel="icon" type="image/png" href="../media/centerpiece-main.png">
+    <link rel="stylesheet" type="text/css" href="../css-files/everywhere.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/delivery.css"/>
+    <link rel="stylesheet" type="text/css" href="../css-files/products.css"/>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+
+<body oncontextmenu="return false">
+<div class="header"> <!--Beginning of the header-->
+    <div class="left-section">
+      <div class="hamburger-icon-container">
+        <picture>
+          <source srcset="../media/hamburger-icon.webp" type="image/webp">
+          <img class="hamburger-icon"
+               alt="toggle-icon"
+               src="../media/hamburger-icon.png"
+               width="24" height="24"
+               decoding="async"
+               onclick="toggleMenu()"
+               draggable="false"
+               ondragstart="return false;">
+        </picture>
+      </div>
+
+      <div class="header-logo-container">
+        <!-- Use a relative link to avoid GitHub Pages subpath issues -->
+        <a rel="website" href="../index.html">
+          <picture>
+            <source srcset="../media/upscale.webp" type="image/webp">
+            <img class="header-logo"
+                 alt="the-logo"
+                 src="../media/upscale.png"
+                 width="756" height="251"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async"
+                 draggable="false"
+                 ondragstart="return false;">
+          </picture>
+        </a>
+      </div>
+    </div>
+
+    <div class="middle-section">
+      <div class="page-title-container">
+        <hr class="top-line"> <!-- Top line -->
+        <div class="page-title">Curtain Tie Backs</div>
+        <hr class="bottom-line"> <!-- Bottom line -->
+      </div>
+    </div>
+
+    <div class="right-section">
+      Complete <br> Catalogue
+    </div>
+  </div> <!--Ending of the header-->
+
+<div id="dropdown-menu" class="dropdown hidden">
+  <a href="about-us.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<div id="backdrop" class="backdrop hidden" onclick="closeMenu()"></div>
+
+<div class="delivery-bar"> <!--Beginning of the delivery bar-->
+    <marquee>
+        Pan-India Delivery Available. Contact &#9742; +91 8169341750 &#9679; &#9993;
+        <a href="mailto:luckycreations.crochet@gmail.com?subject=Inquiry%20About%20Catalogue">
+        luckycreations.crochet@gmail.com
+        </a>
+    </marquee>
+</div> <!--Ending of the delivery bar-->
+
+<!-- The tap message -->
+<div id="tapOverlay" class="tap-overlay">
+  <div class="tap-message">
+    <img id="tapImage" src="../media/tap-1.png" alt="Tap hint">
+    <p>Tap on the card to enlarge the design.</p>
+  </div>
+</div>
+
+<main id="product-container"></main>
+
+<script>
+function renderCatalogue(list) {
+  const container = document.getElementById('product-container');
+  container.innerHTML = '';
+
+  if (!Array.isArray(list) || list.length === 0) {
+    container.innerHTML = '<p class="empty">No products available right now.</p>';
+    return;
+  }
+
+  const toBase = f => (f || '').trim().replace(/\.(webp|png|jpe?g|avif)$/i, '');
+  const enc = s => encodeURIComponent(s);
+
+  list.forEach(item => {
+    const name  = item.name  || 'Item';
+    const size  = item.size  || '';
+    const rate  = item.rate  || '';
+    const file  = (item.image || '').trim();
+    const base  = toBase(file);
+
+    const webpUrl = `../products/tie-backs/${enc(base)}.webp`;
+    const pngUrl  = `../products/tie-backs/${enc(file)}`;
+
+    // Optional intrinsic size support if width/height is added in JSON
+    const w = item.width  || '';
+    const h = item.height || '';
+
+    const card = document.createElement('div');
+    card.className = 'product-card';
+
+    if (item.bestseller) {
+      const badge = document.createElement('div');
+      badge.className = 'bestseller-badge';
+      badge.textContent = 'Bestseller';
+      card.appendChild(badge);
+    }
+    if (item.new) {
+      const mark = document.createElement('div');
+      mark.className = 'new-arrival';
+      mark.textContent = 'New Arrival';
+      card.appendChild(mark);
+    }
+
+    const picture = document.createElement('picture');
+    const source = document.createElement('source');
+    source.type = 'image/webp';
+    source.srcset = webpUrl;
+    picture.appendChild(source);
+
+    const img = document.createElement('img');
+    img.src = pngUrl;
+    img.alt = name;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    if (w && h) { img.width = w; img.height = h; } // keeps layout stable when provided
+    img.setAttribute('draggable', 'false');
+    picture.appendChild(img);
+
+    card.addEventListener('click', (e) => {
+  if (e.target.closest('a')) return; // spare WhatsApp link
+
+  const modal = document.getElementById('image-modal');
+  const modalTieContent = document.querySelector('.modal-tie-content');
+  const modalImg = document.getElementById('modal-img');
+  const caption = document.getElementById('caption-name');
+  const copyright = document.getElementById('copyright-label');
+
+  modal.style.display = "block";
+  modalImg.src = img.src;
+  caption.textContent = name;
+
+  // Clear any old sequence images before appending new ones
+  modalTieContent.querySelectorAll('picture').forEach(p => p.remove());
+
+  if (Array.isArray(item.sequence)) {
+    item.sequence.forEach(file => {
+      const base = toBase(file);
+      const webpUrl = `../products/tie-backs/${enc(base)}.webp`;
+      const pngUrl  = `../products/tie-backs/${enc(file)}`;
+
+      const picture = document.createElement('picture');
+
+      const source = document.createElement('source');
+      source.type = 'image/webp';
+      source.srcset = webpUrl;
+      picture.appendChild(source);
+
+      // Optional intrinsic size support if width/height is added in JSON
+      const w = item.width  || '';
+      const h = item.height || '';
+
+      const extraImg = document.createElement('img');
+      extraImg.src = pngUrl;
+      extraImg.alt = name;
+      extraImg.loading = 'lazy';
+      extraImg.decoding = 'async';
+      if (w && h) { extraImg.width = w; extraImg.height = h; }
+      extraImg.setAttribute('draggable', 'false');
+      picture.appendChild(extraImg);
+
+      // Append directly inside modal-tie-content, after the hero image
+      modalTieContent.appendChild(picture);
+    });
+  }
+
+  document.querySelector('.close').onclick = () => {
+    modal.style.display = "none";
+  };
+});
+
+    card.appendChild(picture);
+
+    const pName = document.createElement('p');
+    pName.innerHTML = `<strong>Name:</strong> ${name}`;
+    card.appendChild(pName);
+
+    const pSize = document.createElement('p');
+    pSize.innerHTML = `<strong>Length:</strong> ${size}`;
+    card.appendChild(pSize);
+
+    const pRate = document.createElement('p');
+    pRate.innerHTML = `<strong>Price:</strong> ${rate}`;
+    card.appendChild(pRate);
+
+    const a = document.createElement('a');
+    const msg = item.whatsapp || `Hi! I'm interested in the ${name} from Lucky Creations.`;
+    a.href = `https://wa.me/918169341750?text=${encodeURIComponent(msg)}`;
+    a.target = '_blank';
+    a.textContent = 'Purchase Design on WhatsApp';
+    a.rel = 'noopener';
+    card.appendChild(a);
+
+    container.appendChild(card);
+  });
+}
+
+fetch('../json-files/tie-backs.json')
+  .then(res => res.json())
+  .then(products => {
+    renderCatalogue(products);
+})
+  .catch(err => {
+    document.getElementById('product-container').innerHTML =
+      '<p class="error">Loading products soon! Please try again later.</p>';
+    console.error('Error loading curtain tie backs:', err);
+  });
+</script>
+
+<script>
+window.addEventListener("load", () => {
+  if (sessionStorage.getItem("hintRemoved")) {
+    return;
+  }
+
+  const tapImage = document.getElementById("tapImage");
+  const images = ["../media/tap-1.png", "../media/tap-2.png", "../media/tap-3.png"];
+  let index = 0;
+
+  // Preload all images
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  const overlay = document.getElementById("tapOverlay");
+  overlay.classList.add("show");
+
+  const interval = setInterval(() => {
+    index = (index + 1) % images.length;
+    tapImage.src = images[index];
+  }, 950);
+
+  setTimeout(() => {
+    overlay.classList.remove("show");
+    clearInterval(interval);
+    sessionStorage.setItem("hintRemoved", "true");
+  }, 3000);
+});
+</script>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("dropdown-menu").classList.toggle("hidden");
+    document.getElementById("backdrop").classList.toggle("hidden");
+  }
+
+  function closeMenu() {
+    document.getElementById("dropdown-menu").classList.add("hidden");
+    document.getElementById("backdrop").classList.add("hidden");
+  }
+</script>
+
+<!-- Preventing right-clicking in Javascript embedded in HTML -->
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
+
+<script>
+document.querySelectorAll('.header-logo').forEach(el => {
+  el.setAttribute('draggable', 'false');
+  el.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+  <script>
+document.querySelectorAll('.hamburger-icon').forEach(el => {
+  el.setAttribute('draggable', 'false');
+  el.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+  <script>
+document.addEventListener('dragstart', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
+</script>
+
+<!-- Disabling keys -->
+<script>
+  document.addEventListener('keydown', e => {
+  if (e.ctrlKey && ['s','u','i','p'].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+    alert("This shortcut is disabled to protect copyrighted content.");
+  }
+});
+</script>
+
+<!-- Discouraging screenshots -->
+<script>
+  document.addEventListener('keyup', e => {
+  if (e.key === 'PrintScreen' || e.key === 44) {
+    alert("Screenshots are discouraged due to copyright.");
+  }
+});
+</script>
+
+<!-- Image Modal -->
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+      <div class="modal-tie-content">
+        <img id="modal-img">
+      </div>
+    <div id="caption-name"></div>
+    <div id="copyright-label">© 2025-2026 Lucky Creations. All rights reserved.</div>
+  </div>
+
+  <footer class="note-footer">
+  <hr>
+  <div class="footer-text">
+    The colours may or may not vary as per their availability. Please confirm at the time of purchase.<br>
+    © 2025-2026 Lucky Creations. All rights reserved.
+  </div>
+  </footer>
+
+</body>
+
+</html>
