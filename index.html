@@ -151,6 +151,13 @@ fetch('./json-files/index.json')
       const card = document.createElement('div');
       card.className = 'product-card';
 
+      if (cat.new) {
+      const mark = document.createElement('div');
+      mark.className = 'new-launch';
+      mark.textContent = 'New Launch';
+      card.appendChild(mark);
+     }
+
       const titleDiv = document.createElement('div');
       titleDiv.className = 'product-title';
       titleDiv.textContent = title;
