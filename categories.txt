@@ -1,0 +1,25 @@
+1) Keychains
+2) Hair Scrunchies
+3) Earrings
+4) Centerpieces
+5) Doilies
+6) Mini Bags & Pouches
+7) Coster Sets
+8) Handkerchiefs
+9) Phone Pouches
+
+Special:
+Tricolour
+
+Seasonal:
+1) Rakhis
+
+Coming Soon:
+1) Curtain Tie Backs
+
+(Optional) Typography:
+32/1.618 = 19.78
+32*1.618 = 51.78
+32*0.83 = 26.56
+32/0.83 = 38.55
+19.78*0.83*0.83 = 13.63

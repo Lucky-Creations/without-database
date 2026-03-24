@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Lucky Creations: Home Page</title>
+
+  <!-- PNG Favicon (Not Webp) -->
+  <link rel="icon" type="image/png" href="./media/centerpiece-main.png">
+
+  <!-- Stylesheets from folder 'css-files' -->
+  <link rel="stylesheet" href="./css-files/everywhere.css"/>
+  <link rel="stylesheet" href="./css-files/header.css"/>
+  <link rel="stylesheet" href="./css-files/delivery.css"/>
+  <link rel="stylesheet" href="./css-files/index.css"/>
+  <link rel="stylesheet" href="./css-files/products.css"/>
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body oncontextmenu="return false">
+  <div class="header"> <!--Beginning of the header-->
+    <div class="left-section">
+      <div class="hamburger-icon-container">
+        <picture>
+          <source srcset="./media/hamburger-icon.webp" type="image/webp">
+          <img class="hamburger-icon"
+               alt="toggle-icon"
+               src="./media/hamburger-icon.png"
+               width="24" height="24"
+               decoding="async"
+               onclick="toggleMenu()"
+               draggable="false"
+               ondragstart="return false;">
+        </picture>
+      </div>
+
+      <div class="header-logo-container">
+        <a rel="website" href="index.html">
+          <picture>
+            <source srcset="./media/upscale.webp" type="image/webp">
+            <img class="header-logo"
+                 alt="the-logo"
+                 src="./media/upscale.png"
+                 width="756" height="251"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async"
+                 draggable="false"
+                 ondragstart="return false;">
+          </picture>
+        </a>
+      </div>
+    </div>
+
+    <div class="middle-section">
+      <div class="page-title-container">
+        <hr class="top-line"> <!-- Top line -->
+        <div class="page-title">Home Page</div>
+        <hr class="bottom-line"> <!-- Bottom line -->
+      </div>
+    </div>
+
+    <div class="right-section">
+      Complete <br> Catalogue
+    </div>
+  </div> <!--Ending of the header-->
+
+  <div id="dropdown-menu" class="dropdown hidden">
+    <a href="./html-files/about-us.html">About Us</a>
+    <a href="./html-files/contact.html">Contact Us</a>
+  </div>
+
+  <div id="backdrop" class="backdrop hidden" onclick="closeMenu()"></div>
+
+  <div class="delivery-bar"> <!--Beginning of the delivery bar-->
+    <div class="scroll-text">
+      Pan-India Delivery Available. Contact &#9742; +91 8169341750 &#9679; &#9993;
+      <a href="mailto:luckycreations.crochet@gmail.com?subject=Inquiry%20About%20Catalogue">
+        luckycreations.crochet@gmail.com
+      </a>
+    </div>
+  </div> <!--Ending of the delivery bar-->
+
+  <!-- The tap message -->
+  <div id="tapOverlayHome" class="tap-overlay-home">
+    <div class="tap-message-home">
+      <img id="tapImageHome" src="./media/new-tap-1.png" alt="Tap hint home">
+      <p>Tap on any category below to view the catalogue.</p>
+    </div>
+  </div>
+
+  <div class="hero-image-container"> <!--Beginning of the hero image-->
+    <div class="hero-image-1">
+      <picture>
+        <source srcset="./media/hero-1.webp" type="image/webp">
+        <img src="./media/hero-1.png"
+             alt="Hero Top"
+             width="1265" height="646"
+             loading="eager"
+             fetchpriority="high"
+             decoding="async"
+             draggable="false"
+             ondragstart="return false;">
+      </picture>
+    </div>
+
+    <div class="tagline">
+      <p>Wear It, Style It, Flaunt It!</p>
+    </div>
+
+    <div class="hero-image-2">
+      <picture>
+        <source srcset="./media/hero-2.webp" type="image/webp">
+        <img src="./media/hero-2.png"
+             alt="Hero Bottom"
+             width="1265" height="640"
+             loading="lazy"
+             decoding="async"
+             draggable="false"
+             ondragstart="return false;">
+      </picture>
+    </div>
+  </div> <!--Ending of the hero image-->
+
+  <div class="intro-line">Showcasing Our <b>Handicrafts'</b> Categories:</div>
+
+  <main class="products-category"></main>
+
+<script>
+fetch('./json-files/index.json')
+  .then(r => r.json())
+  .then(categories => {
+    const container = document.querySelector('.products-category');
+    if (!container) return;
+
+    // A warning message to prevent site from going wrong
+    if (!Array.isArray(categories) || categories.length === 0) {
+      container.innerHTML = '<p class="empty">No categories available right now.</p>';
+      return;
+    }
+
+    categories.forEach(cat => {
+      const title = cat.title || 'Item';
+      const desc  = cat.description || '';
+      const link  = (cat.link || '').trim();
+      const image = (cat.image || '').trim(); // e.g., "keychain-main.png"
+      const base  = image.replace(/\.(avif|webp|png|jpe?g)$/i, ''); // "keychain-main"
+
+      // Encode only filename segments
+      const encImage = encodeURIComponent(image);
+      const encBase  = encodeURIComponent(base);
+
+      const a = document.createElement('a');
+      a.href = `./html-files/${link}`;
+      a.setAttribute('aria-label', title);
+
+      const card = document.createElement('div');
+      card.className = 'product-card';
+
+      if (cat.new) {
+      const mark = document.createElement('div');
+      mark.className = 'new-launch';
+      mark.textContent = 'New Launch';
+      card.appendChild(mark);
+     }
+
+      const titleDiv = document.createElement('div');
+      titleDiv.className = 'product-title';
+      titleDiv.textContent = title;
+
+      const imgWrap = document.createElement('div');
+      imgWrap.className = 'product-image';
+
+      const picture = document.createElement('picture');
+
+      const webp = document.createElement('source');
+      webp.type = 'image/webp';
+      webp.srcset = `./media/${encBase}.webp`; // single URL, no descriptor
+      picture.appendChild(webp);
+
+      const img = document.createElement('img');
+      img.src = `./media/${encImage}`; // PNG/JPG fallback
+      img.alt = title;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      picture.appendChild(img);
+
+      // Preventing dragging images in HTML
+      img.setAttribute('draggable', 'false');
+      img.ondragstart = (e) => e.preventDefault();
+
+      imgWrap.appendChild(picture);
+
+      const descDiv = document.createElement('div');
+      descDiv.className = 'product-description';
+      descDiv.textContent = desc;
+
+      card.appendChild(titleDiv);
+      card.appendChild(imgWrap);
+      card.appendChild(descDiv);
+      a.appendChild(card);
+      container.appendChild(a);
+    });
+  })
+  .catch(err => {
+    const container = document.querySelector('.products-category');
+    if (container) {
+      container.innerHTML = '<p class="error">Loading products soon! Please try again later and kindly notify this issue on the above number or email to help us improve. Thank You!</p>';
+    }
+    console.error('Error loading categories:', err);
+  });
+  
+</script>
+
+<script>
+window.addEventListener("load", () => {
+  if (sessionStorage.getItem("hintHomeRemoved")) {
+    return;
+  }
+
+  const tapImageHome = document.getElementById("tapImageHome");
+  const images = ["./media/new-tap-1.png", "./media/new-tap-2.png", "./media/new-tap-3.png"];
+  let index = 0;
+
+  // Preload all images
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  const overlay = document.getElementById("tapOverlayHome");
+  overlay.classList.add("show");
+
+  const interval = setInterval(() => {
+    index = (index + 1) % images.length;
+    tapImageHome.src = images[index];
+  }, 950);
+
+  setTimeout(() => {
+    overlay.classList.remove("show");
+    clearInterval(interval);
+    sessionStorage.setItem("hintHomeRemoved", "true");
+  }, 3000);
+});
+</script>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("dropdown-menu").classList.toggle("hidden");
+      document.getElementById("backdrop").classList.toggle("hidden");
+    }
+    function closeMenu() {
+      document.getElementById("dropdown-menu").classList.add("hidden");
+      document.getElementById("backdrop").classList.add("hidden");
+    }
+  </script>
+
+<!-- Preventing right-clicking in Javascript embedded in HTML -->
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
+
+<!-- Preventing dragging images in Javascript embedded in HTML -->
+  <script>
+document.querySelectorAll('.header-logo').forEach(el => {
+  el.setAttribute('draggable', 'false');
+  el.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+  <script>
+document.querySelectorAll('.hamburger-icon').forEach(el => {
+  el.setAttribute('draggable', 'false');
+  el.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+  <script>
+document.addEventListener('dragstart', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
+</script>
+
+<!-- Disabling keys -->
+<script>
+  document.addEventListener('keydown', e => {
+  if (e.ctrlKey && ['s','u','i','p'].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+    alert("This shortcut is disabled to protect copyrighted content.");
+  }
+});
+</script>
+
+<!-- Discouraging screenshots -->
+<script>
+  document.addEventListener('keyup', e => {
+  if (e.key === 'PrintScreen' || e.key === 44) {
+    alert("Screenshots are discouraged due to copyright.");
+  }
+});
+</script>
+
+<footer class="home-footer">
+  <hr>
+  <div class="footer-text">
+    © 2025-2026 Lucky Creations. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
