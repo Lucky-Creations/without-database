@@ -222,32 +222,37 @@ window.addEventListener("load", () => {
   const images = ["./media/new-tap-1.png", "./media/new-tap-2.png", "./media/new-tap-3.png"];
   let index = 0;
 
-  //Preload all images and wait for them
+  // Preload images
   let loaded = 0;
   images.forEach(src => {
     const img = new Image();
     img.onload = () => {
       loaded++;
-      if (loaded === images.length) startAnimation();
+      if (loaded === images.length) startOverlay();
     };
     img.src = src;
   });
 
-  function startAnimation() {
+  function startOverlay() {
     const overlay = document.getElementById("tapOverlayHome");
     overlay.classList.add("show");
 
+    // Show first image immediately
     tapImageHome.src = images[0];
-    const interval = setInterval(() => {
-      index = (index + 1) % images.length;
-      tapImageHome.src = images[index];
-    }, 950);
 
+    // Delay the swap until overlay is fully visible (after CSS transition)
     setTimeout(() => {
-      overlay.classList.remove("show");
-      clearInterval(interval);
-      sessionStorage.setItem("hintHomeRemoved", "true");
-    }, 3000);
+      const interval = setInterval(() => {
+        index = (index + 1) % images.length;
+        tapImageHome.src = images[index];
+      }, 950);
+
+      setTimeout(() => {
+        overlay.classList.remove("show");
+        clearInterval(interval);
+        sessionStorage.setItem("hintHomeRemoved", "true");
+      }, 3000);
+    }, 500); // wait for overlay fade-in
   }
 });
 </script>
