@@ -38,7 +38,7 @@
   padding: 0; /* remove box padding */
   text-align: center;
   color: #fff; /* white text for contrast */
-  animation: fadeHint 3s ease forwards;
+  /* animation: fadeHint 3s ease forwards; */
 }
 
 .tap-message img, .tap-message-home img {
