@@ -216,33 +216,39 @@ fetch('./json-files/index.json')
 
 <script>
 window.addEventListener("load", () => {
-  if (sessionStorage.getItem("hintHomeRemoved")) {
-    return;
-  }
+  if (sessionStorage.getItem("hintHomeRemoved")) return;
 
   const tapImageHome = document.getElementById("tapImageHome");
   const images = ["./media/new-tap-1.png", "./media/new-tap-2.png", "./media/new-tap-3.png"];
   let index = 0;
 
-  // Preload all images
+  //Preload all images and wait for them
+  let loaded = 0;
   images.forEach(src => {
     const img = new Image();
+    img.onload = () => {
+      loaded++;
+      if (loaded === images.length) startAnimation();
+    };
     img.src = src;
   });
 
-  const overlay = document.getElementById("tapOverlayHome");
-  overlay.classList.add("show");
+  function startAnimation() {
+    const overlay = document.getElementById("tapOverlayHome");
+    overlay.classList.add("show");
 
-  const interval = setInterval(() => {
-    index = (index + 1) % images.length;
-    tapImageHome.src = images[index];
-  }, 950);
+    tapImageHome.src = images[0];
+    const interval = setInterval(() => {
+      index = (index + 1) % images.length;
+      tapImageHome.src = images[index];
+    }, 950);
 
-  setTimeout(() => {
-    overlay.classList.remove("show");
-    clearInterval(interval);
-    sessionStorage.setItem("hintHomeRemoved", "true");
-  }, 3000);
+    setTimeout(() => {
+      overlay.classList.remove("show");
+      clearInterval(interval);
+      sessionStorage.setItem("hintHomeRemoved", "true");
+    }, 3000);
+  }
 });
 </script>
 
