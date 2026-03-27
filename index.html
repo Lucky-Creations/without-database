@@ -234,26 +234,30 @@ window.addEventListener("load", () => {
   });
 
   function startOverlay() {
-    const overlay = document.getElementById("tapOverlayHome");
-    overlay.classList.add("show");
+  const overlay = document.getElementById("tapOverlayHome");
+  const tapImageHome = document.getElementById("tapImageHome");
+  
+  // 1. Show the overlay
+  overlay.classList.add("show");
+  index = 0;
+  tapImageHome.src = images[0];
 
-    // Show first image immediately
-    tapImageHome.src = images[0];
+  // 2. Start swapping images every 800ms (slightly faster for better flow)
+  const interval = setInterval(() => {
+    index++;
+    if (index < images.length) {
+      tapImageHome.src = images[index];
+    } else {
+      clearInterval(interval); // Stop if we run out of images
+    }
+  }, 800);
 
-    // Delay the swap until overlay is fully visible (after CSS transition)
-    setTimeout(() => {
-      const interval = setInterval(() => {
-        index = (index + 1) % images.length;
-        tapImageHome.src = images[index];
-      }, 950);
-
-      setTimeout(() => {
-        overlay.classList.remove("show");
-        clearInterval(interval);
-        sessionStorage.setItem("hintHomeRemoved", "true");
-      }, 3000);
-    }, 500); // wait for overlay fade-in
-  }
+  // 3. Close the overlay after exactly 3 seconds
+  setTimeout(() => {
+    overlay.classList.remove("show");
+    sessionStorage.setItem("hintHomeRemoved", "true");
+  }, 2800);
+}
 });
 </script>
 
