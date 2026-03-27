@@ -215,7 +215,7 @@ fetch('./json-files/index.json')
 </script>
 
 <script>
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   if (sessionStorage.getItem("hintHomeRemoved")) return;
 
   const tapImageHome = document.getElementById("tapImageHome");
