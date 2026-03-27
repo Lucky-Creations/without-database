@@ -222,7 +222,7 @@ window.addEventListener("load", () => {
   const images = ["./media/new-tap-1.png", "./media/new-tap-2.png", "./media/new-tap-3.png"];
   let index = 0;
 
-  // Preload images
+  // 1. Preload and verify images
   let loaded = 0;
   images.forEach(src => {
     const img = new Image();
@@ -230,34 +230,37 @@ window.addEventListener("load", () => {
       loaded++;
       if (loaded === images.length) startOverlay();
     };
+    img.onerror = () => {
+      // Fail-safe: If an image fails, just hide the overlay so the site stays usable
+      console.error("Failed to load: " + src);
+      sessionStorage.setItem("hintHomeRemoved", "true"); 
+    };
     img.src = src;
   });
 
   function startOverlay() {
-  const overlay = document.getElementById("tapOverlayHome");
-  const tapImageHome = document.getElementById("tapImageHome");
-  
-  // 1. Show the overlay
-  overlay.classList.add("show");
-  index = 0;
-  tapImageHome.src = images[0];
+    const overlay = document.getElementById("tapOverlayHome");
+    
+    // 2. Set the first image IMMEDIATELY before showing the overlay
+    tapImageHome.src = images[0];
+    overlay.classList.add("show");
 
-  // 2. Start swapping images every 800ms (slightly faster for better flow)
-  const interval = setInterval(() => {
-    index++;
-    if (index < images.length) {
-      tapImageHome.src = images[index];
-    } else {
-      clearInterval(interval); // Stop if we run out of images
-    }
-  }, 800);
+    // 3. Swap with a slightly longer interval (850ms) to prevent flickering
+    const interval = setInterval(() => {
+      index++;
+      if (index < images.length) {
+        tapImageHome.src = images[index];
+      } else {
+        clearInterval(interval);
+      }
+    }, 850);
 
-  // 3. Close the overlay after exactly 3 seconds
-  setTimeout(() => {
-    overlay.classList.remove("show");
-    sessionStorage.setItem("hintHomeRemoved", "true");
-  }, 2800);
-}
+    // 4. Stay visible for 3 seconds total
+    setTimeout(() => {
+      overlay.classList.remove("show");
+      sessionStorage.setItem("hintHomeRemoved", "true");
+    }, 3000);
+  }
 });
 </script>
 
