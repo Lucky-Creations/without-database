@@ -1,4 +1,4 @@
-// Rendering tie backs
+// Rendering curtain tie backs
 function renderCatalogue(list) {
   const container = document.getElementById('product-container');
   container.innerHTML = '';
