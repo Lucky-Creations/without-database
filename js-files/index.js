@@ -1,4 +1,4 @@
-// Render categories One dot to refer folders since this is running on behalf of index.html
+// Render categories
 fetch('./json-files/index.json') // One dot to refer folders since index.js is running on behalf of index.html
   .then(r => r.json())
   .then(categories => {
