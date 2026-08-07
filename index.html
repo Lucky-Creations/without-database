@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Lucky Creations: Home Page</title>
+
+  <!-- PNG Favicon (Not Webp) -->
+  <link rel="icon" type="image/png" href="https://lucky-creations.github.io/images/media/centerpiece-main.png">
+
+  <!-- Stylesheets from folder 'css-files' -->
+  <link rel="stylesheet" href="./css-files/everywhere.css"/>
+  <link rel="stylesheet" href="./css-files/header.css"/>
+  <link rel="stylesheet" href="./css-files/delivery.css"/>
+  <link rel="stylesheet" href="./css-files/index.css"/>
+  <link rel="stylesheet" href="./css-files/products.css"/>
+
+  <!-- Javascript rendering from folder 'js-files' -->
+  <script src="./js-files/everywhere.js"></script>
+  <script src="./js-files/index.js"></script>
+  <script src="./js-files/loader.js"></script>
+  <script type="module" src="./js-files/database.js"></script>
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body oncontextmenu="return false">
+  <div class="header"> <!--Beginning of the header-->
+    <div class="left-section">
+      <div class="hamburger-icon-container">
+        <picture>
+          <source srcset="https://lucky-creations.github.io/images/media/hamburger-icon.webp" type="image/webp">
+          <img class="hamburger-icon"
+               alt="toggle-icon"
+               src="https://lucky-creations.github.io/images/media/hamburger-icon.png"
+               width="24" height="24"
+               decoding="async"
+               onclick="toggleMenu()"
+               draggable="false"
+               ondragstart="return false;">
+        </picture>
+      </div>
+
+      <div class="header-logo-container">
+        <a rel="website" href="index.html">
+          <picture>
+            <source srcset="https://lucky-creations.github.io/images/media/logo.webp" type="image/webp">
+            <img class="header-logo"
+                 alt="the-logo"
+                 src="https://lucky-creations.github.io/images/media/logo.png"
+                 width="756" height="251"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async"
+                 draggable="false"
+                 ondragstart="return false;">
+          </picture>
+        </a>
+      </div>
+    </div>
+
+    <div class="middle-section">
+      <div class="page-title-container">
+        <hr class="top-line"> <!-- Top line -->
+        <div class="page-title">Home Page</div>
+        <hr class="bottom-line"> <!-- Bottom line -->
+      </div>
+    </div>
+
+    <div class="right-section">
+      Complete <br> Catalogue
+    </div>
+  </div> <!--Ending of the header-->
+
+  <!-- Create dropdown lists for 'About Us' & 'Contact Us' -->
+  <div id="dropdown-menu" class="dropdown hidden">
+    <a href="./html-files/about-us.html">About Us</a>
+    <a href="./html-files/contact.html">Contact Us</a>
+  </div>
+
+  <!-- Hide dropdown lists when hamburger icon is clicked -->
+  <div id="backdrop" class="backdrop hidden" onclick="closeMenu()"></div>
+
+  <div class="delivery-bar"> <!--Beginning of the delivery bar-->
+    <div class="scroll-text">
+      Pan-India Delivery Available. Contact &#9742; +91 8169341750 &#9679; &#9993;
+      <a href="mailto:luckycreations.crochet@gmail.com?subject=Inquiry%20About%20Catalogue">
+        luckycreations.crochet@gmail.com
+      </a>
+    </div>
+  </div> <!--Ending of the delivery bar-->
+
+  <!-- The tap message -->
+  <div id="tapOverlayHome" class="tap-overlay-home">
+    <div class="tap-message-home">
+      <img id="tapImageHome" src="https://lucky-creations.github.io/images/media/tap-1.png" alt="Tap hint home">
+      <p>Tap on any category below to view the catalogue.</p>
+    </div>
+  </div>
+
+  <!-- The loader -->
+  <div id="loader">
+    <div class="loader-icon"></div>
+    <p id ="loaderText" class="loader-text">Stitching it together...</p>
+  </div>
+
+  <div class="hero-image-container"> <!--Beginning of the hero image-->
+    <div class="hero-image-1">
+      <picture>
+        <source srcset="https://lucky-creations.github.io/images/media/hero-1.webp" type="image/webp">
+        <img src="https://lucky-creations.github.io/images/media/hero-1.png"
+             alt="Hero Top"
+             width="1265" height="646"
+             loading="eager"
+             fetchpriority="high"
+             decoding="async"
+             draggable="false"
+             ondragstart="return false;">
+      </picture>
+    </div>
+
+    <div class="tagline">
+      <p>Wear It, Style It, Flaunt It!</p>
+    </div>
+
+    <div class="hero-image-2">
+      <picture>
+        <source srcset="https://lucky-creations.github.io/images/media/hero-2.webp" type="image/webp">
+        <img src="https://lucky-creations.github.io/images/media/hero-2.webp"
+             alt="Hero Bottom"
+             width="1265" height="640"
+             loading="lazy"
+             decoding="async"
+             draggable="false"
+             ondragstart="return false;">
+      </picture>
+    </div>
+  </div> <!--Ending of the hero image-->
+
+  <!-- The introduction line -->
+  <div class="intro-line">Showcasing Our <b>Handicrafts'</b> Categories:</div>
+
+  <!-- The space for the categories to be rendered -->
+  <main class="products-category"></main>
+
+  <!-- Footer about copyright -->
+  <footer class="home-footer">
+    <hr>
+    <div class="footer-text">
+      © 2025-2026 Lucky Creations. All rights reserved.
+    </div>
+  </footer>
+</body>
+
+</html>
