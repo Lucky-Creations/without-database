@@ -1,4 +1,4 @@
-// Rendering rakhis
+// Rendering handcrafted rakhis
 function renderCatalogue(list) {
   const container = document.getElementById('product-container');
   container.innerHTML = '';
