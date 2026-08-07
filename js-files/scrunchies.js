@@ -1,4 +1,4 @@
-// Rendering scrunchies
+// Rendering hair scrunchies
 function renderCatalogue(list) {
   const container = document.getElementById('product-container');
   container.innerHTML = '';
