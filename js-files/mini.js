@@ -1,4 +1,4 @@
-// Rendering mini bags
+// Rendering mini bags and pouches
 function renderCatalogue(list) {
   const container = document.getElementById('product-container');
   container.innerHTML = '';
