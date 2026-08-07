@@ -8,10 +8,10 @@ function closeMenu() {
   document.getElementById("backdrop").classList.add("hidden");
 }
 
-// Preventing right-clicking in Javascript embedded in HTML
+// Preventing right-clicking in Javascript
 document.addEventListener('contextmenu', e => e.preventDefault());
 
-// Preventing dragging images in Javascript embedded in HTML
+// Preventing dragging images in Javascript
 document.querySelectorAll('.header-logo').forEach(el => {
   el.setAttribute('draggable', 'false');
   el.addEventListener('dragstart', e => e.preventDefault());
