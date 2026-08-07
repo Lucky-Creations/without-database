@@ -1,4 +1,4 @@
-// Rendering handkerchiefs
+// Rendering lacy handkerchiefs
 function renderCatalogue(list) {
   const container = document.getElementById('product-container');
   container.innerHTML = '';
