@@ -3,14 +3,14 @@ import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.4.
 import { getDatabase, ref, runTransaction } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAvWlnAUx3hFEkksLzvTTnUWsn90OVPqFI",
-  authDomain: "lph-server-website.firebaseapp.com",
-  databaseURL: "https://lph-server-website-default-rtdb.firebaseio.com",
-  projectId: "lph-server-website",
-  storageBucket: "lph-server-website.firebasestorage.app",
-  messagingSenderId: "200401032111",
-  appId: "1:200401032111:web:d0ccd06a0415e97657955a",
-  measurementId: "G-9B9SR4TZVY"
+  apiKey: "AIzaSyCrMLfSNOiKR8IrU0d6CkUrMofj4WKoI_c",
+  authDomain: "lucky-creations-crochet.firebaseapp.com",
+  databaseURL: "https://lucky-creations-crochet-default-rtdb.firebaseio.com/",
+  projectId: "lucky-creations-crochet",
+  storageBucket: "lucky-creations-crochet.firebasestorage.app",
+  messagingSenderId: "527493766952",
+  appId: "1:527493766952:web:5dac9fff5448633075ba1d",
+  measurementId: "G-YLZF9540JL"
 };
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
       && isValidWhen(path, host)
     ) {
         logEvent(analytics, "site_visit", { source: "home_page" });
-        runTransaction(ref(db, "crochet_stats/crochet_visits"), n => (n || 0) + 1);
+        runTransaction(ref(db, "crochet_stats/home_visits"), n => (n || 0) + 1);
     }
 
     else if (path.endsWith("centerpieces.html") && isValidWhen(path, host)
