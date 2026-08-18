@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Lucky Creations: Keychains</title>
+  <link rel="icon" type="image/png" href="https://lucky-creations.github.io/images/media/centerpiece-main.png">
+  <link rel="stylesheet" type="text/css" href="../css-files/everywhere.css"/>
+  <link rel="stylesheet" type="text/css" href="../css-files/header.css"/>
+  <link rel="stylesheet" type="text/css" href="../css-files/delivery.css"/>
+  <link rel="stylesheet" type="text/css" href="../css-files/products.css"/>
+
+  <script src="../js-files/everywhere.js"></script>
+  <script src="../js-files/keychains.js"></script>
+  <script src="../js-files/products-tap.js"></script>
+  <script src="../js-files/loader.js"></script>
+  <script type="module" src="../js-files/database.js"></script>
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body oncontextmenu="return false">
+  <div class="header"> <!--Beginning of the header-->
+    <div class="left-section">
+      <div class="hamburger-icon-container">
+        <picture>
+          <source srcset="https://lucky-creations.github.io/images/media/hamburger-icon.webp" type="image/webp">
+          <img class="hamburger-icon"
+               alt="toggle-icon"
+               src="https://lucky-creations.github.io/images/media/hamburger-icon.png"
+               width="24" height="24"
+               decoding="async"
+               onclick="toggleMenu()"
+               draggable="false"
+               ondragstart="return false;">
+        </picture>
+      </div>
+
+      <div class="header-logo-container">
+        <a rel="website" href="../index.html">
+          <picture>
+            <source srcset="https://lucky-creations.github.io/images/media/logo.webp" type="image/webp">
+            <img class="header-logo"
+                 alt="the-logo"
+                 src="https://lucky-creations.github.io/images/media/logo.png"
+                 width="756" height="251"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async"
+                 draggable="false"
+                 ondragstart="return false;">
+          </picture>
+        </a>
+      </div>
+    </div>
+
+    <div class="middle-section">
+      <div class="page-title-container">
+        <hr class="top-line"> <!-- Top line -->
+        <div class="page-title">Keychains</div>
+        <hr class="bottom-line"> <!-- Bottom line -->
+      </div>
+    </div>
+
+    <div class="right-section">
+      Complete <br> Catalogue
+    </div>
+  </div> <!--Ending of the header-->
+
+  <!-- Create dropdown lists for 'About Us' & 'Contact Us' -->
+  <div id="dropdown-menu" class="dropdown hidden">
+    <a href="about-us.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <!-- Hide dropdown lists when hamburger icon is clicked -->
+  <div id="backdrop" class="backdrop hidden" onclick="closeMenu()"></div>
+
+  <div class="delivery-bar"> <!--Beginning of the delivery bar-->
+    <div class="scroll-text">
+      Pan-India Delivery Available. Contact &#9742; +91 8169341750 &#9679; &#9993;
+      <a href="mailto:luckycreations.crochet@gmail.com?subject=Inquiry%20About%20Catalogue">
+        luckycreations.crochet@gmail.com
+      </a>
+    </div>
+  </div> <!--Ending of the delivery bar-->
+
+  <!-- The loader -->
+  <div id="loader">
+    <div class="loader-icon"></div>
+    <p id ="loaderText" class="loader-text">Stitching it together...</p>
+  </div>
+
+  <div id="controls"> <!--Beginning of controls-->
+    <div id="filters">
+      <label class="filter-label">
+        <svg class="funnel-icon" viewBox="0 0 24 24" width="18" height="18"> <!-- Funnel outline -->
+          <path d="M6 6 H18 L14 14 L13 22 L11 22 L10 14 Z" fill="#f7f7f2"/> <!-- Fluid rectangle -->
+        </svg>
+
+        <span>Filter:</span>
+        <select id="filter-select">
+          <option value="normal">All</option>
+          <option value="animated">Animated For Kids</option>
+          <option value="floral">Floral Designs</option>
+          <option value="puffed">Puffed Designs</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="sort">
+      <label class="sort-label">
+        <svg class="sort-icon" viewBox="0 0 24 24" width="18" height="18">
+          <path d="M7 10l5-5 5 5H7z"/> <!-- Up arrow -->
+          <path d="M7 14l5 5 5-5H7z"/> <!-- Down arrow -->
+        </svg>
+        <span>Sort:</span>
+        <select id="sort-select">
+          <option value="default">Default</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="bestsellers">Bestsellers First</option>
+          <option value="new">New Arrivals First</option>
+        </select>
+      </label>
+    </div>
+  </div> <!--Ending of controls-->
+
+  <!-- The tap message -->
+  <div id="tapOverlay" class="tap-overlay">
+    <div class="tap-message">
+      <img id="tapImage" src="../media/tap-1.png" alt="Tap hint">
+      <p>Tap on the card to enlarge the design.</p>
+    </div>
+  </div>
+
+  <!-- The space for the products to be rendered -->
+  <main id="product-container"></main>
+
+  <!-- The image modal -->
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption-name"></div>
+    <div id="copyright-label">© 2025-2026 Lucky Creations. All rights reserved.</div>
+  </div>
+
+  <!-- Footer about colour & copyright -->
+  <footer class="note-footer">
+  <hr>
+  <div class="footer-text">
+    The colours may or may not vary as per their availability. Please confirm at the time of purchase.<br>
+    © 2025-2026 Lucky Creations. All rights reserved.
+  </div>
+  </footer>
+</body>
+
+</html>

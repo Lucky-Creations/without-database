@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Spiral Rakhi",
+    "rate": "₹60",
+    "image": "spiral.png",
+    "category": "twine",
+    "whatsapp": "Hi! I'm interested in the Spiral Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Garden of Pearls Rakhi",
+    "rate": "₹100",
+    "image": "garden-of-pearls.png",
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the Garden of Pearls Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Doraemon Rakhi",
+    "rate": "₹130",
+    "bestseller": true,
+    "image": "doraemon.png",
+    "category": "happy",
+    "whatsapp": "Hi! I'm interested in the Doraemon Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Morpankh Rakhi",
+    "rate": "₹70",
+    "image": "morpankh.png",
+    "category": "twine",
+    "whatsapp": "Hi! I'm interested in the Morpankh Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Lion Rakhi",
+    "rate": "₹130",
+    "bestseller": true,
+    "image": "lion-1.png",
+    "sequence": ["lion-2.png"],
+    "category": "happy",
+    "whatsapp": "Hi! I'm interested in the Lion Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Cartoon Rakhi",
+    "rate": "₹90",
+    "bestseller": true,
+    "image": "cartoon-1.png",
+    "sequence": ["cartoon-2.png"],
+    "category": "happy",
+    "whatsapp": "Hi! I'm interested in the Cartoon Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Elephant Rakhi",
+    "rate": "₹60",
+    "image": "elephant-1.png",
+    "sequence": ["elephant-2.png"],
+    "category": "happy",
+    "whatsapp": "Hi! I'm interested in the Elephant Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Smiley Face Rakhi",
+    "rate": "₹110",
+    "bestseller": true,
+    "image": "smiley-face.png",
+    "category": "happy",
+    "whatsapp": "Hi! I'm interested in the Smiley Face Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Bunny Rakhi",
+    "rate": "₹80",
+    "image": "bunny.png",
+    "category": "happy",
+    "whatsapp": "Hi! I'm interested in the Bunny Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Pearl Bracelet Rakhi",
+    "rate": "₹55",
+    "image": "pearl-bracelet-1.png",
+    "sequence": ["pearl-bracelet-2.png"],
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the Pearl Bracelet Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Flower Bracelet Rakhi",
+    "rate": "₹60",
+    "bestseller": true,
+    "image": "flower-bracelet-1.png",
+    "sequence": ["flower-bracelet-2.png"],
+    "category": "twine",
+    "whatsapp": "Hi! I'm interested in the Flower Bracelet Rakhi from Lucky Creations."
+  },
+  {
+    "name": "The Big Bloom Rakhi",
+    "rate": "₹120",
+    "bestseller": true,
+    "image": "the-big-bloom.png",
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the The Big Bloom Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Pearl Rakhi 1",
+    "rate": "₹50",
+    "image": "pearl-1.png",
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the Pearl Rakhi 1 from Lucky Creations."
+  },
+  {
+    "name": "Pearl Rakhi 2",
+    "rate": "₹60",
+    "image": "pearl-2.png",
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the Pearl Rakhi 2 from Lucky Creations."
+  },
+  {
+    "name": "Pearl Rakhi 3",
+    "rate": "₹55",
+    "bestseller": true,
+    "image": "pearl-3.png",
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the Pearl Rakhi 3 from Lucky Creations."
+  },
+  {
+    "name": "Pearl Rakhi 4",
+    "rate": "₹55",
+    "image": "pearl-4.png",
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the Pearl Rakhi 4 from Lucky Creations."
+  },
+  {
+    "name": "Pearl Rakhi 5",
+    "rate": "₹55",
+    "image": "pearl-5.png",
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the Pearl Rakhi 5 from Lucky Creations."
+  },
+  {
+    "name": "Flower & Lush Rakhi",
+    "rate": "₹55",
+    "image": "flower-lush.png",
+    "category": "twine",
+    "whatsapp": "Hi! I'm interested in the Flower & Lush Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Spiral Heart Rakhi",
+    "rate": "₹50",
+    "image": "spiral-heart.png",
+    "category": "twine",
+    "whatsapp": "Hi! I'm interested in the Spiral Heart Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Puff Flower Rakhi",
+    "rate": "₹60",
+    "image": "puff-flower-1.png",
+    "sequence": ["puff-flower-2.png"],
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the Puff Flower Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Dual Tone Flower Rakhi",
+    "rate": "₹60",
+    "image": "dual-tone-flower.png",
+    "category": "twine",
+    "whatsapp": "Hi! I'm interested in the Dual Tone Flower Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Golden Chakra Rakhi",
+    "rate": "₹65",
+    "image": "golden-chakra-1.png",
+    "sequence": ["golden-chakra-2.png", "golden-chakra-3.png", "golden-chakra-4.png"],
+    "category": "twine",
+    "whatsapp": "Hi! I'm interested in the Golden Chakra Rakhi from Lucky Creations."
+  },
+  {
+    "name": "6-Beads Rakhi",
+    "rate": "₹50",
+    "image": "6-beads-1.png",
+    "sequence": ["6-beads-2.png"],
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the 6-Beads Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Dewdrops on Flower Rakhi",
+    "rate": "₹70",
+    "image": "dewdrops-on-flower.png",
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the Dewdrops on Flower Rakhi from Lucky Creations."
+  },
+  {
+    "name": "Merry-Go-Round Rakhi",
+    "rate": "₹60",
+    "image": "merry-go-round.png",
+    "category": "pearl",
+    "whatsapp": "Hi! I'm interested in the Merry-Go-Round Rakhi from Lucky Creations."
+  }
+]
