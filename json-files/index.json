@@ -1,18 +1,18 @@
 [
   {
-    "title": "Everything Tricolour",
-    "image": "tricolour-main.png",
-    "description": "All things woven in the Indian colours!",
-    "link": "tricolour.html",
-    "class": "tricolour"
-  },
-  {
     "title": "Handcrafted Rakhis",
     "new": true,
     "image": "rakhi-main.png",
     "description": "A thread of LOVE, a bond for LIFE!",
     "link": "rakhis.html",
     "class": "rakhis"
+  },
+  {
+    "title": "Centerpieces",
+    "image": "centerpiece-main.png",
+    "description": "Shelf or vase, style with class",
+    "link": "centerpieces.html",
+    "class": "thaalposh"
   },
   {
     "title": "Keychains",
@@ -34,13 +34,6 @@
     "description": "Take advantage of your ear piercing",
     "link": "earrings.html",
     "class": "earrings"
-  },
-  {
-    "title": "Centerpieces",
-    "image": "centerpiece-main.png",
-    "description": "Shelf or vase, style with class",
-    "link": "centerpieces.html",
-    "class": "thaalposh"
   },
   {
     "title": "Doilies",
@@ -90,5 +83,12 @@
     "description": "Lacy, trendy, always handy",
     "link": "handkerchiefs.html",
     "class": "handkerchiefs"
+  },
+  {
+    "title": "Everything Tricolour",
+    "image": "tricolour-main.png",
+    "description": "All things woven in the Indian colours!",
+    "link": "tricolour.html",
+    "class": "tricolour"
   }
 ]
