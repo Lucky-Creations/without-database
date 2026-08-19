@@ -108,9 +108,6 @@ fetch('../json-files/handkerchiefs.json')
   .then(products => {
     renderCatalogue(products);
 
-    // Disables sort options right away based on the initial product list
-    updateSortOptions(products);
-
     const parsePrice = p => Number(p.rate.replace(/[^\d]/g, ''));
 
     document.querySelector('#filters select').addEventListener('change', e => {
