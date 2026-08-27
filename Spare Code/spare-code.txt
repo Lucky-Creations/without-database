@@ -1,0 +1,10 @@
+1) In index.json:
+  {
+    "title": "Handcrafted Rakhis",
+    "new": true,
+    "image": "rakhi-main.png",
+    "description": "A thread of LOVE, a bond for LIFE!",
+    "link": "rakhis.html",
+    "class": "rakhis"
+  },
+  - Page to rakhis.
