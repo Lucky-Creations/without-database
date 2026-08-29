@@ -1,0 +1,138 @@
+.vertical-images .product-card {
+  max-width: 300px;
+}
+
+.vertical-images .product-card img {
+  max-height: 320px;
+}
+
+@media (max-width: 980px){
+  .vertical-images .product-card {
+    max-width: 270px;
+  }
+}
+
+@media (max-width: 895px){
+  .vertical-images .product-card {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 835px){
+  .vertical-images .product-card {
+    max-width: 250px;
+  }
+
+  .vertical-images .product-card img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 721px) {
+  .vertical-images .product-card {
+    max-width: 250px;
+  }
+  
+  .vertical-images .product-card img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 561px) {
+  .vertical-images .product-card {
+    max-width: 230px;
+  }
+
+  .vertical-images .product-card img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 521px) {
+  .vertical-images .product-card {
+    max-width: 220px;
+  }
+
+  .vertical-images .product-card img {
+    max-height: 270px;
+  }
+}
+
+@media (max-width: 501px) {
+  .vertical-images .product-card {
+    max-width: 200px;
+  }
+
+  .vertical-images .product-card img {
+    max-height: 270px;
+  }
+}
+
+@media (max-width: 461px) {
+  .vertical-images .product-card {
+    max-width: 180px;
+  }
+
+  .vertical-images .product-card img {
+    max-height: 270px;
+  }
+}
+
+@media (max-width: 421px) {
+  .vertical-images .product-card {
+    max-width: 170px;
+  }
+
+  .vertical-images .product-card img {
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 401px) {
+  .vertical-images .product-card {
+    max-width: 160px;
+  }
+
+  .vertical-images .product-card img {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 381px) {
+  .vertical-images .product-card {
+    max-width: 150px;
+  }
+
+  .vertical-images .product-card img {
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 361px) {
+  .vertical-images .product-card {
+    max-width: 140px;
+  }
+
+  .vertical-images .product-card img {
+    max-height: 230px;
+  }
+}
+
+@media (max-width: 341px) {
+  .vertical-images .product-card {
+    max-width: 130px;
+  }
+
+  .vertical-images .product-card img {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 321px) {
+  .vertical-images .product-card {
+    max-width: 90%;
+  }
+  .vertical-images .product-card img {
+    max-height: 100%;
+  }
+}
