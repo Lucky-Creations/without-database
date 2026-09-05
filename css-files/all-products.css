@@ -292,7 +292,7 @@
   border-radius: 8px;
 }
 
-.modal-rakhi-content img {
+.modal-rakhi-content img, .modal-garland-content img {
   display: block;
   margin: auto auto 15px auto;
   width: 40%; /* Forces scaling relative to the modal width (slightly larger than modal-tie-content) */
@@ -351,7 +351,7 @@
   .modal-tie-content img {
     width: 35%;
   }
-  .modal-rakhi-content img {
+  .modal-rakhi-content img, .modal-garland-content img {
     width: 45%;
   }
 }
@@ -360,7 +360,7 @@
   .modal-tie-content img {
     width: 42%;
   }
-  .modal-rakhi-content img {
+  .modal-rakhi-content img, .modal-garland-content img {
     width: 52%;
   }
 }
@@ -369,7 +369,7 @@
   .modal-tie-content img {
     width: 50%;
   }
-  .modal-rakhi-content img {
+  .modal-rakhi-content img, .modal-garland-content img {
     width: 60%;
   }
 }
@@ -378,7 +378,7 @@
   .modal-tie-content img {
     width: 60%;
   }
-  .modal-rakhi-content img {
+  .modal-rakhi-content img, .modal-garland-content img {
     width: 70%;
   }
 }
@@ -452,7 +452,7 @@
     width: 70%;
   }
 
-  .modal-rakhi-content img {
+  .modal-rakhi-content img, .modal-garland-content img {
     width: 80%;
   }
 }
