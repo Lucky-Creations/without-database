@@ -136,7 +136,8 @@
 
 .new-launch {
   position: absolute;
-  top: 0;
+  top: 15px;
+  left: -45px;
   background: linear-gradient(45deg, #33bf00, #ffffff);
   background-size: 300% 300%;
   color: #000000;
@@ -144,9 +145,16 @@
   border-radius: 6px;
   font-size: 12px;
   font-weight: bold;
+  transform: rotate(-45deg);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   pointer-events: none;
   animation: gradientShift 2s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .product-category-card:hover .new-launch {
