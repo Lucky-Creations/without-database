@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Garland Design 1",
+    "rate": "₹250",
+    "image": "garland-1-1.png",
+    "sequence": ["garland-1-2.png"],
+    "category": "floral",
+    "whatsapp": "Hi! I'm interested in the Garland Design 1 from Lucky Creations."
+  },
+  {
+    "name": "Garland Design 2",
+    "rate": "₹350",
+    "image": "garland-2-1.png",
+    "sequence": ["garland-2-2.png"],
+    "category": "floral",
+    "whatsapp": "Hi! I'm interested in the Garland Design 2 from Lucky Creations."
+  }
+]
