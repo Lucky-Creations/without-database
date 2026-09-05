@@ -136,14 +136,13 @@
 
 .new-launch {
   position: absolute;
-  top: 15px;
+  top: 14px;
   left: -45px;
   background: linear-gradient(45deg, #33bf00, #ffffff);
   background-size: 300% 300%;
   color: #000000;
-  padding: 5px 40px;
-  border-radius: 6px;
-  font-size: 12px;
+  padding: 3px 40px;
+  font-size: 11px;
   font-weight: bold;
   transform: rotate(-45deg);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -359,12 +358,6 @@ a, a * {
   }
 }
 
-@media (max-width: 660px) {
-  .new-launch {
-    padding: 2px 40px;
-  }
-}
-
 @media (max-width: 621px){
   .product-category-card {
     max-width: 270px;
@@ -386,10 +379,6 @@ a, a * {
 }
 
 @media (max-width: 561px){
-  .new-launch {
-    padding: 5px 40px;
-  }
-
   .product-category-card {
     max-width: 230px;
   }
@@ -441,11 +430,6 @@ a, a * {
     font-size: 11px;
     line-height: 1.2;
   }
-
-  .new-launch {
-    font-size: 10px;
-    padding: 5px 30px;
-  }
 }
 
 @media (max-width: 441px) {
@@ -459,11 +443,6 @@ a, a * {
 }
 
 @media (max-width: 401px) {
-  .new-launch {
-    font-size: 9px;
-    padding: 4px 30px;
-  }
-
   .product-category-card {
     max-width: 165px;
   }
@@ -605,11 +584,4 @@ a, a * {
   .product-description {
     font-size: 10px;
   }
-}
-
-@media (max-width: 262px) {
-  .new-launch {
-    font-size: 7px;
-    padding: 2px 30px;
-  } 
 }
