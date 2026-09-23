@@ -1,20 +1,40 @@
 [
   {
-    "name": "Purple Mud Pie Centerpiece",
+    "name": "Mud Pie Centerpiece",
+    "colours": [
+      {
+        "name": "Purple", "value": "purple", "image": "purple-mud-pie.png"
+      },
+      {
+        "name": "Cyan", "value": "cyan", "image": "cyan-mud-pie.png"
+      },
+      {
+        "name": "Red", "value": "red", "image": "red-mud-pie.png"
+      },
+      {
+        "name": "Orange", "value": "orange", "image": "orange-mud-pie.png"
+      }
+    ],
     "size": "44 cms",
     "rate": "₹540",
     "bestseller": true,
     "image": "purple-mud-pie.png",
-    "category": "dual",
-    "whatsapp": "Hi! I'm interested in the Purple Mud Pie Centerpiece from Lucky Creations."
+    "category": "dual"  
   },
   {
     "name": "Crown Of Hearts Centerpiece",
+    "colours": [
+      {
+        "name": "Pink", "value": "#ff1493", "image": "pink-crown-of-hearts.png"
+      },
+      {
+        "name": "Red", "value": "red", "image": "red-crown-of-hearts.png"
+      }
+    ],
     "size": "31 cms",
     "rate": "₹225",
-    "image": "crown-of-hearts.png",
-    "category": "dual",
-    "whatsapp": "Hi! I'm interested in the Crown Of Hearts Centerpiece from Lucky Creations."
+    "image": "pink-crown-of-hearts.png",
+    "category": "dual"
   },
   {
     "name": "Multichrome Marvel Centerpiece",
@@ -44,11 +64,24 @@
   },
   {
     "name": "Figure-O-Fish Centerpiece",
+    "colours": [
+      {
+        "name": "Orange", "value": "#ff4001", "image": "orange-figure-o-fish.png"
+      },
+      {
+        "name": "Red", "value": "red", "image": "red-figure-o-fish.png"
+      },
+      {
+        "name": "Green", "value": "green", "image": "green-figure-o-fish.png"
+      },
+      {
+        "name": "Purple", "value": "purple", "image": "purple-figure-o-fish.png"
+      }
+    ],
     "size": "60 cms",
     "rate": "₹325",
-    "image": "figure-o-fish.png",
-    "category": ["dual", "thematic"],
-    "whatsapp": "Hi! I'm interested in the Figure-O-Fish Centerpiece from Lucky Creations."
+    "image": "orange-figure-o-fish.png",
+    "category": ["dual", "thematic"]
   },
   {
     "name": "Radial Flag Centerpiece",
@@ -78,11 +111,21 @@
   },
   {
     "name": "Two Tone Diamond Centerpiece",
+    "colours": [
+      {
+        "name": "Orange", "value": "#ff4001", "image": "orange-two-tone-diamond.jpeg"
+      },
+      {
+        "name": "Blue", "value": "blue", "image": "blue-two-tone-diamond.jpeg"
+      },
+      {
+        "name": "Green", "value": "green", "image": "green-two-tone-diamond.jpeg"
+      }
+    ],
     "size": "37 cms",
     "rate": "₹275",
-    "image": "two-tone-diamond.jpeg",
-    "category": "dual",
-    "whatsapp": "Hi! I'm interested in the Two Tone Diamond Centerpiece from Lucky Creations."
+    "image": "orange-two-tone-diamond.jpeg",
+    "category": "dual"
   },
   {
     "name": "Purple Passion Centerpiece",
@@ -143,20 +186,40 @@
     "whatsapp": "Hi! I'm interested in The Glowing Sun Centerpiece from Lucky Creations."
   },
   {
-    "name": "Twilight Violet Centerpiece",
+    "name": "Twilight Centerpiece",
+    "colours": [
+      {
+        "name": "Violet", "value": "#c001ff", "image": "violet-twilight.png"
+      },
+      {
+        "name": "Red", "value": "red", "image": "red-twilight.png"
+      },
+      {
+        "name": "Blue", "value": "blue", "image": "blue-twilight.png"
+      }
+    ],
     "size": "30 cms",
     "rate": "₹175",
-    "image": "twilight-violet.png",
-    "category": "dual",
-    "whatsapp": "Hi! I'm interested in the Twilight Violet Centerpiece from Lucky Creations."
+    "image": "violet-twilight.png",
+    "category": "dual"
   },
   {
-    "name": "Green Web Octagon Centerpiece",
+    "name": "Web Octagon Centerpiece",
+    "colours": [
+      {
+        "name": "Green", "value": "green", "image": "green-web-octagon.jpeg"
+      },
+      {
+        "name": "Pink", "value": "#ff1493", "image": "pink-web-octagon.jpeg"
+      },
+      {
+        "name": "Red", "value": "red", "image": "red-web-octagon.jpeg"
+      }
+    ],
     "size": "42 cms",
     "rate": "₹340",
     "image": "green-web-octagon.jpeg",
-    "category": "dual",
-    "whatsapp": "Hi! I'm interested in the Green Web Octagon Centerpiece from Lucky Creations."
+    "category": "dual"
   },
   {
     "name": "Skyline Centerpiece",
@@ -193,11 +256,24 @@
   },
   {
     "name": "Ringed Centerpiece",
+    "colours": [
+      {
+        "name": "Red", "value": "red", "image": "red-ringed.png"
+      },
+      {
+        "name": "Pink", "value": "#ff1493", "image": "pink-ringed.png"
+      },
+      {
+        "name": "Cyan", "value": "cyan", "image": "cyan-ringed.png"
+      },
+      {
+        "name": "Green", "value": "green", "image": "green-ringed.png"
+      }
+    ],
     "size": "28 cms",
     "rate": "₹175",
-    "image": "ringed.png",
-    "category": "dual",
-    "whatsapp": "Hi! I'm interested in the Ringed Centerpiece from Lucky Creations."
+    "image": "red-ringed.png",
+    "category": "dual"
   },
   {
     "name": "Rose Border Centerpiece",
@@ -219,17 +295,27 @@
     "name": "Four Petals Centerpiece",
     "size": "28 cms",
     "rate": "₹200",
-    "image": "four-petals.jpeg",
+    "image": "blue-four-petals.jpeg",
     "category": "mono",
     "whatsapp": "Hi! I'm interested in the Four Petals Centerpiece from Lucky Creations."
   },
   {
     "name": "Blooming Flowers Centerpiece",
+    "colours": [
+      {
+        "name": "Red", "value": "red", "image": "red-blooming-flowers.png"
+      },
+      {
+        "name": "Raspberry", "value": "#e30b5d", "image": "raspberry-blooming-flowers.png"
+      },
+      {
+        "name": "Cyan", "value": "cyan", "image": "cyan-blooming-flowers.png"
+      }
+    ],
     "size": "50 cms",
     "rate": "₹440",
-    "image": "blooming-flowers.png",
-    "category": "dual",
-    "whatsapp": "Hi! I'm interested in the Blooming Flowers Centerpiece from Lucky Creations."
+    "image": "red-blooming-flowers.png",
+    "category": "dual"
   },
   {
     "name": "Red & White Puffed Centerpiece",
@@ -240,12 +326,19 @@
     "whatsapp": "Hi! I'm interested in the Red & White Puffed Centerpiece from Lucky Creations."
   },
   {
-    "name": "Pink Shell Centerpiece",
+    "name": "Shell Centerpiece",
+    "colours": [
+      {
+        "name": "Pink", "value": "pink", "image": "pink-shell.jpeg"
+      },
+      {
+        "name": "Cyan", "value": "cyan", "image": "cyan-shell.jpeg"
+      }
+    ],
     "size": "45 cms",
     "rate": "₹340",
     "image": "pink-shell.jpeg",
-    "category": "dual",
-    "whatsapp": "Hi! I'm interested in the Pink Shell Centerpiece from Lucky Creations."
+    "category": "dual"
   },
   {
     "name": "Multi-Flower Centerpiece",
@@ -275,11 +368,24 @@
   },
   {
     "name": "Floral Monochrome Centerpiece",
+    "colours": [
+      {
+        "name": "Cyan", "value": "cyan", "image": "cyan-floral-monochrome.jpeg"
+      },
+      {
+        "name": "Red", "value": "red", "image": "red-floral-monochrome.jpeg"
+      },
+      {
+        "name": "Yellow", "value": "yellow", "image": "yellow-floral-monochrome.jpeg"
+      },
+      {
+        "name": "Green", "value": "green", "image": "green-floral-monochrome.jpeg"
+      }
+    ],
     "size": "34 cms",
     "rate": "₹250",
-    "image": "floral-monochrome.jpeg",
-    "category": "mono",
-    "whatsapp": "Hi! I'm interested in the Floral Monochrome Centerpiece from Lucky Creations."
+    "image": "cyan-floral-monochrome.jpeg",
+    "category": "mono"
   },
   {
     "name": "Enclosed Picots Centerpiece",
@@ -339,11 +445,18 @@
   },
   {
     "name": "Cross Stitch Centerpiece",
+    "colours": [
+      {
+        "name": "Green", "value": "green", "image": "green-cross-stitch.jpeg"
+      },
+      {
+        "name": "Pink", "value": "#ff1493", "image": "pink-cross-stitch.jpeg"
+      }
+    ],
     "size": "38 cms",
     "rate": "₹350",
-    "image": "cross-stitch.jpeg",
-    "category": "dual",
-    "whatsapp": "Hi! I'm interested in the Cross Stitch Centerpiece from Lucky Creations."
+    "image": "green-cross-stitch.jpeg",
+    "category": "dual"
   },
   {
     "name": "Watermelon Centerpiece",
