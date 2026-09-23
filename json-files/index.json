@@ -1,13 +1,5 @@
 [
   {
-    "title": "GAGA Over Garlands",
-    "new": true,
-    "image": "garland-main.png",
-    "description": "Woven for decoration, built for durability!",
-    "link": "garlands.html",
-    "class": "garlands"
-  },
-  {
     "title": "Centerpieces",
     "image": "centerpiece-main.png",
     "description": "Shelf or vase, style with class",
@@ -31,7 +23,7 @@
   {
     "title": "Hair Scrunchies",
     "image": "scrunchie-main.png",
-    "description": "Tie your hair with style & flair (Customizable in colours)",
+    "description": "Tie your hair with style & flair (CUSTOMISABLE IN COLOURS)",
     "link": "scrunchies.html",
     "class": "scrunchies"
   },
@@ -52,7 +44,7 @@
   {
     "title": "Mini Bags & Pouches",
     "image": "mini-bag-main.png",
-    "description": "Travel light, travel far",
+    "description": "Travel light, travel far (CUSTOMISABLE IN COLOURS)",
     "link": "mini-bags.html",
     "class": "mini-bags"
   },
@@ -62,6 +54,13 @@
     "description": "For secrets, too big for pockets",
     "link": "phone-pouches.html",
     "class": "phone-pouches"
+  },
+  {
+    "title": "GAGA Over Garlands",
+    "image": "garland-main.png",
+    "description": "Woven for decoration, built for durability!",
+    "link": "garlands.html",
+    "class": "garlands"
   },
   {
     "title": "Curtain Tie Backs",
