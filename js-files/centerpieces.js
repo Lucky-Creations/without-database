@@ -50,6 +50,7 @@ function renderCatalogue(list) {
     const img = document.createElement('img');
     img.src = pngUrl;
     img.alt = name;
+    let selectedColour = item.colours?.[0]?.name || '';
     img.loading = 'lazy';
     img.decoding = 'async';
     if (w && h) { img.width = w; img.height = h; } // Keeps layout stable when provided
@@ -57,7 +58,7 @@ function renderCatalogue(list) {
     picture.appendChild(img);
 
     card.addEventListener('click', (e) => {
-      if (e.target.closest('a')) return; // Spares WhatsApp link
+      if (e.target.closest('a') || e.target.closest('.colour-circle')) return; // Spares WhatsApp link and colour circles
 
       const modal = document.getElementById('image-modal');
       const modalImg = document.getElementById('modal-img');
@@ -72,6 +73,48 @@ function renderCatalogue(list) {
       modalImg.src = img.src;
       caption.textContent = name;
 
+      const modalColours = document.getElementById('modal-colours');
+      modalColours.innerHTML = '';
+
+      item.colours.forEach(colour => {
+        const colourWrapper = document.createElement('div');
+        colourWrapper.className = 'colour-wrapper';
+
+        const colourLabel = document.createElement('span');
+        colourLabel.className = 'colour-label';
+        colourLabel.textContent = colour.name;
+
+        const colourDiv = document.createElement('button');
+        colourDiv.className = 'colour-circle';
+        colourDiv.style.backgroundColor = colour.value;
+        colourDiv.classList.add('modal-colour-circle');
+
+        if (selectedColour === colour.name) {
+          colourDiv.classList.add('selected');
+        }
+
+        colourDiv.addEventListener('click', (e) => {
+          e.stopPropagation();
+
+          selectedColour = colour.name;
+
+          modalColours.querySelectorAll('.colour-circle')
+            .forEach(btn => btn.classList.remove('selected'));
+
+          colourDiv.classList.add('selected');
+
+          const newBase = toBase(colour.image);
+
+          modalImg.src =
+            `https://lucky-creations.github.io/images/centerpieces/${enc(colour.image)}`;
+        });
+
+        colourWrapper.appendChild(colourLabel);
+        colourWrapper.appendChild(colourDiv);
+
+        modalColours.appendChild(colourWrapper);
+      });
+
       document.querySelector('.close').onclick = () => {
           modal.style.display = "none";
         };
@@ -82,6 +125,66 @@ function renderCatalogue(list) {
     const pName = document.createElement('p');
     pName.innerHTML = `<strong>Name:</strong> ${name}`;
     card.appendChild(pName);
+    
+    const a = document.createElement('a');
+    const msg = item.whatsapp || `Hi! I'm interested in the ${name} from Lucky Creations.`;
+    a.href = `https://wa.me/918169341750?text=${encodeURIComponent(msg)}`;
+    a.target = '_blank';
+    a.textContent = 'Order on WhatsApp';
+    a.rel = 'noopener';
+
+    if (Array.isArray(item.colours) && item.colours.length > 0) {
+      const coloursContainer = document.createElement('div');
+      coloursContainer.className = 'colours-container';
+      for (let i = 0; i < item.colours.length; i++) {
+        const colour = item.colours[i];
+
+        const colourWrapper = document.createElement('div');
+        colourWrapper.className = 'colour-wrapper';
+
+        const colourLabel = document.createElement('span');
+        colourLabel.className = 'colour-label';
+        colourLabel.textContent = colour.name;
+
+        const colourDiv = document.createElement('button');
+        colourDiv.className = 'colour-circle';
+        colourDiv.style.backgroundColor = colour.value;
+        colourDiv.title = colour.name;
+
+        if (i === 0) {
+          colourDiv.classList.add('selected');
+        }
+
+        colourDiv.addEventListener('click', (e) => {
+          e.stopPropagation();
+
+          selectedColour = colour.name;
+
+          const msg = `Hi! I'm interested in the ${selectedColour} ${name} from Lucky Creations.`;
+          a.href = `https://wa.me/918169341750?text=${encodeURIComponent(msg)}`;
+
+          const newBase = toBase(colour.image);
+
+          source.srcset =
+            `https://lucky-creations.github.io/images/centerpieces/${enc(newBase)}.webp`;
+
+          img.src =
+            `https://lucky-creations.github.io/images/centerpieces/${enc(colour.image)}`;
+
+          coloursContainer.querySelectorAll('.colour-circle').forEach(btn => {
+            btn.classList.remove('selected');
+          });
+
+          colourDiv.classList.add('selected');
+        });
+
+        colourWrapper.appendChild(colourLabel);
+        colourWrapper.appendChild(colourDiv);
+
+        coloursContainer.appendChild(colourWrapper);
+      }
+      card.appendChild(coloursContainer);
+    }
 
     const pSize = document.createElement('p');
     pSize.innerHTML = `<strong>Size:</strong> ${size}`;
@@ -91,12 +194,6 @@ function renderCatalogue(list) {
     pRate.innerHTML = `<strong>Price:</strong> ${rate}`;
     card.appendChild(pRate);
 
-    const a = document.createElement('a');
-    const msg = item.whatsapp || `Hi! I'm interested in the ${name} from Lucky Creations.`;
-    a.href = `https://wa.me/918169341750?text=${encodeURIComponent(msg)}`;
-    a.target = '_blank';
-    a.textContent = 'Order on WhatsApp';
-    a.rel = 'noopener';
     card.appendChild(a);
 
     container.appendChild(card);
