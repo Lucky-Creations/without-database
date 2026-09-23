@@ -219,15 +219,58 @@
   animation: gradientShift 2s ease infinite;
 }
 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .product-card:hover .new-arrival {
   background: #f7f7f2;
   color: #442a6e;
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.colours-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.colour-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.colour-label {
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.colour-circle {
+  width: 40px;
+  height: 25px;
+  border-radius: 25%;
+}
+
+.colour-circle.selected {
+  outline: 3px solid #442a6e;
+  outline-offset: 2px;
+}
+
+#modal-colours {
+  margin-top: -20px;
+}
+
+.modal-colour-circle.selected {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+.product-card:hover .colour-label {
+  color: #f7f7f2;
 }
 
 .old-price {
@@ -401,6 +444,12 @@
   }
 }
 
+@media (max-width: 601px) {
+  .product-card p {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 581px) {
   #product-container {
     padding-top: 10px;
@@ -438,12 +487,12 @@
 
 @media (max-width: 501px) {
   .product-card p {
-    font-size: 12px;
+    font-size: 20px;
     margin: 2px;
   }
 
   .product-card a {
-    font-size: 12px;
+    font-size: 20px;
   }
 }
 
@@ -463,29 +512,18 @@
   }
 
   .product-card p {
-    font-size: 10px;
+    font-size: 18px;
     margin: 2px;
   }
 
   .product-card a {
-    font-size: 10px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 371px) {
   #product-container {
     padding-top: 5px;
-  }
-}
-
-@media (max-width: 361px) {
-  .product-card p {
-    font-size: 10px;
-    margin: 2px;
-  }
-
-  .product-card a {
-    font-size: 10px;
   }
 }
 
@@ -515,5 +553,20 @@
 
   .product-card a {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 315px) {
+  .colours-container {
+    gap: 15px;
+  }
+
+  .colour-label {
+    font-size: 10px;
+  }
+
+  .colour-circle {
+    width: 25px;
+    height: 25px;
   }
 }
