@@ -1,5 +1,13 @@
 [
   {
+    "title": "Count on COMBOS!",
+    "image": "combo-main.png",
+    "new": true,
+    "description": "Handmade by us, Handpicked by YOU!",
+    "link": "combos.html",
+    "class": "combos"
+  },
+  {
     "title": "Centerpieces",
     "image": "centerpiece-main.png",
     "description": "Shelf or vase, style with class",
