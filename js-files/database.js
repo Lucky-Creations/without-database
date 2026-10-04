@@ -40,6 +40,12 @@ window.addEventListener("DOMContentLoaded", () => {
         runTransaction(ref(db, "crochet_stats/home_visits"), n => (n || 0) + 1);
     }
 
+    else if (path.endsWith("combos.html") && isValidWhen(path, host)
+    ) {
+      logEvent(analytics, "site_visit", { source: "combos_page" });
+      runTransaction(ref(db, "crochet_stats/combos_visits"), n => (n || 0) + 1);
+    }
+
     else if (path.endsWith("garlands.html") && isValidWhen(path, host)
     ) {
       logEvent(analytics, "site_visit", { source: "garlands_page" });
