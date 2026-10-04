@@ -18,6 +18,15 @@
     "whatsapp": "Hi! I'm interested in the Vibrant Illusion Doily from Lucky Creations."
   },
   {
+    "name": "Blue Cheese Doily",
+    "size": "17 cms",
+    "rate": "₹100",
+    "new": true,
+    "image": "blue-cheese.png",
+    "category": "dual",
+    "whatsapp": "Hi! I'm interested in the Blue Cheese Doily from Lucky Creations."
+  },
+  {
     "name": "Sweet Corn Doily",
     "size": "20 cms",
     "rate": "₹125",
@@ -65,6 +74,15 @@
     "image": "light-peach-heart.jpeg",
     "category": "mono",
     "whatsapp": "Hi! I'm interested in the Light Peach Heart Doily from Lucky Creations."
+  },
+  {
+    "name": "Round Net Doily",
+    "size": "17 cms",
+    "rate": "₹100",
+    "new": true,
+    "image": "round-net.png",
+    "category": "mono",
+    "whatsapp": "Hi! I'm interested in the Round Net Doily from Lucky Creations."
   },
   {
     "name": "Picot Petals Doily",
