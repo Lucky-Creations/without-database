@@ -388,7 +388,6 @@
   {
     "name": "Design 55",
     "rate": "₹55",
-    "new": true,
     "image": "55.png",
     "category": "multi",
     "whatsapp": "Hi! I'm interested in the Design 55 Scrunchie from Lucky Creations."
@@ -396,7 +395,6 @@
   {
     "name": "Design 56",
     "rate": "₹55",
-    "new": true,
     "image": "56.png",
     "category": "multi",
     "whatsapp": "Hi! I'm interested in the Design 56 Scrunchie from Lucky Creations."
@@ -404,7 +402,6 @@
   {
     "name": "Design 57",
     "rate": "₹65",
-    "new": true,
     "image": "57.png",
     "category": "mono",
     "whatsapp": "Hi! I'm interested in the Design 57 Scrunchie from Lucky Creations."
@@ -412,7 +409,6 @@
   {
     "name": "Design 58",
     "rate": "₹50",
-    "new": true,
     "image": "58.png",
     "category": "mono",
     "whatsapp": "Hi! I'm interested in the Design 58 Scrunchie from Lucky Creations."
@@ -420,7 +416,6 @@
   {
     "name": "Design 59",
     "rate": "₹60",
-    "new": true,
     "image": "59.png",
     "category": "multi",
     "whatsapp": "Hi! I'm interested in the Design 59 Scrunchie from Lucky Creations."
@@ -428,9 +423,56 @@
   {
     "name": "Design 60",
     "rate": "₹70",
-    "new": true,
     "image": "60.png",
     "category": "multi",
     "whatsapp": "Hi! I'm interested in the Design 60 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 61",
+    "rate": "₹45",
+    "new": true,
+    "image": "61.png",
+    "category": "multi",
+    "whatsapp": "Hi! I'm interested in the Design 61 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 62",
+    "rate": "₹70",
+    "new": true,
+    "image": "62.png",
+    "category": "multi",
+    "whatsapp": "Hi! I'm interested in the Design 62 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 63",
+    "rate": "₹65",
+    "new": true,
+    "image": "63.png",
+    "category": "multi",
+    "whatsapp": "Hi! I'm interested in the Design 63 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 64",
+    "rate": "₹60",
+    "new": true,
+    "image": "64.png",
+    "category": "multi",
+    "whatsapp": "Hi! I'm interested in the Design 64 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 65",
+    "rate": "₹50",
+    "new": true,
+    "image": "65.png",
+    "category": "multi",
+    "whatsapp": "Hi! I'm interested in the Design 65 Scrunchie from Lucky Creations."
+  },
+  {
+    "name": "Design 66",
+    "rate": "₹90",
+    "new": true,
+    "image": "66.png",
+    "category": "multi",
+    "whatsapp": "Hi! I'm interested in the Design 66 Scrunchie from Lucky Creations."
   }
 ]
