@@ -32,6 +32,15 @@
     "whatsapp": "Hi! I'm interested in the Pink Lace Handkerchief 4 from Lucky Creations."
   },
   {
+    "name": "Pink Lace Handkerchief 5",
+    "size": "12 inches",
+    "rate": "₹80",
+    "new": true,
+    "image": "pink-5.png",
+    "category": "pink",
+    "whatsapp": "Hi! I'm interested in the Pink Lace Handkerchief 5 from Lucky Creations."
+  },
+  {
     "name": "Blue Lace Handkerchief 1",
     "size": "12 inches",
     "rate": "₹60",
@@ -62,6 +71,15 @@
     "image": "blue-4.jpeg",
     "category": "blue",
     "whatsapp": "Hi! I'm interested in the Blue Lace Handkerchief 4 from Lucky Creations."
+  },
+  {
+    "name": "Blue Lace Handkerchief 5",
+    "size": "12 inches",
+    "rate": "₹90",
+    "new": true,
+    "image": "blue-5.png",
+    "category": "blue",
+    "whatsapp": "Hi! I'm interested in the Blue Lace Handkerchief 5 from Lucky Creations."
   },
   {
     "name": "Peach Lace Handkerchief 1",
@@ -96,6 +114,15 @@
     "whatsapp": "Hi! I'm interested in the Peach Lace Handkerchief 4 from Lucky Creations."
   },
   {
+    "name": "Peach Lace Handkerchief 5",
+    "size": "12 inches",
+    "rate": "₹80",
+    "new": true,
+    "image": "peach-5.png",
+    "category": "peach",
+    "whatsapp": "Hi! I'm interested in the Peach Lace Handkerchief 5 from Lucky Creations."
+  },
+  {
     "name": "Green Lace Handkerchief 1",
     "size": "12 inches",
     "rate": "₹80",
@@ -126,5 +153,14 @@
     "image": "green-4.jpeg",
     "category": "green",
     "whatsapp": "Hi! I'm interested in the Green Lace Handkerchief 4 from Lucky Creations."
+  },
+  {
+    "name": "Green Lace Handkerchief 5",
+    "size": "12 inches",
+    "rate": "₹90",
+    "new": true,
+    "image": "green-5.png",
+    "category": "green",
+    "whatsapp": "Hi! I'm interested in the Green Lace Handkerchief 5 from Lucky Creations."
   }
 ]
