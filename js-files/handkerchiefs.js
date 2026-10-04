@@ -134,6 +134,8 @@ fetch('../json-files/handkerchiefs.json')
         sorted.sort((a, b) => parsePrice(a) - parsePrice(b));
       } else if (sort === "price-high") {
         sorted.sort((a, b) => parsePrice(b) - parsePrice(a));
+      } else if (sort === "new") {
+        sorted.sort((a, b) => (b.new === true) - (a.new === true));
       }
 
       renderCatalogue(sorted);
@@ -162,6 +164,8 @@ fetch('../json-files/handkerchiefs.json')
         list.sort((a, b) => parsePrice(a) - parsePrice(b));
       } else if (currentSort === "price-high") {
         list.sort((a, b) => parsePrice(b) - parsePrice(a));
+      } else if (currentSort === "new") {
+        list.sort((a, b) => (b.new === true) - (a.new === true));
       }
 
       renderCatalogue(list);
