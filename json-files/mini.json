@@ -9,12 +9,31 @@
     "whatsapp": "Hi! I'm interested in the Autumn 'n' Spring Bag from Lucky Creations."
   },
   {
-    "name": "Burnt Wood Sienna Bag",
-    "size": "18*12 cms",
-    "rate": "₹230",
-    "image": "burnt-wood-sienna.png",
+    "name": "Shredded Apple Bag",
+    "size": "20*13 cms",
+    "rate": "₹270",
+    "new": true,
+    "image": "shredded-apple.png",
     "category": "mini",
-    "whatsapp": "Hi! I'm interested in the Burnt Wood Sienna Bag from Lucky Creations."
+    "whatsapp": "Hi! I'm interested in the Shredded Apple Bag from Lucky Creations."
+  },
+  {
+    "name": "Rainforest Bag",
+    "size": "21*13 cms",
+    "rate": "₹250",
+    "new": true,
+    "image": "rainforest.png",
+    "category": "mini",
+    "whatsapp": "Hi! I'm interested in the Rainforest Bag from Lucky Creations."
+  },
+  {
+    "name": "Basket Weave Bag",
+    "size": "21*14 cms",
+    "rate": "₹250",
+    "new": true,
+    "image": "basket-weave.png",
+    "category": "mini",
+    "whatsapp": "Hi! I'm interested in the Basket Weave Bag from Lucky Creations."
   },
   {
     "name": "Grey Ice Monochrome Bag",
@@ -26,13 +45,39 @@
     "whatsapp": "Hi! I'm interested in the Grey Ice Monochrome Bag from Lucky Creations."
   },
   {
-    "name": "Basket Weave Bag",
-    "size": "21*14 cms",
+    "name": "Marble Mix Bag 1",
+    "size": "18*13 cms",
+    "rate": "₹270",
+    "new": true,
+    "image": "marble-mix-1.png",
+    "category": "mini",
+    "whatsapp": "Hi! I'm interested in the Marble Mix Bag 1 from Lucky Creations."
+  },
+  {
+    "name": "Marble Mix Bag 2",
+    "size": "20*14 cms",
+    "rate": "₹270",
+    "new": true,
+    "image": "marble-mix-2.png",
+    "category": "mini",
+    "whatsapp": "Hi! I'm interested in the Marble Mix Bag 2 from Lucky Creations."
+  },
+  {
+    "name": "Burnt Wood Sienna Bag",
+    "size": "18*12 cms",
+    "rate": "₹230",
+    "image": "burnt-wood-sienna.png",
+    "category": "mini",
+    "whatsapp": "Hi! I'm interested in the Burnt Wood Sienna Bag from Lucky Creations."
+  },
+  {
+    "name": "Pink Bubbles Bag",
+    "size": "22*12 cms",
     "rate": "₹250",
     "new": true,
-    "image": "basket-weave.png",
+    "image": "pink-bubbles.png",
     "category": "mini",
-    "whatsapp": "Hi! I'm interested in the Basket Weave Bag from Lucky Creations."
+    "whatsapp": "Hi! I'm interested in the Pink Bubbles Bag from Lucky Creations."
   },
   {
     "name": "Rose Pink Grain Design Bag",
