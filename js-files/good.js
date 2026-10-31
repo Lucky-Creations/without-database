@@ -145,6 +145,8 @@ fetch('../json-files/good.json')
       let filtered = [...products];
       if (filter === "centerpieces") {
         filtered = products.filter(p => p.category === "centerpieces");
+      } else if (filter === "keychains") {
+        filtered = products.filter(p => p.category === "keychains");
       } else if (filter === "earrings") {
         filtered = products.filter(p => p.category === "earrings");
       } else if (filter === "scrunchies") {
@@ -185,6 +187,8 @@ fetch('../json-files/good.json')
       // Functioning of filter
       if (currentFilter === "centerpieces") {
         list = list.filter(p => p.category === "centerpieces");
+      } else if (currentFilter === "keychains") {
+        list = list.filter(p => p.category === "keychains");
       } else if (currentFilter === "earrings") {
         list = list.filter(p => p.category === "earrings");
       } else if (currentFilter === "scrunchies") {
