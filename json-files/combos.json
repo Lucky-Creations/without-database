@@ -1,0 +1,116 @@
+[
+  {
+    "name": "The Mega Fusion Mix Combo",
+    "details": "Pick any 1 mini bag, 2 scrunchies, 2 earrings and a keychain of your choice",
+    "discount": "10",
+    "image": "the-mega-fusion-mix.png",
+    "category": "fusion",
+    "whatsapp": "Hi! I'm interested in The Mega Fusion Mix Combo from Lucky Creations."
+  },
+  {
+    "name": "The Sunflower Bloom Combo",
+    "details": "Any 3 or more Sunflower themed products of your choice",
+    "discount": "10",
+    "image": "the-sunflower-bloom.png",
+    "category": "fusion",
+    "whatsapp": "Hi! I'm interested in The Sunflower Bloom Combo from Lucky Creations."
+  },
+  {
+    "name": "The Good Omen Goodies Combo",
+    "details": "Any 3 or more Good Omen Goodies of your choice",
+    "discount": "10",
+    "image": "the-good-omen-goodies.png",
+    "category": "picked",
+    "whatsapp": "Hi! I'm interested in The Good Omen Goodies Combo from Lucky Creations."
+  },
+  {
+    "name": "The Everything Tricolour Combo",
+    "details": "Any 3 or more Everything Tricolour products of your choice",
+    "discount": "10",
+    "image": "the-everything-tricolour.png",
+    "category": "picked",
+    "whatsapp": "Hi! I'm interested in The Everything Tricolour Combo from Lucky Creations."
+  },
+  {
+    "name": "The Black Box Combo",
+    "details": "The Basket Weave Bag and 2 black scrunchies of your choice",
+    "discount": "5",
+    "image": "the-black-box.png",
+    "category": ["fusion", "mini"],
+    "whatsapp": "Hi! I'm interested in The Black Box Combo from Lucky Creations."
+  },
+  {
+    "name": "The CENTER of Attraction Combo",
+    "details": "2 Centerpieces: Any 2 colours of a centerpiece of your choice",
+    "discount": "10",
+    "image": "the-center-of-attraction.png",
+    "category": "centerpieces",
+    "whatsapp": "Hi! I'm interested in The CENTER of Attraction Combo from Lucky Creations."
+  },
+  {
+    "name": "The Big Brother, Little Brother Combo",
+    "details": "Pick any 1 centerpiece and 1 doily of your choice",
+    "discount": "5",
+    "image": "the-big-brother-little-brother.png",
+    "category": "centerpieces",
+    "whatsapp": "Hi! I'm interested in The Big Brother, Little Brother Combo from Lucky Creations."
+  },
+  {
+    "name": "The Fresh Watermelon Combo",
+    "details": "Any 3 or more Watermelon themed products of your choice",
+    "discount": "10",
+    "image": "the-fresh-watermelon.png",
+    "category": "fusion",
+    "whatsapp": "Hi! I'm interested in The Fresh Watermelon Combo from Lucky Creations."
+  },
+  {
+    "name": "The Colours of Kaleidoscope Combo",
+    "details": "The vibrance of the Rainbow Multicolour Bag and the Multicolour Pouch",
+    "rate": "₹260",
+    "discount": "10",
+    "image": "the-colours-of-kaleidoscope.png",
+    "category": "mini",
+    "whatsapp": "Hi! I'm interested in The Colours of Kaleidoscope Combo from Lucky Creations."
+  },
+  {
+    "name": "The Go Green Combo",
+    "details": "Any 2 green complementing mini bags from the collection",
+    "rate": "₹500",
+    "discount": "5",
+    "image": "the-go-green.png",
+    "category": "mini",
+    "whatsapp": "Hi! I'm interested in The Go Green Combo from Lucky Creations."
+  },
+  {
+    "name": "The 3D Animation Combo",
+    "details": "Any 2 or more Animated keychains of your choice",
+    "discount": "10",
+    "image": "the-3d-animation.png",
+    "category": "picked",
+    "whatsapp": "Hi! I'm interested in The 3D Animation Combo from Lucky Creations."
+  },
+  {
+    "name": "The Triple Down Bands Combo",
+    "details": "Any 3 or more scrunchies of your choice",
+    "discount": "10",
+    "image": "the-triple-down-bands.png",
+    "category": "picked",
+    "whatsapp": "Hi! I'm interested in The Triple Down Bands Combo from Lucky Creations."
+  },
+  {
+    "name": "The Pair of Pairs Combo",
+    "details": "Any 2 or more earrings of your choice",
+    "discount": "10",
+    "image": "the-pair-of-pairs.png",
+    "category": "picked",
+    "whatsapp": "Hi! I'm interested in The Pair of Pairs Combo from Lucky Creations."
+  },
+  {
+    "name": "The Spick & Span Combo",
+    "details": "4 'lacy' handkerchiefs, 1 design of your choice from each colour",
+    "discount": "5",
+    "image": "the-spick-span.png",
+    "category": "picked",
+    "whatsapp": "Hi! I'm interested in The Spick & Span Combo from Lucky Creations."
+  }
+]
