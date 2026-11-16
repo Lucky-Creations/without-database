@@ -26,6 +26,33 @@
     "whatsapp": "Hi! I'm interested in the Blue Cheese Doily from Lucky Creations."
   },
   {
+    "name": "Sunflower Doily",
+    "size": "21 cms",
+    "rate": "₹160",
+    "new": true,
+    "image": "sunflower.png",
+    "category": "dual",
+    "whatsapp": "Hi! I'm interested in the Sunflower Doily from Lucky Creations."
+  },
+  {
+    "name": "Bougainvillea Doily",
+    "size": "20 cms",
+    "rate": "₹160",
+    "new": true,
+    "image": "bougainvillea.png",
+    "category": "dual",
+    "whatsapp": "Hi! I'm interested in the Bougainvillea Doily from Lucky Creations."
+  },
+  {
+    "name": "Molten Lava Doily",
+    "size": "24 cms",
+    "rate": "₹200",
+    "new": true,
+    "image": "molten-lava.png",
+    "category": "multi",
+    "whatsapp": "Hi! I'm interested in the Molten Lava Doily from Lucky Creations."
+  },
+  {
     "name": "Apple Spread Doily",
     "size": "25 cms",
     "rate": "₹230",
