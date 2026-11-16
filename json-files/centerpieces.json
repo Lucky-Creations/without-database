@@ -101,6 +101,24 @@
     "category": ["dual", "thematic"]
   },
   {
+    "name": "The Third Eye Centerpiece 1",
+    "size": "55 cms",
+    "rate": "₹500",
+    "new": true,
+    "image": "the-third-eye-1.png",
+    "category": "multi",
+    "whatsapp": "Hi! I'm interested in the The Third Eye Centerpiece 1 from Lucky Creations."
+  },
+  {
+    "name": "The Third Eye Centerpiece 2",
+    "size": "35 cms",
+    "rate": "₹250",
+    "new": true,
+    "image": "the-third-eye-2.png",
+    "category": "multi",
+    "whatsapp": "Hi! I'm interested in the The Third Eye Centerpiece 2 from Lucky Creations."
+  },
+  {
     "name": "Ocean Sands Centerpiece",
     "size": "37 cms",
     "rate": "₹300",
