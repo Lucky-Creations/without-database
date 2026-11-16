@@ -60,6 +60,7 @@ function renderCatalogue(list) {
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
     const caption = document.getElementById('caption-name');
+    
     document.querySelector('.close').onclick = () => {
       modal.style.display = "none";
     };
@@ -104,9 +105,7 @@ function renderCatalogue(list) {
             .forEach(btn => btn.classList.remove('selected'));
 
           colourDiv.classList.add('selected');
-
-          const newBase = toBase(colour.image);
-
+          
           modalImg.src =
             `https://lucky-creations.github.io/images/centerpieces/${enc(colour.image)}`;
         });
