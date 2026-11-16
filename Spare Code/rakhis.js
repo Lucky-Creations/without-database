@@ -55,14 +55,17 @@ function renderCatalogue(list) {
     img.setAttribute('draggable', 'false');
     picture.appendChild(img);
 
+    const modal = document.getElementById('image-modal');
+    const modalRakhiContent = document.querySelector('.modal-rakhi-content');
+    const modalImg = document.getElementById('modal-img');
+    const caption = document.getElementById('caption-name');
+
+    document.querySelector('.close').onclick = () => {
+      modal.style.display = "none";
+    };
+
     card.addEventListener('click', (e) => {
       if (e.target.closest('a')) return; // Spares WhatsApp link
-
-      const modal = document.getElementById('image-modal');
-      const modalRakhiContent = document.querySelector('.modal-rakhi-content');
-      const modalImg = document.getElementById('modal-img');
-      const caption = document.getElementById('caption-name');
-      const copyright = document.getElementById('copyright-label');
 
       modal.style.display = "block";
       modalImg.src = img.src;
@@ -101,10 +104,6 @@ function renderCatalogue(list) {
           modalRakhiContent.appendChild(picture);
         });
       }
-
-      document.querySelector('.close').onclick = () => {
-        modal.style.display = "none";
-      };
     });
 
     card.appendChild(picture);
