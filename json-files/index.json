@@ -14,14 +14,6 @@
     "class": "thaalposh"
   },
   {
-    "title": "Bookmarks",
-    "image": "bookmark-main.png",
-    "new": true,
-    "description": "Can't remember the page? Don't worry!",
-    "link": "bookmarks.html",
-    "class": "bookmarks"
-  },
-  {
     "title": "Good Omen Goodies",
     "image": "good-omen-main.png",
     "description": "Charm your luck!",
@@ -62,6 +54,13 @@
     "description": "Masterpieces for your showpieces",
     "link": "doilies.html",
     "class": "doilies"
+  },
+  {
+    "title": "Bookmarks",
+    "image": "bookmark-main.png",
+    "description": "Can't remember the page? Don't worry!",
+    "link": "bookmarks.html",
+    "class": "bookmarks"
   },
   {
     "title": "Phone Pouches",
